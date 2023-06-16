@@ -1,0 +1,14 @@
+/* core/responsive */
+@each $name, $size in $breakpoints {
+  @media only screen and (max-width: $size) {
+    .stack-#{$name} {
+      @include unsplit();
+      &.flex.row {
+        display: block !important;
+      }
+    }
+    [class*="grid-"].stack-#{$name} {
+      grid-template-columns: 1fr;
+    }
+  }
+}

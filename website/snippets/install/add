@@ -1,0 +1,8 @@
+## using npm
+$ npm add @abw/badger-css
+
+## using yarn
+$ yarn add @abw/badger-css
+
+## using pnpm
+$ pnpm add @abw/badger-css

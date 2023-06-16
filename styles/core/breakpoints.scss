@@ -1,0 +1,34 @@
+/*-- core/breakpoints --*/
+// classes to limit width to a breakpoint, e.g. .tablet
+@each $name, $size in $breakpoints {
+  .#{$name} {
+    max-width: $size;
+    &.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  // for debugging/style guide
+  .#{$name}-width:before {
+    content: "#{$size}";
+  }
+}
+
+.lt-mobile,
+.lt-tablet,
+.lt-laptop,
+.lt-desktop,
+.lt-widescreen {
+  display: none;
+}
+
+@each $name, $size in $breakpoints {
+  @media only screen and (max-width: $size) {
+    .gt-#{$name} {
+      display: none !important;
+    }
+    .lt-#{$name} {
+      display: block !important;
+    }
+  }
+}

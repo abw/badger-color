@@ -1,0 +1,67 @@
+{
+  "name": "@abw/badger-color",
+  "version": "0.0.1",
+  "description": "Color Scheme Editor",
+  "type": "module",
+  "main": "./dist/badger-color.umd.cjs",
+  "module": "./dist/badger-color.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/badger-color.js",
+      "require": "./dist/badger-color.umd.cjs"
+    },
+    "./config/*": "./dist/config/*",
+    "./styles/*": "./dist/styles/*"
+  },
+  "author": "Andy Wardley",
+  "license": "ISC",
+  "keywords": [
+    "react"
+  ],
+  "scripts": {
+    "dev": "vite --config vite.docs.js",
+    "build": "vite build",
+    "test": "vitest --ui --coverage",
+    "build:docs": "vite build --outDir docs --config vite.docs.js",
+    "preview": "vite preview --outDir docs --config vite.docs.js",
+    "lint": "eslint 'website/**/*.{js,jsx}' 'lib/**/*.{js,jsx}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abw/badger-color.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abw/badger-color/issues"
+  },
+  "dependencies": {
+    "@abw/badger-filesystem": "^1.0.3"
+  },
+  "devDependencies": {
+    "@abw/badger-timestamp": "^1.0.4",
+    "@abw/badger-utils": "^1.0.19",
+    "@abw/react-night-and-day": "^0.0.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@vitest/coverage-c8": "^0.31.0",
+    "@vitest/ui": "^0.31.0",
+    "bezier-easing": "^2.1.0",
+    "eslint": "^8.37.0",
+    "eslint-plugin-react": "^7.32.2",
+    "jsdom": "^21.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "sass": "^1.60.0",
+    "vite": "^4.2.0",
+    "vite-plugin-svgr": "^3.2.0",
+    "vitest": "^0.31.0"
+  }
+}

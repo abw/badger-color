@@ -1,0 +1,13 @@
+$border-opacity: 0.25 !default;
+$border-color-light: rgba($black, $border-opacity) !default;
+$border-color-dark: rgba($white, $border-opacity) !default;
+
+:where(html) {
+  --border-width: 1px;
+  --border-style: solid;
+  --border-radius: 0px;
+  --border-color: #{$border-color-light};
+}
+#{$dark-theme} {
+  --border-color: #{$border-color-dark};
+}

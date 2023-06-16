@@ -1,0 +1,54 @@
+$surface-border-opacity: 0.15 !default;
+$surface-border-color-light: rgba($black, $surface-border-opacity) !default;
+$surface-border-color-dark: rgba($white, $surface-border-opacity) !default;
+
+:where(html) {
+  [class*="surface-"] {
+    --border-color: #{$surface-border-color-light};
+  }
+  .surface-0 {
+    --color: var(--grey-0);
+    --background-color: white;
+  }
+  .surface-1 {
+    --color: var(--grey-40);
+    --background-color: var(--grey-70);
+  }
+  .surface-2 {
+    --color: var(--grey-30);
+    --background-color: var(--grey-80);
+  }
+  .surface-3 {
+    --color: var(--grey-20);
+    --background-color: var(--grey-90);
+  }
+  .surface-4 {
+    --color: var(--grey-10);
+    --background-color: var(--grey-100);
+  }
+}
+#{$dark-theme} {
+  [class*="surface-"] {
+    --border-color: #{$surface-border-color-dark};
+  }
+  .surface-0 {
+    --color: var(--grey-100);
+    --background-color: black;
+  }
+  .surface-1 {
+    --color: var(--grey-60);
+    --background-color: var(--grey-0);
+  }
+  .surface-2 {
+    --color: var(--grey-70);
+    --background-color: var(--grey-10);
+  }
+  .surface-3 {
+    --color: var(--grey-80);
+    --background-color: var(--grey-20);
+  }
+  .surface-4 {
+    --color: var(--grey-90);
+    --background-color: var(--grey-30);
+  }
+}

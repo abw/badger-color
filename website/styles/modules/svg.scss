@@ -1,0 +1,93 @@
+div.chart {
+  max-width: 600px;
+  margin: 0 auto;
+  svg {
+    width: 100%;
+  }
+  input[type=range] {
+    display: block;
+    width: 100%;
+  }
+}
+
+svg.chart {
+  $ease-color: #c82;
+  --control-color: var(--blue-50);
+  background-color: white;
+  margin: 0.5rem 0;
+  border: 1px solid var(--grey-60);
+  .border {
+    fill: none;
+    stroke-width: 0.5;
+    stroke: var(--grey-50);
+  }
+  .grid line {
+    fill: none;
+    stroke-width: 0.1;
+    stroke: var(--grey-60);
+  }
+  .line {
+    fill: none;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke: var(--blue-50);
+  }
+  .start-point {
+    stroke-width: 1;
+    stroke: var(--green-50);
+    fill: var(--green-70);
+    opacity: 0.4;
+    &.hover {
+      opacity: 0.8;
+    }
+  }
+  .end-point {
+    stroke-width: 1;
+    stroke: var(--red-50);
+    fill: var(--red-70);
+    opacity: 0.4;
+    &.hover {
+      opacity: 0.8;
+    }
+  }
+  .control-point {
+    stroke-width: 1;
+    stroke: var(--control-color);
+    fill: var(--blue-70);
+    opacity: 0.4;
+    &.hover {
+      opacity: 0.8;
+    }
+  }
+  .control-line {
+    stroke: var(--control-color);
+    stroke-width: 0.25;
+    stroke-dasharray: 2 1;
+  }
+  .stop-line {
+    stroke: var(--violet-50);
+    stroke-width: 0.25;
+    stroke-dasharray: 1.5 0.5;
+  }
+}
+
+#site.dark {
+  svg.chart {
+    background-color: black;
+    .border {
+      stroke: var(--grey-50);
+    }
+    .grid line {
+      stroke: var(--grey-70);
+    }
+    .start-point {
+      fill: var(--green-30);
+    }
+    .end-point {
+      fill: var(--red-30);
+    }
+    .control-point {
+      fill: var(--blue-30);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// redefine any of the following hues to taste...
+$red-hue:       5;
+$brown-hue:    15;
+$orange-hue:   25;
+$yellow-hue:   45;
+$olive-hue:    70;
+$green-hue:   120;
+$teal-hue:    165;
+$blue-hue:    200;
+$indigo-hue:  230;
+$violet-hue:  255;
+$purple-hue:  280;
+$pink-hue:    320;
+
+// ...before importing the badger-ui SCSS stylesheet
+@import "@abw/badger-ui/styles/badger-ui.scss";

@@ -1,0 +1,9 @@
+:where(html) {
+  --font-sans:      #{$font-sans};
+  --font-serif:     #{$font-serif};
+  --font-mono:      #{$font-mono};
+  --font-system:    #{$font-system};
+  --weight-light:   #{$weight-light};
+  --weight-normal:  #{$weight-normal};
+  --weight-bold:    #{$weight-bold};
+}

@@ -1,0 +1,142 @@
+$button-border-width:     1px !default;
+$button-border-radius:    $unit-radius !default;
+$button-padding:          $unit-pad-v * 2 $unit-pad-h * 2 !default;
+$button-transition:       0.3s;
+$button-hover-transition: 0.2s;
+
+button, .button {
+  --color:            var(--brand-20);
+  --border-radius:    #{$button-border-radius};
+  --border-color:     var(--brand-60);
+  --background-color: var(--brand-90);
+  --transition-time:  #{$button-transition};
+  position:           relative;
+  // display:            inline-flex;
+  display:            inline-block;
+  // align-items:        center;
+  // justify-content:    space-evenly;
+  color:              var(--color);
+  background-color:   var(--background-color);
+  border:             $button-border-width solid var(--border-color);
+  border-radius:      $button-border-radius;
+  padding:            $button-padding;
+  font-size:          1em;
+  line-height:        1 !important;
+  text-align:         center;
+  text-decoration:    none;
+  vertical-align:     middle;
+  outline:            none;
+  touch-action:       manipulation;
+  background-image:   none;
+  white-space:        nowrap;
+  user-select:        none;
+  transition:         $button-transition all;
+  cursor:             pointer;
+  &:hover {
+    --border-color:     var(--brand-50);
+    --background-color: var(--brand-80);
+    --transition-time:  #{$button-hover-transition};
+  }
+  &.solid {
+    --color:            var(--brand-100);
+    --border-color:     var(--brand-50);
+    --background-color: var(--brand-50);
+    &:hover {
+      --border-color:     var(--brand-40);
+      --background-color: var(--brand-40);
+    }
+  }
+  .icon {
+    margin: 0;
+  }
+  .icon.on-left {
+    margin-left: 0;
+  }
+  .icon.on-right {
+    margin-right: 0;
+  }
+  &.disabled,
+  &[disabled],
+  .disabled & {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+    box-shadow: none;
+    &:hover {
+      --color: var(--grey-40);
+      --border-color: var(--grey-50);
+      --background-color: var(--grey-60);
+      cursor: not-allowed;
+    }
+  }
+}
+
+button + button {
+  // margin-left: 0.5rem;
+}
+
+button {
+  @each $color in $color-names {
+    &.#{$color} {
+      --color: var(--#{$color}-10);
+      --border-color: var(--#{$color}-60);
+      --background-color: var(--#{$color}-90);
+      &:hover {
+        --color: var(--#{$color}-0);
+        --border-color: var(--#{$color}-50);
+        --background-color: var(--#{$color}-80);
+      }
+      &.solid {
+        --color: var(--#{$color}-100);
+        --border-color: var(--#{$color}-50);
+        --background-color: var(--#{$color}-50);
+        &:hover {
+          --color: var(--#{$color}-100);
+          --border-color: var(--#{$color}-40);
+          --background-color: var(--#{$color}-40);
+        }
+      }
+    }
+  }
+}
+#{$dark-theme} button {
+  --color: var(--brand-90);
+  --border-color: var(--brand-40);
+  --background-color: var(--brand-10);
+  &:hover {
+    --border-color: var(--brand-50);
+    --background-color: var(--brand-20);
+  }
+  &.solid {
+    --color: var(--brand-100);
+    --border-color: var(--brand-40);
+    --background-color: var(--brand-40);
+    &:hover {
+      --border-color: var(--brand-50);
+      --background-color: var(--brand-50);
+    }
+  }
+
+  @each $color in $color-names {
+    &.#{$color} {
+      --color: var(--#{$color}-90);
+      --border-color: var(--#{$color}-40);
+      --background-color: var(--#{$color}-10);
+      &:hover {
+        --color: var(--#{$color}-100);
+        --border-color: var(--#{$color}-50);
+        --background-color: var(--#{$color}-20);
+      }
+      &.solid {
+        --color: var(--#{$color}-90);
+        --border-color: var(--#{$color}-40);
+        --background-color: var(--#{$color}-40);
+        &:hover {
+          --color: var(--#{$color}-100);
+          --border-color: var(--#{$color}-50);
+          --background-color: var(--#{$color}-50);
+        }
+      }
+    }
+  }
+}

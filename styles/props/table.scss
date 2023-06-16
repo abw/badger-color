@@ -1,0 +1,25 @@
+:where(html) {
+  --table-text:         var(--grey-10);
+  --table-back:         var(--grey-100);
+  --table-border:       var(--grey-80);
+  --table-head-text:    var(--brand-10);
+  --table-head-back:    var(--brand-90);
+  --table-radius:       var(--unit-radius);
+  --table-radius-1:     var(--unit-radius-1);
+}
+
+/*
+$table-radius:          $unit-radius !default;
+$table-radius-inner:    $unit-radius - 1px !default;
+$table-edge:            hsl($primary-hue, 30%, 80%) !default;
+$table-head-back:       hsl($primary-hue, 50%, 93%) !default;
+$table-head-fore:       hsl($primary-hue, 30%, 20%) !default;
+$table-spec-back:       hsl($primary-hue, 20%, 90%) !default;
+$table-spec-fore:       hsl($primary-hue, 40%, 70%) !default;
+$table-spec-border:     rgba($black, 0.5) !default;
+$table-key-back:        $table-head-back !default;
+$table-key-fore:        $table-head-fore !default;
+$table-detail-border:   hsl($primary-hue, 40%, 80%) !default;
+$table-detail-foot:     hsl($primary-hue, 60%, 70%) !default;
+$table-stripe-back:     hsl($primary-hue, 50%, 97%) !default;
+*/

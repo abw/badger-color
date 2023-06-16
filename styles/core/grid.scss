@@ -1,0 +1,40 @@
+/*-- core/grid --*/
+[class*="grid-"] {
+  display: grid;
+}
+.grid-fit {
+  --min-width: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-width), 1fr));
+}
+@for $n from 2 through 16 {
+  .grid-#{$n} {
+    grid-template-columns: repeat($n, 1fr);
+  }
+}
+
+@for $n from 0 through 16 {
+  .gap-#{$n} {
+    gap: $n * $unit-margin;
+  }
+  .gap-h-#{$n} {
+    column-gap: $n * $unit-margin;
+  }
+  .gap-v-#{$n} {
+    row-gap: $n * $unit-margin;
+  }
+}
+
+// stacking breakpoints
+@each $name, $size in $breakpoints {
+  @media only screen and (max-width: $size) {
+    .stack-#{$name} {
+      @include unsplit();
+      &.flex.row {
+        display: block !important;
+      }
+    }
+    [class*="grid-"].stack-#{$name} {
+      grid-template-columns: 1fr;
+    }
+  }
+}

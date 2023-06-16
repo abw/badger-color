@@ -1,0 +1,134 @@
+code:not(.codeblock code):not(.toc code) {
+  color: var(--code-text);
+  background-color: var(--code-back);
+  border: 1px solid var(--code-border);
+  padding: 0 3px;
+  border-radius: 2px;
+}
+
+/*
+a code:not(.codeblock code):not(.toc code) {
+  background-color: var(--code-link-bg);
+  color: var(--code-link-fg);
+  border: 1px solid var(--code-link-bd);
+  border-bottom-color: var(--code-link-ul);
+}
+a:hover code:not(.codeblock code):not(.toc code) {
+  background-color: var(--code-hv-bg);
+  color: var(--code-hv-fg);
+  border: 1px solid var(--code-hv-bd);
+  border-bottom-color: var(--code-hv-ul);
+}
+*/
+
+div.example {
+  margin-bottom: 2rem;
+  div.source {
+    // background-color: var(--codeblock-back);
+    // border-radius: $codeblock-radius;
+
+  }
+  div.interim {
+    margin-block-start: 2rem;
+    margin-block-end: 1rem;
+  }
+}
+
+div.codeblock,
+div.output {
+  position: relative;
+  border-radius: 4px;
+  box-shadow: var(--shadow-2);
+  h4.caption {
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: normal;
+    top: 0.25rem;
+    right: 0.75rem;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+}
+
+div.codeblock {
+  font-size: 0.9rem;
+  padding: 0;
+
+  // margin-bottom: 2rem;
+  &.expandable {
+    background-color: rgba(43, 43, 43);
+  }
+  pre {
+    border-radius: $codeblock-radius;
+    margin: 0 !important;
+    max-height: 18rem;
+    overflow-y: scroll;
+    transition: all 0.5s;
+  }
+  h4.caption {
+    color: white;
+  }
+  div.controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, var(--codeblock-back-from) 0%, var(--codeblock-back-to) 100%);
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    border-radius: 0 0 $codeblock-radius $codeblock-radius;
+  }
+  .expand, .clipboard {
+    font-size: 0.8rem;
+    color: white;
+    background-color: hsla(var(--brand-hue), 90%, 30%, 0.8);
+    padding: 0.25em 0.5em;
+    margin: 0;
+    min-width: 10ch;
+    text-align: center;
+    transition: all 1s;
+    user-select: none;
+    &:hover {
+      transition: all 0.2s;
+      background-color: hsla(var(--brand-hue), 50%, 50%, 0.9);
+      cursor: pointer;
+    }
+  }
+  .expand {
+    left: 0%;
+    border-radius: 0 $codeblock-radius 0 $codeblock-radius;
+  }
+  .clipboard {
+    right: 0rem;
+    border-radius: $codeblock-radius 0 $codeblock-radius 0;
+    transition: all 1s;
+    &.copied {
+      background-color: hsla(120, 70%, 30%, 0.9);
+      cursor: pointer;
+    }
+  }
+  &.fixed {
+    .expand {
+      visibility: hidden;
+    }
+  }
+  &.expanded {
+    pre {
+      max-height: 250rem;
+      transition: all 0.5s;
+    }
+  }
+}
+div.output {
+  position: relative;
+  background-color: var(--output-back);
+  border: 1px solid var(--output-border);
+  // box-shadow: $shadows;
+  padding: 2rem 2rem;
+  h4.caption {
+    color: var(--output-text);
+    // hsl($dev-hue, 40%, 30%);
+  }
+}

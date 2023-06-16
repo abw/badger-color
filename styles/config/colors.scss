@@ -1,0 +1,411 @@
+@use "sass:map";
+
+$color-names:
+  'red', 'brown', 'orange', 'yellow', 'olive', 'green',
+  'teal', 'blue', 'indigo', 'violet', 'purple', 'pink',
+  'grey';
+
+$color-stops:
+  '0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100';
+
+$red-hue:       0 !default;
+$brown-hue:    15 !default;
+$orange-hue:   25 !default;
+$yellow-hue:   45 !default;
+$olive-hue:    70 !default;
+$green-hue:   120 !default;
+$teal-hue:    165 !default;
+$blue-hue:    200 !default;
+$indigo-hue:  230 !default;
+$violet-hue:  255 !default;
+$purple-hue:  280 !default;
+$pink-hue:    320 !default;
+
+$hues: (
+  'red':    $red-hue,
+  'brown':  $brown-hue,
+  'orange': $orange-hue,
+  'yellow': $yellow-hue,
+  'olive':  $olive-hue,
+  'green':  $green-hue,
+  'teal':   $teal-hue,
+  'blue':   $blue-hue,
+  'indigo': $indigo-hue,
+  'violet': $violet-hue,
+  'purple': $purple-hue,
+  'pink':   $pink-hue,
+) !default;
+
+$brand-color: 'violet' !default;
+$brand-hue:   map.get($hues, $brand-color) !default;
+$grey-hue:    $brand-hue !default;
+$black:       #000;
+$white:       #fff;
+
+$red-0:       hsl($red-hue    80%  8%) !default;
+$red-10:      hsl($red-hue    65% 15%) !default;
+$red-20:      hsl($red-hue    65% 21%) !default;
+$red-30:      hsl($red-hue    75% 28%) !default;
+$red-40:      hsl($red-hue    76% 36%) !default;
+$red-50:      hsl($red-hue    75% 45%) !default;
+$red-60:      hsl($red-hue    75% 66%) !default;
+$red-70:      hsl($red-hue    75% 80%) !default;
+$red-80:      hsl($red-hue    75% 88%) !default;
+$red-90:      hsl($red-hue    75% 94%) !default;
+$red-100:     hsl($red-hue    75% 98%) !default;
+
+$brown-0:     hsl($brown-hue  80%  8%) !default;
+$brown-10:    hsl($brown-hue  65% 15%) !default;
+$brown-20:    hsl($brown-hue  65% 21%) !default;
+$brown-30:    hsl($brown-hue  65% 28%) !default;
+$brown-40:    hsl($brown-hue  60% 36%) !default;
+$brown-50:    hsl($brown-hue  54% 47%) !default;
+$brown-60:    hsl($brown-hue  54% 62%) !default;
+$brown-70:    hsl($brown-hue  75% 79%) !default;
+$brown-80:    hsl($brown-hue  70% 87%) !default;
+$brown-90:    hsl($brown-hue  66% 92%) !default;
+$brown-100:   hsl($brown-hue  55% 98%) !default;
+
+$orange-0:    hsl($orange-hue 80%  8%) !default;
+$orange-10:   hsl($orange-hue 65% 15%) !default;
+$orange-20:   hsl($orange-hue 65% 23%) !default;
+$orange-30:   hsl($orange-hue 84% 32%) !default;
+$orange-40:   hsl($orange-hue 84% 42%) !default;
+$orange-50:   hsl($orange-hue 86% 52%) !default;
+$orange-60:   hsl($orange-hue 84% 66%) !default;
+$orange-70:   hsl($orange-hue 80% 80%) !default;
+$orange-80:   hsl($orange-hue 75% 88%) !default;
+$orange-90:   hsl($orange-hue 75% 93%) !default;
+$orange-100:  hsl($orange-hue 75% 98%) !default;
+
+$yellow-0:    hsl($yellow-hue 80%  8%) !default;
+$yellow-10:   hsl($yellow-hue 65% 13%) !default;
+$yellow-20:   hsl($yellow-hue 65% 21%) !default;
+$yellow-30:   hsl($yellow-hue 95% 30%) !default;
+$yellow-40:   hsl($yellow-hue 95% 40%) !default;
+$yellow-50:   hsl($yellow-hue 95% 49%) !default;
+$yellow-60:   hsl($yellow-hue 95% 69%) !default;
+$yellow-70:   hsl($yellow-hue 82% 80%) !default;
+$yellow-80:   hsl($yellow-hue 80% 87%) !default;
+$yellow-90:   hsl($yellow-hue 75% 93%) !default;
+$yellow-100:  hsl($yellow-hue 75% 98%) !default;
+
+$olive-0:     hsl($olive-hue  80%  8%) !default;
+$olive-10:    hsl($olive-hue  65% 13%) !default;
+$olive-20:    hsl($olive-hue  65% 19%) !default;
+$olive-30:    hsl($olive-hue  83% 25%) !default;
+$olive-40:    hsl($olive-hue  81% 34%) !default;
+$olive-50:    hsl($olive-hue  80% 42%) !default;
+$olive-60:    hsl($olive-hue  70% 64%) !default;
+$olive-70:    hsl($olive-hue  75% 80%) !default;
+$olive-80:    hsl($olive-hue  75% 87%) !default;
+$olive-90:    hsl($olive-hue  75% 93%) !default;
+$olive-100:   hsl($olive-hue  75% 98%) !default;
+
+$green-0:     hsl($green-hue  80%  8%) !default;
+$green-10:    hsl($green-hue  65% 13%) !default;
+$green-20:    hsl($green-hue  65% 19%) !default;
+$green-30:    hsl($green-hue  68% 25%) !default;
+$green-40:    hsl($green-hue  61% 34%) !default;
+$green-50:    hsl($green-hue  52% 46%) !default;
+$green-60:    hsl($green-hue  55% 72%) !default;
+$green-70:    hsl($green-hue  75% 84%) !default;
+$green-80:    hsl($green-hue  75% 89%) !default;
+$green-90:    hsl($green-hue  75% 94%) !default;
+$green-100:   hsl($green-hue  75% 98%) !default;
+
+$teal-0:      hsl($teal-hue   80%  8%) !default;
+$teal-10:     hsl($teal-hue   65% 13%) !default;
+$teal-20:     hsl($teal-hue   65% 19%) !default;
+$teal-30:     hsl($teal-hue   84% 23%) !default;
+$teal-40:     hsl($teal-hue   84% 31%) !default;
+$teal-50:     hsl($teal-hue   85% 39%) !default;
+$teal-60:     hsl($teal-hue   60% 66%) !default;
+$teal-70:     hsl($teal-hue   75% 82%) !default;
+$teal-80:     hsl($teal-hue   75% 88%) !default;
+$teal-90:     hsl($teal-hue   75% 94%) !default;
+$teal-100:    hsl($teal-hue   75% 98%) !default;
+
+$blue-0:      hsl($blue-hue   80%  8%) !default;
+$blue-10:     hsl($blue-hue   65% 13%) !default;
+$blue-20:     hsl($blue-hue   65% 22%) !default;
+$blue-30:     hsl($blue-hue   60% 31%) !default;
+$blue-40:     hsl($blue-hue   70% 40%) !default;
+$blue-50:     hsl($blue-hue   80% 50%) !default;
+$blue-60:     hsl($blue-hue   78% 72%) !default;
+$blue-70:     hsl($blue-hue   75% 84%) !default;
+$blue-80:     hsl($blue-hue   75% 90%) !default;
+$blue-90:     hsl($blue-hue   75% 93%) !default;
+$blue-100:    hsl($blue-hue   75% 98%) !default;
+
+$indigo-0:    hsl($indigo-hue 80%  8%) !default;
+$indigo-10:   hsl($indigo-hue 60% 13%) !default;
+$indigo-20:   hsl($indigo-hue 60% 23%) !default;
+$indigo-30:   hsl($indigo-hue 55% 36%) !default;
+$indigo-40:   hsl($indigo-hue 55% 48%) !default;
+$indigo-50:   hsl($indigo-hue 83% 63%) !default;
+$indigo-60:   hsl($indigo-hue 90% 77%) !default;
+$indigo-70:   hsl($indigo-hue 95% 88%) !default;
+$indigo-80:   hsl($indigo-hue 90% 93%) !default;
+$indigo-90:   hsl($indigo-hue 75% 95%) !default;
+$indigo-100:  hsl($indigo-hue 75% 98%) !default;
+
+$violet-0:    hsl($violet-hue 80%  8%) !default;
+$violet-10:   hsl($violet-hue 65% 13%) !default;
+$violet-20:   hsl($violet-hue 60% 24%) !default;
+$violet-30:   hsl($violet-hue 50% 37%) !default;
+$violet-40:   hsl($violet-hue 50% 51%) !default;
+$violet-50:   hsl($violet-hue 92% 67%) !default;
+$violet-60:   hsl($violet-hue 91% 78%) !default;
+$violet-70:   hsl($violet-hue 85% 88%) !default;
+$violet-80:   hsl($violet-hue 80% 92%) !default;
+$violet-90:   hsl($violet-hue 75% 95%) !default;
+$violet-100:  hsl($violet-hue 75% 98%) !default;
+
+$purple-0:    hsl($purple-hue 95%  8%) !default;
+$purple-10:   hsl($purple-hue 65% 13%) !default;
+$purple-20:   hsl($purple-hue 65% 22%) !default;
+$purple-30:   hsl($purple-hue 52% 32%) !default;
+$purple-40:   hsl($purple-hue 52% 45%) !default;
+$purple-50:   hsl($purple-hue 70% 60%) !default;
+$purple-60:   hsl($purple-hue 91% 77%) !default;
+$purple-70:   hsl($purple-hue 85% 88%) !default;
+$purple-80:   hsl($purple-hue 75% 92%) !default;
+$purple-90:   hsl($purple-hue 75% 95%) !default;
+$purple-100:  hsl($purple-hue 75% 98%) !default;
+
+$pink-0:      hsl($pink-hue   80%  8%) !default;
+$pink-10:     hsl($pink-hue   65% 13%) !default;
+$pink-20:     hsl($pink-hue   65% 19%) !default;
+$pink-30:     hsl($pink-hue   60% 27%) !default;
+$pink-40:     hsl($pink-hue   60% 39%) !default;
+$pink-50:     hsl($pink-hue   56% 52%) !default;
+$pink-60:     hsl($pink-hue   80% 74%) !default;
+$pink-70:     hsl($pink-hue   75% 86%) !default;
+$pink-80:     hsl($pink-hue   75% 92%) !default;
+$pink-90:     hsl($pink-hue   75% 95%) !default;
+$pink-100:    hsl($pink-hue   75% 98%) !default;
+
+$grey-0:      hsl($grey-hue    8% 8%) !default;
+$grey-10:     hsl($grey-hue    6% 16%) !default;
+$grey-20:     hsl($grey-hue    5% 24%) !default;
+$grey-30:     hsl($grey-hue    6% 32%) !default;
+$grey-40:     hsl($grey-hue    7% 44%) !default;
+$grey-50:     hsl($grey-hue    8% 60%) !default;
+$grey-60:     hsl($grey-hue    9% 75%) !default;
+$grey-70:     hsl($grey-hue   12% 89%) !default;
+$grey-80:     hsl($grey-hue   15% 92%) !default;
+$grey-90:     hsl($grey-hue   20% 95%) !default;
+$grey-100:    hsl($grey-hue   30% 98%) !default;
+
+$red: (
+  '0':   $red-0,
+  '10':  $red-10,
+  '20':  $red-20,
+  '30':  $red-30,
+  '40':  $red-40,
+  '50':  $red-50,
+  '60':  $red-60,
+  '70':  $red-70,
+  '80':  $red-80,
+  '90':  $red-90,
+  '100': $red-100,
+);
+
+$brown: (
+  '0':   $brown-0,
+  '10':  $brown-10,
+  '20':  $brown-20,
+  '30':  $brown-30,
+  '40':  $brown-40,
+  '50':  $brown-50,
+  '60':  $brown-60,
+  '70':  $brown-70,
+  '80':  $brown-80,
+  '90':  $brown-90,
+  '100': $brown-100,
+);
+
+$orange: (
+  '0':   $orange-0,
+  '10':  $orange-10,
+  '20':  $orange-20,
+  '30':  $orange-30,
+  '40':  $orange-40,
+  '50':  $orange-50,
+  '60':  $orange-60,
+  '70':  $orange-70,
+  '80':  $orange-80,
+  '90':  $orange-90,
+  '100': $orange-100,
+);
+
+$yellow: (
+  '0':   $yellow-0,
+  '10':  $yellow-10,
+  '20':  $yellow-20,
+  '30':  $yellow-30,
+  '40':  $yellow-40,
+  '50':  $yellow-50,
+  '60':  $yellow-60,
+  '70':  $yellow-70,
+  '80':  $yellow-80,
+  '90':  $yellow-90,
+  '100': $yellow-100,
+);
+
+$olive: (
+  '0':   $olive-0,
+  '10':  $olive-10,
+  '20':  $olive-20,
+  '30':  $olive-30,
+  '40':  $olive-40,
+  '50':  $olive-50,
+  '60':  $olive-60,
+  '70':  $olive-70,
+  '80':  $olive-80,
+  '90':  $olive-90,
+  '100': $olive-100,
+);
+
+$green: (
+  '0':   $green-0,
+  '10':  $green-10,
+  '20':  $green-20,
+  '30':  $green-30,
+  '40':  $green-40,
+  '50':  $green-50,
+  '60':  $green-60,
+  '70':  $green-70,
+  '80':  $green-80,
+  '90':  $green-90,
+  '100': $green-100,
+);
+
+$teal: (
+  '0':   $teal-0,
+  '10':  $teal-10,
+  '20':  $teal-20,
+  '30':  $teal-30,
+  '40':  $teal-40,
+  '50':  $teal-50,
+  '60':  $teal-60,
+  '70':  $teal-70,
+  '80':  $teal-80,
+  '90':  $teal-90,
+  '100': $teal-100,
+);
+
+$blue: (
+  '0':   $blue-0,
+  '10':  $blue-10,
+  '20':  $blue-20,
+  '30':  $blue-30,
+  '40':  $blue-40,
+  '50':  $blue-50,
+  '60':  $blue-60,
+  '70':  $blue-70,
+  '80':  $blue-80,
+  '90':  $blue-90,
+  '100': $blue-100,
+);
+
+$indigo: (
+  '0':   $indigo-0,
+  '10':  $indigo-10,
+  '20':  $indigo-20,
+  '30':  $indigo-30,
+  '40':  $indigo-40,
+  '50':  $indigo-50,
+  '60':  $indigo-60,
+  '70':  $indigo-70,
+  '80':  $indigo-80,
+  '90':  $indigo-90,
+  '100': $indigo-100,
+);
+
+$violet: (
+  '0':   $violet-0,
+  '10':  $violet-10,
+  '20':  $violet-20,
+  '30':  $violet-30,
+  '40':  $violet-40,
+  '50':  $violet-50,
+  '60':  $violet-60,
+  '70':  $violet-70,
+  '80':  $violet-80,
+  '90':  $violet-90,
+  '100': $violet-100,
+);
+
+$purple: (
+  '0':   $purple-0,
+  '10':  $purple-10,
+  '20':  $purple-20,
+  '30':  $purple-30,
+  '40':  $purple-40,
+  '50':  $purple-50,
+  '60':  $purple-60,
+  '70':  $purple-70,
+  '80':  $purple-80,
+  '90':  $purple-90,
+  '100': $purple-100,
+);
+
+$pink: (
+  '0':   $pink-0,
+  '10':  $pink-10,
+  '20':  $pink-20,
+  '30':  $pink-30,
+  '40':  $pink-40,
+  '50':  $pink-50,
+  '60':  $pink-60,
+  '70':  $pink-70,
+  '80':  $pink-80,
+  '90':  $pink-90,
+  '100': $pink-100,
+);
+
+$grey: (
+  '0':   $grey-0,
+  '10':  $grey-10,
+  '20':  $grey-20,
+  '30':  $grey-30,
+  '40':  $grey-40,
+  '50':  $grey-50,
+  '60':  $grey-60,
+  '70':  $grey-70,
+  '80':  $grey-80,
+  '90':  $grey-90,
+  '100': $grey-100,
+);
+
+$colors: (
+  'red':    $red,
+  'brown':  $brown,
+  'orange': $orange,
+  'yellow': $yellow,
+  'olive':  $olive,
+  'green':  $green,
+  'teal':   $teal,
+  'blue':   $blue,
+  'indigo': $indigo,
+  'violet': $violet,
+  'purple': $purple,
+  'pink':   $pink,
+  'grey':   $grey,
+);
+
+$brand: map.get($colors, $brand-color);
+
+$brand-0:   map.get($brand, '0')   !default;
+$brand-10:  map.get($brand, '10')  !default;
+$brand-20:  map.get($brand, '20')  !default;
+$brand-30:  map.get($brand, '30')  !default;
+$brand-40:  map.get($brand, '40')  !default;
+$brand-50:  map.get($brand, '50')  !default;
+$brand-60:  map.get($brand, '60')  !default;
+$brand-70:  map.get($brand, '70')  !default;
+$brand-80:  map.get($brand, '80')  !default;
+$brand-90:  map.get($brand, '90')  !default;
+$brand-100: map.get($brand, '100') !default;

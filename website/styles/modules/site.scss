@@ -1,0 +1,25 @@
+#site {
+  & > header > nav {
+    color: var(--navbar-text);
+    background-color: var(--navbar-back);
+    height: $navbar-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    font-size: $size-largish;
+    line-height: 1rem;
+    a, .night-and-day--switcher {
+      text-decoration: none;
+      color: var(--navbar-link);
+      &:hover {
+        color: var(--navbar-hover);
+      }
+    }
+  }
+  & > footer {
+    color: var(--footer-text);
+    background-color: var(--footer-back);
+    padding: 1rem;
+  }
+}

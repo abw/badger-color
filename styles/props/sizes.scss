@@ -1,0 +1,5 @@
+:where(html) {
+@each $name, $size in $sizes {
+  --size-#{$name}: #{$size};
+}
+}
