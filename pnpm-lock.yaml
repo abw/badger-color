@@ -4,6 +4,7 @@ specifiers:
   '@abw/badger-filesystem': ^1.0.3
   '@abw/badger-timestamp': ^1.0.4
   '@abw/badger-utils': ^1.0.19
+  '@abw/react-context': ^2.0.3
   '@abw/react-night-and-day': ^0.0.5
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^14.0.0
@@ -13,6 +14,7 @@ specifiers:
   '@vitest/coverage-c8': ^0.31.0
   '@vitest/ui': ^0.31.0
   bezier-easing: ^2.1.0
+  chroma-js: ^2.4.2
   eslint: ^8.37.0
   eslint-plugin-react: ^7.32.2
   jsdom: ^21.1.1
@@ -32,6 +34,7 @@ dependencies:
 devDependencies:
   '@abw/badger-timestamp': 1.0.4
   '@abw/badger-utils': 1.0.19
+  '@abw/react-context': 2.0.3
   '@abw/react-night-and-day': 0.0.5_biqbaboplfbrettd7655fr4n2y
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
@@ -41,6 +44,7 @@ devDependencies:
   '@vitest/coverage-c8': 0.31.4_vitest@0.31.4
   '@vitest/ui': 0.31.4_vitest@0.31.4
   bezier-easing: 2.1.0
+  chroma-js: 2.4.2
   eslint: 8.42.0
   eslint-plugin-react: 7.32.2_eslint@8.42.0
   jsdom: 21.1.2
@@ -78,6 +82,13 @@ packages:
 
   /@abw/badger-utils/1.0.19:
     resolution: {integrity: sha512-rwkfAbhyS4M17Bwu/3tSiSW3kxR2n/43xUc2F6tfmwwd0BZ2NsP457GYHUYdhsxBXTyDc3YNIE18+HnG/Hl5/g==}
+
+  /@abw/react-context/2.0.3:
+    resolution: {integrity: sha512-9kjqEB09vdWh8ZjcIgf8Ci43WrkDIrhRBCm0juDxDfe/5QjPUhrK7A3zjaTkw+qHYvF6+c/kpndLrCjowyLaJA==}
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: true
 
   /@abw/react-night-and-day/0.0.5_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-CiBOTtno1CMNZZ0njY8v19RYq2NyaGbXNTeu9kTeOushQdpzPaUNm04qqFKsYoB5Ag+P+dtaYvTcw2HAR84Euw==}
@@ -1371,6 +1382,10 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /chroma-js/2.4.2:
+    resolution: {integrity: sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==}
     dev: true
 
   /ci-info/3.8.0:

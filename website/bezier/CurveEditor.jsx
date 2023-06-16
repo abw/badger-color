@@ -12,7 +12,11 @@ const CurveEditor = ({
   max, setMax,
   control1, setControl1,
   control2, setControl2,
-  range=100
+  range=100,
+  stops,
+  item,
+  stopRadius=1,
+  stopClass='stop-point'
 }) => {
   const factor = range / 100
   const svgRef = useRef(null)
@@ -65,6 +69,21 @@ const CurveEditor = ({
             x1="100" y1={max / factor} x2={control2.x} y2={control2.y / factor}
             className="control-line"
           />
+          { stops &&
+            Object.entries(stops).map(
+              ([stop, hsl]) => {
+                const x = parseInt(stop)
+                const y = hsl[item] / factor
+                // console.log(`stop ${stop} x:${x} y:${y}`)
+                return (
+                  <circle
+                    cx={x} cy={y} key={stop}
+                    r={stopRadius} className={stopClass}
+                  />
+                )
+              }
+            )
+          }
           <g className="line">
             <polyline className="line" points={
               tPoints.map(
@@ -97,6 +116,12 @@ const CurveEditor = ({
             setCoordinates={moveControl2}
             svgRef={svgRef}
           />
+          <ControlPoint
+            coordinates={{ x: stop, y: 0 }}
+            setCoordinates={xy => setStop(Math.round(xy.x))}
+            maxY={0} radius={2} className="stop-select-point"
+            svgRef={svgRef}
+          />
           <line
             x1={stop} y1={0} x2={stop} y2={100}
             className="stop-line"
@@ -107,65 +132,59 @@ const CurveEditor = ({
           />
         </g>
       </svg>
-      <div className="grid-2 gap-2">
-        <div className="field">
-          <label>Min</label>
-          <input
-            type="number"
-            value={min}
-            onChange={e => setMin(clampRange(e.target.value))}
-          />
+      <div className="grid-2 gap-2 stack-mobile small">
+        <div className="grid-3 gap-2">
+          <div className="field">
+            <label>Min</label>
+            <input
+              type="number"
+              value={min}
+              onChange={e => setMin(clampRange(e.target.value))}
+            />
+          </div>
+          <div className="field">
+            <label>Ctrl X</label>
+            <input
+              type="number"
+              value={control1.x}
+              onChange={e => setControl1({ x: clampRange(e.target.value), y: control1.y })}
+            />
+          </div>
+          <div className="field">
+            <label>Ctrl Y</label>
+            <input
+              type="number"
+              value={control1.y}
+              onChange={e => setControl1({ x: control1.x, y: clampRange(e.target.value) })}
+            />
+          </div>
         </div>
-        <div className="field">
-          <label>Max</label>
-          <input
-            type="number"
-            value={max}
-            onChange={e => setMax(clampRange(e.target.value))}
-          />
+        <div className="grid-3 gap-2">
+          <div className="field">
+            <label>Max</label>
+            <input
+              type="number"
+              value={max}
+              onChange={e => setMax(clampRange(e.target.value))}
+            />
+          </div>
+          <div className="field">
+            <label>X</label>
+            <input
+              type="number"
+              value={control2.x}
+              onChange={e => setControl2({ x: clampRange(e.target.value), y: control2.y })}
+            />
+          </div>
+          <div className="field">
+            <label>Y</label>
+            <input
+              type="number"
+              value={control2.y}
+              onChange={e => setControl2({ x: control2.x, y: clampRange(e.target.value) })}
+            />
+          </div>
         </div>
-      </div>
-      <div className="grid-4 gap-2">
-        <div className="field">
-          <label>X</label>
-          <input
-            type="number"
-            value={control1.x}
-            onChange={e => setControl1({ x: clampRange(e.target.value), y: control1.y })}
-          />
-        </div>
-        <div className="field">
-          <label>Y</label>
-          <input
-            type="number"
-            value={control1.y}
-            onChange={e => setControl1({ x: control1.x, y: clampRange(e.target.value) })}
-          />
-        </div>
-        <div className="field">
-          <label>X</label>
-          <input
-            type="number"
-            value={control2.x}
-            onChange={e => setControl2({ x: clampRange(e.target.value), y: control2.y })}
-          />
-        </div>
-        <div className="field">
-          <label>Y</label>
-          <input
-            type="number"
-            value={control2.y}
-            onChange={e => setControl2({ x: control2.x, y: clampRange(e.target.value) })}
-          />
-        </div>
-      </div>
-      <div className="field">
-        <label>Stop: {stop} = {Math.round(stopY)}</label>
-        <input
-          type="range"
-          min="0" max="100" step="1"
-          value={stop} onChange={e => setStop(e.target.value)}
-        />
       </div>
     </div>
   )

@@ -16,14 +16,14 @@
     overflow-y: scroll;
     // box-shadow: var(--shadow-1);
   }
-  aside {
+  & > aside {
     $padding: 0.5rem;
     background-color: var(--app-side-back);
     padding: $padding 0 $padding $padding;
     flex-basis: 320px;
     transition: margin 300ms ease-in-out;
   }
-  main {
+  & > main {
     background-color: var(--app-main-back);
     margin-left: 0;
     flex-basis: 100%;

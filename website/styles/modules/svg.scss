@@ -1,5 +1,5 @@
 div.chart {
-  max-width: 600px;
+  // max-width: 600px;
   margin: 0 auto;
   svg {
     width: 100%;
@@ -11,8 +11,8 @@ div.chart {
 }
 
 svg.chart {
-  $ease-color: #c82;
   --control-color: var(--blue-50);
+  --stop-color: var(--indigo-50);
   background-color: white;
   margin: 0.5rem 0;
   border: 1px solid var(--grey-60);
@@ -46,6 +46,21 @@ svg.chart {
     stroke: var(--red-50);
     fill: var(--red-70);
     opacity: 0.4;
+    &.hover {
+      opacity: 0.8;
+    }
+  }
+  .stop-point {
+    stroke-width: 0.5;
+    stroke: var(--indigo-50);
+    fill: var(--indigo-70);
+    opacity: 0.8;
+  }
+  .stop-select-point {
+    stroke-width: 1;
+    stroke: var(--violet-50);
+    fill: var(--violet-70);
+    opacity: 0.5;
     &.hover {
       opacity: 0.8;
     }

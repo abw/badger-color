@@ -42,6 +42,7 @@
   "devDependencies": {
     "@abw/badger-timestamp": "^1.0.4",
     "@abw/badger-utils": "^1.0.19",
+    "@abw/react-context": "^2.0.3",
     "@abw/react-night-and-day": "^0.0.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -51,6 +52,7 @@
     "@vitest/coverage-c8": "^0.31.0",
     "@vitest/ui": "^0.31.0",
     "bezier-easing": "^2.1.0",
+    "chroma-js": "^2.4.2",
     "eslint": "^8.37.0",
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^21.1.1",

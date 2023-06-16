@@ -3,6 +3,8 @@ import CurveEditor from './CurveEditor.jsx'
 import { range } from '@abw/badger-utils'
 import { bezier, bezierInverse } from '../utils/curves.js'
 
+// DEPRECATED - moved to ../palette/RangeEdit
+
 const HSLCurveEditor = () => {
   const [hMin, setHMin] = useState(30)
   const [hMax, setHMax] = useState(40)
@@ -131,7 +133,7 @@ const HSLCurveEditor = () => {
   )
 }
 
-const KeyValue = ({k, v}) =>
+const KeyValue = ({v}) =>
   <div className="value">{v}</div>
 
 
