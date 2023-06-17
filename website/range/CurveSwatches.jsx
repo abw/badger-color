@@ -10,12 +10,12 @@ const CurveSwatches = () => {
   return (
     <div className="swatches">
       { numberRange(0, 100, options.show5s ? 5 : 10).map(
-        n => <Swatch
-          key={n}
-          stop={n}
-          color={hslAtStop(n)}
-          showInfo={options.info}
-        />
+        n =>
+          <Swatch
+            key={n}
+            stop={n}
+            color={hslAtStop(n)}
+          />
       )}
     </div>
   )

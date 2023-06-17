@@ -15,7 +15,6 @@ const StopSwatches = () => {
             key={n}
             stop={n}
             color={range.stops[n]}
-            showInfo={options.info}
           />
       )}
     </div>

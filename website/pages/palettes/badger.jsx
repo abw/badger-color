@@ -1,8 +1,8 @@
 import React from 'react'
-import palette from '../../../config/palette/abw.json'
+import palette from '../../../config/palette/badger.json'
 import Palette from '../../palette/index.jsx'
 
-const Abw = () =>
+const Badger = () =>
   <Palette palette={palette}/>
 
-export default Abw
+export default Badger

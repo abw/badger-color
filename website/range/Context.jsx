@@ -4,14 +4,16 @@ import { usePalette } from '../palette/Context.jsx'
 import { bezier, bezierInverse } from '../utils/curves.js'
 import { setHex } from '../../lib/utils/color.js'
 
-const Context = ({name, render}) => {
-  const { palette, saveRange } = usePalette()
+const Context = ({render}) => {
+  const { palette, saveRange, editingRange: name } = usePalette()
   const [range, setRange] = useState(palette.ranges[name])
   const [open, setOpen] = useState(false)
   const [editing, setEditing] = useState(false)
   const toggleOpen = () => setOpen(! open)
   const toggleEditing = () => setEditing(! editing)
-  const save = () => saveRange(range)
+
+  const reset = () => setRange(palette.ranges[name])
+  const save  = () => saveRange(range)
 
   // functions to update curves
   const setCurves = curves => setRange( range => ({ ...range, curves }) )
@@ -96,17 +98,27 @@ const Context = ({name, render}) => {
       { }
     )
   )
+  const curvesToStops = () => setStops(
+    Object.keys(range.stops).reduce(
+      (stops, stop) => {
+        stops[stop] = setHex(
+          hslAtStop(stop)
+        )
+        return stops
+      },
+      { }
+    )
+  )
   const hCurveToStops = () => curveToStops('h')
   const sCurveToStops = () => curveToStops('s')
   const lCurveToStops = () => curveToStops('l')
-
 
   return render({
     range, setRange,
     open, setOpen,
     editing, setEditing,
     toggleOpen, toggleEditing,
-    save,
+    reset, save,
     setHMin, setHMax, setHMinControl, setHMaxControl,
     setSMin, setSMax, setSMinControl, setSMaxControl,
     setLMin, setLMax, setLMinControl, setLMaxControl,
@@ -114,7 +126,8 @@ const Context = ({name, render}) => {
     setHStop, setSStop, setLStop,
     resetHStops, resetSStops, resetLStops,
     hAtStop, sAtStop, lAtStop, hslAtStop,
-    hCurveToStops, sCurveToStops, lCurveToStops
+    hCurveToStops, sCurveToStops, lCurveToStops,
+    curvesToStops
   })
 }
 

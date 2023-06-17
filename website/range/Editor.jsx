@@ -5,9 +5,14 @@ import Lightness from './Lightness.jsx'
 import StopSwatches from './StopSwatches.jsx'
 import CurveSwatches from './CurveSwatches.jsx'
 import Controls from './Controls.jsx'
+import Swatches from './Swatches.jsx'
+import { Consumer } from './Context.jsx'
 
-const Editor = () =>
+const Editor = ({ range }) =>
   <div className="range-editor">
+    <h2>{range.name}</h2>
+    <h3>Current</h3>
+    <Swatches/>
     <h3>Stops</h3>
     <StopSwatches/>
     <h3>Curve</h3>
@@ -20,4 +25,4 @@ const Editor = () =>
     <Controls/>
   </div>
 
-export default Editor
+export default Consumer(Editor)

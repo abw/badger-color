@@ -1,10 +1,10 @@
 import React from 'react'
 import { Provider } from './Context.jsx'
-import Range from './Range.jsx'
+import Editor from './Editor.jsx'
 
-const Index = ({name}) =>
-  <Provider name={name}>
-    <Range/>
+const Index = () =>
+  <Provider>
+    <Editor/>
   </Provider>
 
 export default Index

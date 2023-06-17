@@ -1,28 +1,15 @@
 import React from 'react'
-import Ranges from './Ranges.jsx'
+import Header from './Header.jsx'
+import Main from './Main.jsx'
+import Footer from './Footer.jsx'
 import { Provider } from './Context.jsx'
 
 const Palette = ({palette}) =>
   <Provider source={palette}>
     <section className="palette">
-      <header>
-        <h1>{palette.name}</h1>
-        <div className="info">
-          { palette.comment &&
-            <div className="comment">
-              {palette.comment}
-            </div>
-          }
-          { palette.source &&
-            <div className="source">
-              From: <a href={palette.source}>{palette.source}</a>
-            </div>
-          }
-        </div>
-      </header>
-      <main>
-        <Ranges/>
-      </main>
+      <Header/>
+      <Main/>
+      <Footer/>
     </section>
   </Provider>
 

@@ -6,35 +6,35 @@ const Context = ({source, render}) => {
   const [options, setOptions] = useState({
     names:  false,
     info:   false,
+    grey:   false,
     show5s: false
   })
-  const saveRange = range => {
-    // setPalette({
-    const newPalette = ({
+  const saveRange = range => setPalette(
+    palette => ({
       ...palette,
       ranges: {
         ...palette.ranges,
         [range.name]: range
       }
     })
-    console.log(`newPalette:`, newPalette)
-    setPalette(palette)
-  }
-  const setOption = (name, value) =>
-    setOptions({ ...options, [name]: value })
-  const toggleOption = name =>
-    setOption(name, ! options[name])
+  )
+  const setOption = (name, value) => setOptions({ ...options, [name]: value })
+  const toggleOption = name => setOption(name, ! options[name])
   const toggler = name => () => toggleOption(name)
   const toggleNames  = toggler('names')
   const toggleInfo   = toggler('info')
+  const toggleGrey   = toggler('grey')
   const toggleShow5s = toggler('show5s')
+
+  const [editingRange, setEditingRange] = useState(false)
 
   return render({
     palette,
     options,
     saveRange,
     setOption, toggleOption,
-    toggleNames, toggleInfo, toggleShow5s
+    toggleNames, toggleInfo, toggleShow5s, toggleGrey,
+    editingRange, setEditingRange
   })
 }
 

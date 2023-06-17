@@ -18,7 +18,7 @@ export const Bezier = [
   { to: '/bezier', text: 'Bezier Editor' },
 ]
 export const Palettes = [
-  { to: '/palettes/abw',      text: 'abw' },
+  { to: '/palettes/badger',   text: 'Badger' },
   { to: '/palettes/colar',    text: 'Colar' },
   { to: '/palettes/tailwind', text: 'Tailwind' },
 ]
