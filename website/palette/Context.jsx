@@ -27,6 +27,7 @@ const Context = ({source, render}) => {
   const toggleShow5s = toggler('show5s')
 
   const [editingRange, setEditingRange] = useState(false)
+  const editRange = name => setEditingRange(editingRange === name ? false : name)
 
   return render({
     palette,
@@ -34,7 +35,7 @@ const Context = ({source, render}) => {
     saveRange,
     setOption, toggleOption,
     toggleNames, toggleInfo, toggleShow5s, toggleGrey,
-    editingRange, setEditingRange
+    editingRange, setEditingRange, editRange
   })
 }
 
