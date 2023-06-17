@@ -22,6 +22,7 @@ section.palette {
     h2 {
       font-size: $size-medium;
       margin-top: 0.5rem;
+      margin-bottom: 0;
     }
     h3 {
       font-size: $size-small;
@@ -57,11 +58,17 @@ section.palette {
     cursor: pointer;
     .swatch {
       font-size: $size-small;
-      padding: 0.25em 0.5em;
+      padding: 0.5em;
       min-height: 3rem;
       .info {
-        font-size: $size-smaller;
-        opacity: 0.8;
+        .stop {
+          font-size: $size-small;
+          margin-bottom: 1em;
+        }
+        .specs {
+          font-size: $size-smaller;
+          opacity: 0.8;
+        }
       }
       &.grey {
         min-height: 2rem;
@@ -75,9 +82,6 @@ section.palette {
         align-items: center;
         justify-content: center;
       }
-    }
-    .info {
-      font-size: $size-small;
     }
   }
   .range-editor {

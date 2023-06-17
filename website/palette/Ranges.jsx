@@ -1,19 +1,14 @@
-import React, { useState } from 'react'
-import Range from './Range.jsx'
+import React from 'react'
+import Range from '../range/index.jsx'
 import Checkbox from '../ui/Checkbox.jsx'
+import { usePalette } from './Context.jsx'
 
-const Ranges = ({palette}) => {
-  const [options, setOptions] = useState({
-    names:  false,
-    stops:  false,
-    info:   false,
-    split5: false
-  })
-  const setOption = (name, value) =>
-    setOptions({ ...options, [name]: value })
-  const toggleOption = name =>
-    setOption(name, ! options[name])
-  const toggler = name => () => toggleOption(name)
+const Ranges = () => {
+  const {
+    palette,
+    options,
+    toggleNames, toggleInfo, toggleShow5s
+  } = usePalette()
 
   return (
     <div className="ranges">
@@ -21,30 +16,22 @@ const Ranges = ({palette}) => {
         <Checkbox
           label="Show Names"
           checked={options.names}
-          toggle={toggler('names')}
-        />
-        <Checkbox
-          label="Show Stops"
-          checked={options.stops}
-          toggle={toggler('stops')}
+          toggle={toggleNames}
         />
         <Checkbox
           label="Show Info"
           checked={options.info}
-          toggle={toggler('info')}
+          toggle={toggleInfo}
         />
         <Checkbox
-          label="Split 5"
-          checked={options.split5}
-          toggle={toggler('split5')}
+          label="Show 5s"
+          checked={options.show5s}
+          toggle={toggleShow5s}
         />
       </div>
-      { Object.values(palette.ranges).map(
-        range =>
-          <Range
-            key={range.name} range={range}
-            options={options}
-          />
+      { Object.keys(palette.ranges).map(
+        name =>
+          <Range key={name} name={name}/>
       )}
     </div>
   )

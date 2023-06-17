@@ -4,10 +4,11 @@ import Editor from '../editor/index.jsx'
 const Range = ({range, options}) => {
   const [open, setOpen] = useState(false)
   const [editing, setEditing] = useState(false)
+  const toggleOpen = () => setOpen(! open)
   const toggleEditing = () => setEditing(! editing)
   return (
     <div className="range">
-      { options.names &&
+      { (options.names || open) &&
         <h2>{range.name}</h2>
       }
       { editing && <h3>Current</h3> }
@@ -35,6 +36,9 @@ const Range = ({range, options}) => {
             </div>
         )}
       </div>
+      { open &&
+
+}
       { editing &&
         <Editor
           range={range}
