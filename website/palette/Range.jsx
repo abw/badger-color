@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import RangeEditor from './RangeEditor.jsx'
+import Editor from '../editor/index.jsx'
 
 const Range = ({range, options}) => {
+  const [open, setOpen] = useState(false)
   const [editing, setEditing] = useState(false)
   const toggleEditing = () => setEditing(! editing)
   return (
@@ -9,7 +10,8 @@ const Range = ({range, options}) => {
       { options.names &&
         <h2>{range.name}</h2>
       }
-      <div className="swatches" onClick={toggleEditing}>
+      { editing && <h3>Current</h3> }
+      <div className="swatches" onClick={toggleOpen}>
         { Object.entries(range.stops).map(
           ([stop, color]) =>
             <div
@@ -34,7 +36,7 @@ const Range = ({range, options}) => {
         )}
       </div>
       { editing &&
-        <RangeEditor
+        <Editor
           range={range}
           options={options}
           toggleEditing={toggleEditing}

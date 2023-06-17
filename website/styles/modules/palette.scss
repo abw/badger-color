@@ -23,19 +23,25 @@ section.palette {
       font-size: $size-medium;
       margin-top: 0.5rem;
     }
+    h3 {
+      font-size: $size-small;
+      margin-top: 0.5rem;
+    }
     .options {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
+      user-select: none;
+      // margin-bottom: 1rem;
       label {
-        display: block;
-        padding: 0.125rem 0.5rem;
+        display: flex;
+        align-items: center;
+        padding: 0.25rem 0.5rem;
         // font-size: $size-largish;
         background-color: var(--option-back);
         border: 1px solid var(--option-border);
         border-radius: 4px;
         transition: all 0.25s;
+        line-height: 1;
         input {
           margin-right: 0.5em;
         }
@@ -62,6 +68,13 @@ section.palette {
         padding: 0.125rem 0.5rem;
         font-size: $size-smaller;
       }
+      &.none {
+        background-color: var(--grey-90);
+        color: var(--grey-20);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
     .info {
       font-size: $size-small;
@@ -69,19 +82,19 @@ section.palette {
   }
   .range-editor {
     margin-bottom: 1rem;
-    .swatches {
-      margin-top: 0.25rem;
-    }
   }
 }
 
 #site.dark {
   color-scheme: dark;
-  div.curve-editor {
-    div.radio-buttons {
-      label {
-        border-color: var(--grey-40);
-        background-color: var(--grey-20);
+  section.palette {
+    --option-back: var(--grey-0);
+    --option-border: var(--grey-30);
+    --option-hover-back: black;
+    .swatches {
+      .swatch.none {
+        background-color: var(--grey-10);
+        color: var(--grey-80);
       }
     }
   }

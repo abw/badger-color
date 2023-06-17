@@ -13,6 +13,7 @@ div.chart {
 svg.chart {
   --control-color: var(--blue-50);
   --stop-color: var(--indigo-50);
+  user-select: none;
   background-color: white;
   margin: 0.5rem 0;
   border: 1px solid var(--grey-60);
@@ -52,9 +53,12 @@ svg.chart {
   }
   .stop-point {
     stroke-width: 0.5;
-    stroke: var(--indigo-50);
-    fill: var(--indigo-70);
-    opacity: 0.8;
+    stroke: var(--pink-40);
+    fill: var(--pink-80);
+    opacity: 0.5;
+    &:hover {
+      opacity: 0.9;
+    }
   }
   .stop-select-point {
     stroke-width: 1;
@@ -64,6 +68,10 @@ svg.chart {
     &.hover {
       opacity: 0.8;
     }
+  }
+  .stop-text {
+    font-size: 4px;
+    fill: var(--violet-50);
   }
   .control-point {
     stroke-width: 1;
@@ -103,6 +111,13 @@ svg.chart {
     }
     .control-point {
       fill: var(--blue-30);
+    }
+    .stop-select-point {
+      fill: var(--violet-30);
+    }
+    .stop-point {
+      stroke: var(--pink-60);
+      fill: var(--pink-20);
     }
   }
 }

@@ -17,7 +17,7 @@ const Ranges = ({palette}) => {
 
   return (
     <div className="ranges">
-      <div className="options">
+      <div className="options gap-4 mar-b-4">
         <Checkbox
           label="Show Names"
           checked={options.names}
