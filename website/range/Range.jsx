@@ -1,13 +1,11 @@
 import React from 'react'
 import Swatches from './Swatches.jsx'
-import Editor from '../editor/index.jsx'
+import Editor from './Editor.jsx'
 import { useRange } from './Context.jsx'
 import { usePalette } from '../palette/Context.jsx'
 
 const Range = () => {
-  const {
-    options
-  } = usePalette()
+  const { options } = usePalette()
   const {
     range,
     open,
@@ -24,8 +22,6 @@ const Range = () => {
       <Swatches/>
       { editing &&
         <Editor
-          range={range}
-          options={options}
           toggleEditing={toggleEditing}
         />
       }

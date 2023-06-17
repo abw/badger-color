@@ -28,6 +28,9 @@ section.palette {
       font-size: $size-small;
       margin-top: 0.5rem;
     }
+    h2 + h3 {
+      margin-top: 0;
+    }
     .options {
       display: flex;
       align-items: center;

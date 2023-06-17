@@ -5,8 +5,8 @@ const Swatch = ({color, stop, showInfo}) =>
   <div
     className="swatch"
     style={{
-      backgroundColor: `hsl(${color.h} ${color.s}% ${color.l}%)`,
-      // backgroundColor: `${color.hex}`,
+      // backgroundColor: `hsl(${color.h} ${color.s}% ${color.l}%)`,
+      backgroundColor: `${color.hex}`,
       color: stop > 50 ? 'black' : 'white'
     }}
   >

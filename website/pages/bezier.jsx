@@ -1,9 +1,10 @@
 import React from 'react'
-import HSLCurveEditor from '../bezier/HSLCurveEditor.jsx'
+// import HSLCurveEditor from '../bezier/HSLCurveEditor.jsx'
 
 const Bezier = () => {
   return (
-    <HSLCurveEditor/>
+    <h1>WORKING....</h1>
+    // <HSLCurveEditor/>
   )
 }
 

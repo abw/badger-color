@@ -4,6 +4,7 @@ import { range as numberRange } from '@abw/badger-utils'
 import { clamper } from '../utils/clamp.js'
 import { bezier, bezierInverse } from '../utils/curves.js'
 import Checkbox from '../ui/Checkbox.jsx'
+import { usePalette } from '../palette/Context.jsx'
 
 const gridLines = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 const tPoints = numberRange(0, 100)
@@ -14,7 +15,7 @@ const CurveEditor = ({
   max, setMax,
   control1, setControl1,
   control2, setControl2,
-  range=100,
+  scale=100,
   stops,
   setStop,
   item,
@@ -22,7 +23,8 @@ const CurveEditor = ({
   stopClass='stop-point',
   resetCurve, resetStops, curveToStops
 }) => {
-  const factor = range / 100
+  const { options } = usePalette()
+  const factor = scale / 100
   const svgRef = useRef(null)
   const [showCurve, setShowCurve] = useState(true)
   const [showStops, setShowStops] = useState(true)
@@ -32,7 +34,7 @@ const CurveEditor = ({
   const stopY = bezier(stopTime, min, control1.y, control2.y, max)
   // console.log(`stopTime:${stopTime} from ${start.y} via ${control1.y} and ${control2.y} to ${end.y} is ${stopY}`);
 
-  const clampRange = clamper(0, range)
+  const clampRange = clamper(0, scale)
 
   const moveStart = newStart => {
     setMin(Math.round(newStart.y * factor))
@@ -89,25 +91,18 @@ const CurveEditor = ({
           <rect x="0" y="0" width="100" height="100" className="border"/>
           { stops && showStops &&
             <g>
-              { Object.entries(stops).map(
-                ([stop, hsl]) => {
-                  const x = parseInt(stop)
+              { numberRange(0, 100, options.show5s ? 5 : 10).map(
+                x => {
+                  const hsl = stops[x]
                   const y = hsl[item] / factor
-                  // console.log(`stop ${stop} x:${x} y:${y}`)
                   return (
                     <ControlPoint
-                      key={stop}
+                      key={x}
                       coordinates={{ x, y }}
-                      setCoordinates={xy => setStop(stop, Math.round(xy.y * factor))}
+                      setCoordinates={xy => setStop(x, Math.round(xy.y * factor))}
                       minX={x} maxX={x} radius={stopRadius} className={stopClass}
                       svgRef={svgRef}
                     />
-                    /*
-                    <circle
-                      cx={x} cy={y} key={stop}
-                      r={stopRadius} className={stopClass}
-                    />
-                    */
                   )
                 }
               )}

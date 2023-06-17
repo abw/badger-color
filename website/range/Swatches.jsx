@@ -6,21 +6,22 @@ import Swatch from '../color/Swatch.jsx'
 
 const Swatches = () => {
   const {
+    palette,
     options
   } = usePalette()
   const {
     range,
-    toggleOpen
+    toggleEditing
   } = useRange()
 
   return (
-    <div className="swatches" onClick={toggleOpen}>
+    <div className="swatches" onClick={toggleEditing}>
       { numberRange(0, 100, options.show5s ? 5 : 10).map(
         stop =>
           <Swatch
             key={stop}
             stop={stop}
-            color={range.stops[stop]}
+            color={palette.ranges[range.name].stops[stop]}
             showInfo={options.info}
           />
       )}
