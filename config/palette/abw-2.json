@@ -1,4 +1,7 @@
 {
+  "name": "abw-2",
+  "comment": "Palette #2 created by Andy Wardley",
+  "source": "",
   "ranges": {
     "red": {
       "name": "red",
@@ -58,6 +61,44 @@
           "h": 0,
           "s": 75,
           "l": 98
+        }
+      },
+      "curves": {
+        "h": {
+          "min": 0,
+          "max": 0,
+          "minControl": {
+            "x": 30,
+            "y": 0
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 0
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 75
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 75
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 28
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 80
+          }
         }
       }
     },
@@ -120,6 +161,44 @@
           "s": 55,
           "l": 98
         }
+      },
+      "curves": {
+        "h": {
+          "min": 15,
+          "max": 15,
+          "minControl": {
+            "x": 30,
+            "y": 15
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 15
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 55,
+          "minControl": {
+            "x": 30,
+            "y": 65
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 75
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 28
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 79
+          }
+        }
       }
     },
     "orange": {
@@ -180,6 +259,44 @@
           "h": 25,
           "s": 75,
           "l": 98
+        }
+      },
+      "curves": {
+        "h": {
+          "min": 25,
+          "max": 25,
+          "minControl": {
+            "x": 30,
+            "y": 25
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 25
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 84
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 80
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 32
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 80
+          }
         }
       }
     },
@@ -242,6 +359,44 @@
           "s": 75,
           "l": 98
         }
+      },
+      "curves": {
+        "h": {
+          "min": 45,
+          "max": 45,
+          "minControl": {
+            "x": 30,
+            "y": 45
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 45
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 95
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 82
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 30
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 80
+          }
+        }
       }
     },
     "olive": {
@@ -302,6 +457,44 @@
           "h": 70,
           "s": 75,
           "l": 98
+        }
+      },
+      "curves": {
+        "h": {
+          "min": 70,
+          "max": 70,
+          "minControl": {
+            "x": 30,
+            "y": 70
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 70
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 83
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 75
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 25
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 80
+          }
         }
       }
     },
@@ -364,6 +557,44 @@
           "s": 75,
           "l": 98
         }
+      },
+      "curves": {
+        "h": {
+          "min": 120,
+          "max": 120,
+          "minControl": {
+            "x": 30,
+            "y": 120
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 120
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 68
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 75
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 25
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 84
+          }
+        }
       }
     },
     "teal": {
@@ -424,6 +655,44 @@
           "h": 165,
           "s": 75,
           "l": 98
+        }
+      },
+      "curves": {
+        "h": {
+          "min": 165,
+          "max": 165,
+          "minControl": {
+            "x": 30,
+            "y": 165
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 165
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 84
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 75
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 23
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 82
+          }
         }
       }
     },
@@ -486,6 +755,44 @@
           "s": 75,
           "l": 98
         }
+      },
+      "curves": {
+        "h": {
+          "min": 200,
+          "max": 200,
+          "minControl": {
+            "x": 30,
+            "y": 200
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 200
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 60
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 75
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 31
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 84
+          }
+        }
       }
     },
     "indigo": {
@@ -546,6 +853,44 @@
           "h": 230,
           "s": 75,
           "l": 98
+        }
+      },
+      "curves": {
+        "h": {
+          "min": 230,
+          "max": 230,
+          "minControl": {
+            "x": 30,
+            "y": 230
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 230
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 55
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 95
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 36
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 88
+          }
         }
       }
     },
@@ -608,6 +953,44 @@
           "s": 75,
           "l": 98
         }
+      },
+      "curves": {
+        "h": {
+          "min": 255,
+          "max": 255,
+          "minControl": {
+            "x": 30,
+            "y": 255
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 255
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 50
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 85
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 37
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 88
+          }
+        }
       }
     },
     "purple": {
@@ -668,6 +1051,44 @@
           "h": 280,
           "s": 75,
           "l": 98
+        }
+      },
+      "curves": {
+        "h": {
+          "min": 280,
+          "max": 280,
+          "minControl": {
+            "x": 30,
+            "y": 280
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 280
+          }
+        },
+        "s": {
+          "min": 95,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 52
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 85
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 32
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 88
+          }
         }
       }
     },
@@ -730,6 +1151,44 @@
           "s": 75,
           "l": 98
         }
+      },
+      "curves": {
+        "h": {
+          "min": 320,
+          "max": 320,
+          "minControl": {
+            "x": 30,
+            "y": 320
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 320
+          }
+        },
+        "s": {
+          "min": 80,
+          "max": 75,
+          "minControl": {
+            "x": 30,
+            "y": 60
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 75
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 27
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 86
+          }
+        }
       }
     },
     "grey": {
@@ -778,6 +1237,40 @@
         "100": {
           "s": 30,
           "l": 98
+        }
+      },
+      "curves": {
+        "h": {
+          "minControl": {
+            "x": 30
+          },
+          "maxControl": {
+            "x": 70
+          }
+        },
+        "s": {
+          "min": 8,
+          "max": 30,
+          "minControl": {
+            "x": 30,
+            "y": 6
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 12
+          }
+        },
+        "l": {
+          "min": 8,
+          "max": 98,
+          "minControl": {
+            "x": 30,
+            "y": 32
+          },
+          "maxControl": {
+            "x": 70,
+            "y": 89
+          }
         }
       }
     }
