@@ -1,0 +1,16 @@
+$input-border-width:     1px !default;
+$input-border-radius:    $unit-radius !default;
+$input-padding:          0.5em 1em !default;
+
+input[type="text"] {
+  display:            inline-block;
+  border:             $input-border-width solid var(--grey-50);
+  border-radius:      $input-border-radius;
+  padding:            $input-padding !important;
+  font-size:          1rem !important;
+  line-height:        1 !important;
+  margin:             0;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}

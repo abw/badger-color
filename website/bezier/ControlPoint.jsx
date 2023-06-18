@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { clamper } from '../utils/clamp.js'
+import { clamper } from '../../lib/utils/index.js'
 import { useRef } from 'react'
 
 const ControlPoint = ({

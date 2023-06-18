@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Generator } from '@abw/react-context'
 import { usePalette } from '../palette/Context.jsx'
-import { bezier, bezierInverse } from '../utils/curves.js'
+import { bezier, bezierInverse } from '../../lib/utils/bezier.js'
 import { setHex } from '../../lib/utils/color.js'
 
 const Context = ({render}) => {

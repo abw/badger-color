@@ -1,12 +1,11 @@
 import React, { useState, useRef } from 'react'
 import ControlPoint from '../bezier/ControlPoint.jsx'
 import { range as numberRange } from '@abw/badger-utils'
-import { clamper } from '../utils/clamp.js'
-import { bezier, bezierInverse } from '../utils/curves.js'
 import Checkbox from '../ui/Checkbox.jsx'
 import { usePalette } from '../palette/Context.jsx'
 import LockedPoint from './LockedPoint.jsx'
 import Button from '../ui/Button.jsx'
+import { bezier, bezierInverse, clamper } from '../../lib/utils/index.js'
 
 const gridLines = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 const tPoints = numberRange(0, 100)

@@ -4,7 +4,7 @@ import Icon from './Icon.jsx'
 
 const Button = ({
   text,
-  iconLeft, iconRight,
+  icon, iconLeft, iconRight,
   color,
   className,
   onClick,
@@ -25,6 +25,9 @@ const Button = ({
     >
       { iconLeft &&
         <Icon name={iconLeft} className="icon-left"/>
+      }
+      { icon &&
+        <Icon name={icon} className="icon-only"/>
       }
       {text}
       { iconRight &&
