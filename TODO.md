@@ -10,4 +10,4 @@
 * save palette
 * load palette
 * export palette
-* compress / decompress / base64 in URL
+* greyscales - select color and desat

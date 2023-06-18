@@ -1,6 +1,9 @@
 import React from 'react'
 import Checkbox from '../ui/Checkbox.jsx'
+import Button from '../ui/Button.jsx'
 import { usePalette } from './Context.jsx'
+import { sleep } from '@abw/badger-utils'
+import { useState } from 'react'
 
 const Header = () => {
   const {
@@ -8,6 +11,12 @@ const Header = () => {
     options,
     toggleNames, toggleInfo, toggleShow5s, toggleGrey
   } = usePalette()
+  const [copied, setCopied] = useState(false)
+  const copy = (text) => {
+    navigator.clipboard.writeText(text)
+    setCopied(true)
+    sleep(2000).then(() => setCopied(false))
+  }
 
   return (
     <header>
@@ -28,15 +37,34 @@ const Header = () => {
           </div>
         </div>
         <div>
+          { copied
+            ? <Button
+                text="Copied"
+                iconRight="check"
+                color="violet"
+                className="wd-8"
+                solid
+              />
+            : <Button
+                text="Copy"
+                iconRight="clipboard"
+                color="violet"
+                className="wd-8"
+                onClick={() => copy(JSON.stringify(palette, null, 2))}
+              />
+          }
+          {/*
           <button
+            className="mar-l-2"
             onClick={
               () => navigator.clipboard.writeText(
-                JSON.stringify(palette, null, 2)
+                base64CompressedPalette(palette)
               )
             }
           >
-            Copy to Clipboard
+            Copy Compressed
           </button>
+          */}
         </div>
       </div>
       <div className="options gap-4 mar-v-4">
