@@ -92,21 +92,23 @@ const Context = ({render}) => {
   const curveToStops = item => setStops(
     Object.entries(range.stops).reduce(
       (stops, [stop, color]) => {
-        stops[stop] = setHex({
-          ...color,
-          [item]: atStop(stop, range.curves[item])
-        })
+        stops[stop] = color.locked
+          ? color
+          : setHex({
+            ...color,
+            [item]: atStop(stop, range.curves[item])
+          })
         return stops
       },
       { }
     )
   )
   const curvesToStops = () => setStops(
-    Object.keys(range.stops).reduce(
-      (stops, stop) => {
-        stops[stop] = setHex(
-          hslAtStop(stop)
-        )
+    Object.entries(range.stops).reduce(
+      (stops, [stop, color]) => {
+        stops[stop] = color.locked
+          ? color
+          : setHex( hslAtStop(stop) )
         return stops
       },
       { }
