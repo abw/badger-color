@@ -13,6 +13,8 @@ div.chart {
 svg.chart {
   --control-color: var(--blue-50);
   --stop-color: var(--indigo-50);
+  --locked-stroke: var(--grey-60);
+  --locked-fill: var(--grey-70);
   user-select: none;
   background-color: white;
   margin: 0.5rem 0;
@@ -81,6 +83,12 @@ svg.chart {
     &.hover {
       opacity: 0.8;
     }
+  }
+  .locked-point {
+    stroke-width: 0.5;
+    stroke: var(--locked-stroke);
+    fill: var(--locked-fill);
+    opacity: 0.8;
   }
   .control-line {
     stroke: var(--control-color);

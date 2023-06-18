@@ -45,11 +45,14 @@ const Context = ({render}) => {
   const resetLCurve = () => setLCurve(palette.ranges[name].curves.l)
 
   // functions to update stops
-  const setStops = stops => setRange( range => ({ ...range, stops }) )
-  const setStop  = (stop, color) => setStops({ ...range.stops, [stop]: setHex(color) })
-  const setHStop = (stop, h) => setStop(stop, { ...range.stops[stop], h })
-  const setSStop = (stop, s) => setStop(stop, { ...range.stops[stop], s })
-  const setLStop = (stop, l) => setStop(stop, { ...range.stops[stop], l })
+  const setStops   = stops => setRange( range => ({ ...range, stops }) )
+  const setStop    = (stop, color) => setStops({ ...range.stops, [stop]: setHex(color) })
+  const setHStop   = (stop, h) => setStop(stop, { ...range.stops[stop], h })
+  const setSStop   = (stop, s) => setStop(stop, { ...range.stops[stop], s })
+  const setLStop   = (stop, l) => setStop(stop, { ...range.stops[stop], l })
+  const lockStop   = stop => setStop(stop, { ...range.stops[stop], locked: true  })
+  const unlockStop = stop => setStop(stop, { ...range.stops[stop], locked: false })
+  const toggleLock = stop => range.stops[stop].locked ? unlockStop(stop) : lockStop(stop)
 
   // reset stops to their original h/s/l
   const resetStops = item => setStops(
@@ -124,6 +127,7 @@ const Context = ({render}) => {
     setLMin, setLMax, setLMinControl, setLMaxControl,
     resetHCurve, resetSCurve, resetLCurve,
     setHStop, setSStop, setLStop,
+    lockStop, unlockStop, toggleLock,
     resetHStops, resetSStops, resetLStops,
     hAtStop, sAtStop, lAtStop, hslAtStop,
     hCurveToStops, sCurveToStops, lCurveToStops,

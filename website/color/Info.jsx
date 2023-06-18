@@ -1,8 +1,16 @@
 import React from 'react'
+import Icon from '../ui/Icon.jsx'
 
-const Info = ({color, stop}) =>
+const Info = ({color, stop, lockable}) =>
   <div className="info">
-    <div className="stop">{stop}</div>
+    <div className="flex space">
+      <div className="stop">{stop}</div>
+      { lockable && color.locked &&
+        <div className="locked">
+          <Icon name="lock"/>
+        </div>
+      }
+    </div>
     <div className="specs">
       {color.hex}<br/>
       h:{color.h}&deg;<br/>

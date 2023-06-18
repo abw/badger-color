@@ -5,6 +5,7 @@ import { clamper } from '../utils/clamp.js'
 import { bezier, bezierInverse } from '../utils/curves.js'
 import Checkbox from '../ui/Checkbox.jsx'
 import { usePalette } from '../palette/Context.jsx'
+import LockedPoint from './LockedPoint.jsx'
 
 const gridLines = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 const tPoints = numberRange(0, 100)
@@ -95,15 +96,18 @@ const CurveEditor = ({
                 x => {
                   const hsl = stops[x]
                   const y = hsl[item] / factor
-                  return (
-                    <ControlPoint
-                      key={x}
-                      coordinates={{ x, y }}
-                      setCoordinates={xy => setStop(x, Math.round(xy.y * factor))}
-                      minX={x} maxX={x} radius={stopRadius} className={stopClass}
-                      svgRef={svgRef}
-                    />
-                  )
+                  return hsl.locked
+                    ? <LockedPoint
+                        key={x}
+                        coordinates={{ x, y }}
+                      />
+                    : <ControlPoint
+                        key={x}
+                        coordinates={{ x, y }}
+                        setCoordinates={xy => setStop(x, Math.round(xy.y * factor))}
+                        minX={x} maxX={x} radius={stopRadius} className={stopClass}
+                        svgRef={svgRef}
+                      />
                 }
               )}
             </g>

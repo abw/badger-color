@@ -53,8 +53,8 @@ section.palette {
   .swatches {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    cursor: pointer;
     .swatch {
+      position: relative;
       font-size: $size-small;
       padding: 0.5em;
       min-height: 3rem;
@@ -67,6 +67,15 @@ section.palette {
           font-size: $size-smaller;
           opacity: 0.8;
         }
+        .locked {
+          font-size: $size-smallish;
+        }
+      }
+      &.light {
+        color: black;
+      }
+      &.dark {
+        color: white;
       }
       &.grey {
         min-height: 2rem;
@@ -79,6 +88,34 @@ section.palette {
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      &.clickable {
+        cursor: pointer;
+        .hover-overlay {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(black, 0.5);
+          color: white;
+          .icon {
+            font-size: 2rem;
+            margin: 0 auto;
+          }
+        }
+        &:hover {
+          .hover-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        &.dark .hover-overlay {
+          background-color: rgba(white, 0.5);
+          color: black;
+        }
       }
     }
   }

@@ -17,6 +17,7 @@ const Swatches = ({range}) => {
             key={stop}
             stop={stop}
             color={range.stops[stop]}
+            clickable={true}
           />
       )}
     </div>
