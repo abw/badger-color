@@ -29,6 +29,9 @@ const Context = ({source, render}) => {
   const [editingRange, setEditingRange] = useState(false)
   const editRange = name => setEditingRange(editingRange === name ? false : name)
 
+  console.log(`palette: `, palette)
+
+
   return render({
     palette,
     options,

@@ -6,6 +6,7 @@ import { bezier, bezierInverse } from '../utils/curves.js'
 import Checkbox from '../ui/Checkbox.jsx'
 import { usePalette } from '../palette/Context.jsx'
 import LockedPoint from './LockedPoint.jsx'
+import Button from '../ui/Button.jsx'
 
 const gridLines = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 const tPoints = numberRange(0, 100)
@@ -238,27 +239,31 @@ const CurveEditor = ({
           </div>
         </div>
       </div>
-      <div className="flex space small">
+      <div className="flex space small start">
         <div>
-          <button
-            className="orange button mar-r-2"
+          <Button
+            text="Curve"
+            color="orange"
+            iconLeft="undo"
+            className="mar-r-2 mar-b-2"
             onClick={resetCurve}
-          >
-            Reset Curve
-          </button>
-          <button
-            className="orange button"
+          />
+          <Button
+            text="Stops"
+            color="orange"
+            iconLeft="undo"
+            className="mar-b-2"
             onClick={resetStops}
-          >
-            Reset Stops
-          </button>
+          />
         </div>
-        <button
-          className="blue solid button"
+        <Button
+          text="Curve to Stops"
+          color="blue"
+          iconRight="arrow-up"
+          className="mar-b-2"
           onClick={curveToStops}
-        >
-          Curve to Stops
-        </button>
+          solid
+        />
       </div>
     </div>
   )

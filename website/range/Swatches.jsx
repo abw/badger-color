@@ -17,12 +17,14 @@ const Swatches = () => {
   return (
     <div className="swatches" onClick={toggleEditing}>
       { numberRange(0, 100, options.show5s ? 5 : 10).map(
-        stop =>
-          <Swatch
+        stop => {
+          return <Swatch
             key={stop}
             stop={stop}
             color={palette.ranges[range.name].stops[stop]}
+            showLock={true}
           />
+        }
       )}
     </div>
   )

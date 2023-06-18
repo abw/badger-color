@@ -12,12 +12,12 @@ export const Icon = ({
   width=512,
   height=512,
   style,
-  className='icon',
+  className='',
   fill='currentColor'
 }) =>
   <svg
     aria-hidden="true" focusable="false"
-    className={className} style={style}
+    className={`${className} icon`} style={style}
     role="img" xmlns="http://www.w3.org/2000/svg"
     viewBox={`0 0 ${width} ${height}`}
     onClick={onClick}

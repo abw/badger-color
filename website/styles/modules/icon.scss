@@ -5,4 +5,10 @@ svg.icon {
   height: 1em;
   overflow: visible;
   vertical-align: -.125em;
+  &.icon-left {
+    margin-right: 0.75em;
+  }
+  &.icon-right {
+    margin-left: 0.75em;
+  }
 }

@@ -1,6 +1,5 @@
 # TODO
 
-* locked stops
 * curve drag
 * storage
 * move palettes/palette context outward
@@ -11,3 +10,4 @@
 * save palette
 * load palette
 * export palette
+* compress / decompress / base64 in URL

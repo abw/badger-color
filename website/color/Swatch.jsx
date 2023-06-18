@@ -4,7 +4,17 @@ import { usePalette } from '../palette/Context.jsx'
 import { hslToGrey, hslToLuminance } from '../../lib/utils/color.js'
 import Icon from '../ui/Icon.jsx'
 
-const Swatch = ({color, stop, onClick, clickable, lockable}) => {
+const Swatch = ({
+  color, stop,
+  onClick,
+  clickable,
+  lockable,
+  copyable,
+  showLock=lockable,
+  lockIcon='lock',
+  unlockIcon='unlock',
+  copyIcon='arrow-up',
+}) => {
   const { options } = usePalette()
   const bgcol = options.grey
     ? hslToGrey(color)
@@ -12,11 +22,11 @@ const Swatch = ({color, stop, onClick, clickable, lockable}) => {
   const lum = hslToLuminance(color)
 
   let classes = ['swatch', lum > 0.5 ? 'light' : 'dark']
-  if (clickable) {
+  if (onClick || clickable) {
     classes.push('clickable')
   }
   if (lockable) {
-    classes.push('lockable clickable')
+    classes.push('lockable')
     classes.push(color.locked ? 'locked' : 'unlocked')
   }
 
@@ -25,24 +35,18 @@ const Swatch = ({color, stop, onClick, clickable, lockable}) => {
       className={classes.join(' ')}
       onClick={onClick}
       style={{
-        backgroundColor: bgcol,
+        backgroundColor: bgcol
       }}
     >
-      { options.info &&
-        <Info color={color} stop={stop} lockable={lockable}/>
-      }
-      { color.locked && ! options.info &&
-        <div className="info">
-          <div className="text-right">
-            <div className="locked">
-              <Icon name="lock"/>
-            </div>
-          </div>
-        </div>
-      }
+      <Info color={color} stop={stop} showLock={showLock}/>
       { lockable &&
         <div className="hover-overlay">
-          <Icon name={color.locked ? 'unlock' : 'lock'}/>
+          <Icon name={color.locked ? unlockIcon : lockIcon}/>
+        </div>
+      }
+      { copyable &&
+        <div className="hover-overlay">
+          <Icon name={copyIcon}/>
         </div>
       }
     </div>

@@ -118,6 +118,12 @@ const Context = ({render}) => {
   const sCurveToStops = () => curveToStops('s')
   const lCurveToStops = () => curveToStops('l')
 
+  // copy a single stop from the curve to stops
+  const curvesToStop = stop => setStop(
+    stop,
+    setHex( hslAtStop(stop) )
+  )
+
   return render({
     range, setRange,
     open, setOpen,
@@ -133,7 +139,7 @@ const Context = ({render}) => {
     resetHStops, resetSStops, resetLStops,
     hAtStop, sAtStop, lAtStop, hslAtStop,
     hCurveToStops, sCurveToStops, lCurveToStops,
-    curvesToStops
+    curvesToStops, curvesToStop
   })
 }
 
