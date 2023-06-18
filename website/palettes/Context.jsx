@@ -10,7 +10,6 @@ const Context = ({render}) => {
 
   const selectPalette = uri => {
     const palette = palettes[uri]
-    console.log(`select palette ${uri}: `, palette)
     if (palette) {
       savePaletteApp({ palettes, palette: uri })
     }

@@ -22,4 +22,33 @@ div.field {
 
 .hover {
   cursor: pointer;
+  &:hover,
+  &:hover > * {
+    color: var(--hover-text);
+  }
+}
+.loading {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  font-size: 2rem;
+}
+dialog {
+  // border: none !important;
+  border: 1px solid var(--dialog-border);
+  background-color: var(--dialog-back);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-4);
+  max-width: 30rem;
+}
+dialog::backdrop {
+  background-color: rgba(black, 0.7);
+  // background-color: var(--dialog-backdrop);
+}
+#site.dark {
+  dialog::backdrop {
+    // background-color: rgba(white, 0.5);
+  }
 }

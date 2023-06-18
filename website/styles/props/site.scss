@@ -19,6 +19,7 @@
   --menu-active-text:     var(--brand-20);
   --menu-active-back:     var(--brand-70);
   --menu-active-border:   var(--brand-60);
+  --hover-text:           var(--blue-40);
   --code-back:            var(--brand-90);
   --code-text:            var(--brand-30);
   --code-border:          var(--brand-80);
@@ -28,6 +29,9 @@
   --output-back:          var(--grey-90);
   --output-border:        var(--brand-70);
   --output-text:          var(--grey-30);
+  --dialog-back:          var(--grey-100);
+  --dialog-border:        var(--grey-20);
+  --dialog-backdrop:      rgba(black, 0.5);
 }
 #site.dark {
   --body-text:          var(--grey-60);
@@ -50,6 +54,7 @@
   --menu-active-text:   var(--brand-80);
   --menu-active-back:   var(--brand-40);
   --menu-active-border: var(--brand-60);
+  --hover-text:         var(--blue-60);
   --code-back:          var(--brand-10);
   --code-text:          var(--brand-90);
   --code-border:        var(--grey-30);
@@ -59,4 +64,7 @@
   --output-back:          var(--grey-20);
   --output-border:        var(--brand-10);
   --output-text:          var(--grey-70);
+  --dialog-back:          var(--grey-10);
+  --dialog-border:        var(--grey-20);
+  --dialog-backdrop:      rgba(white, 0.5);
 }

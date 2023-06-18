@@ -2,11 +2,9 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Consumer } from '../palettes/Context.jsx'
 import Name from '../palette/Name.jsx'
-import Button from '../ui/Button.jsx'
-import { useNavigate } from 'react-router-dom'
+import Delete from '../palette/Delete.jsx'
 
-const Edit = ({ palette, selectPalette, deletePalette }) => {
-  const navigate = useNavigate()
+const Edit = ({ palette, selectPalette }) => {
   const { uri } = useParams()
 
   useEffect(
@@ -15,10 +13,6 @@ const Edit = ({ palette, selectPalette, deletePalette }) => {
     },
     [uri]
   )
-  const trash = () => {
-    deletePalette()
-    navigate('/')
-  }
 
   if (uri !== palette?.uri) {
     return <div className="loading">Loading...</div>
@@ -28,13 +22,7 @@ const Edit = ({ palette, selectPalette, deletePalette }) => {
     <div>
       <div className="flex space start">
         <Name/>
-        <Button
-          text="Delete Palette"
-          color="red"
-          solid
-          iconRight="trash"
-          onClick={trash}
-        />
+        <Delete/>
       </div>
     </div>
   )
