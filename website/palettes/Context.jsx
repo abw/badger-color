@@ -30,9 +30,10 @@ const Context = ({render}) => {
     setPalette(p)
     setPalettes(ps)
     savePaletteApp({ palettes: ps, palette: uri })
+    return p
   }
 
-  const renamePalette = (name) => {
+  const renamePalette = name => {
     if (! palette) {
       return
     }
@@ -47,12 +48,24 @@ const Context = ({render}) => {
     return p
   }
 
+  const deletePalette = () => {
+    if (! palette) {
+      return
+    }
+    const ps = { ...palettes }
+    delete ps[palette.uri]
+    setPalette(null)
+    setPalettes(ps)
+    savePaletteApp({ palettes: ps, palette: null })
+  }
+
   return render({
     palettes,
     palette,
     selectPalette,
     createPalette,
-    renamePalette
+    renamePalette,
+    deletePalette
   })
 }
 
