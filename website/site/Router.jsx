@@ -1,7 +1,9 @@
 import React from 'react'
 import Layout from './Layout.jsx'
 import { createBrowserRouter } from 'react-router-dom'
-import Edit from '../routes/Edit.jsx'
+import Palette from '../routes/Palette.jsx'
+import Home from '../routes/Palette/Home.jsx'
+import Edit from '../routes/Palette/Edit.jsx'
 
 const ROUTES = import.meta.globEager('../pages/**/[a-z]*.jsx')
 const routes = Object.entries(ROUTES).map(
@@ -22,8 +24,18 @@ const Router = createBrowserRouter(
       children: [
         ...routes,
         {
-          path: 'edit/:uri',
-          element: <Edit/>
+          path: 'palette/:uri/*',
+          element: <Palette/>,
+          children: [
+            {
+              index: true,
+              element: <Home/>,
+            },
+            {
+              path: 'edit',
+              element: <Edit/>
+            },
+          ]
         }
       ]
     }

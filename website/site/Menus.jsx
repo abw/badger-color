@@ -22,3 +22,7 @@ export const Palettes = [
   { to: '/palettes/colar',    text: 'Colar' },
   { to: '/palettes/tailwind', text: 'Tailwind' },
 ]
+
+export const Dev = [
+  { to: '/form',   text: 'Form Test' },
+]

@@ -37,7 +37,8 @@
     "url": "https://github.com/abw/badger-color/issues"
   },
   "dependencies": {
-    "@abw/badger-filesystem": "^1.0.3"
+    "@abw/badger-filesystem": "^1.0.3",
+    "@abw/react-formula": "0.0.2-alpha.2"
   },
   "devDependencies": {
     "@abw/badger-timestamp": "^1.0.4",

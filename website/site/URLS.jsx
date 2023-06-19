@@ -1,3 +1,5 @@
 export const URLS = {
-  edit: uri => `/edit/${uri}`
+  palette: {
+    home: uri => `/palette/${uri}`
+  }
 }

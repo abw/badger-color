@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from './Menu.jsx'
-import { Palettes } from './Menus.jsx'
+import { Dev, Palettes } from './Menus.jsx'
 import { Consumer } from '../palettes/Context.jsx'
 import Button from '../ui/Button.jsx'
 import Link from './Link.jsx'
@@ -14,7 +14,7 @@ const Sidebar = ({
   const navigate = useNavigate()
   const newPalette = () => {
     const p = createPalette()
-    navigate(URLS.edit(p.uri))
+    navigate(URLS.palette.home(p.uri))
   }
 
   return (
@@ -34,7 +34,7 @@ const Sidebar = ({
           ([uri, palette]) =>
             <Link
               key={uri}
-              to={URLS.edit(uri)}
+              to={URLS.palette.home(uri)}
               className="item"
               text={palette.name}
               // className={`${name === palette?.name ? 'active' : ''} item`}
@@ -45,7 +45,7 @@ const Sidebar = ({
 
       {/* <Menu items={GettingStarted}/> */}
       <Menu title="Standard Palettes" items={Palettes}/>
-      {/* <Menu title="Styles" items={Styles}/> */}
+      <Menu title="Developer Tests" items={Dev}/>
     </div>
   )
 }
