@@ -1,28 +1,22 @@
 import React from 'react'
+import Checkbox from '../ui/Checkbox.jsx'
 import Button from '../ui/Button.jsx'
-import { usePalettes } from '../palettes/Context.jsx'
 import { usePalette } from './Context.jsx'
 import { sleep } from '@abw/badger-utils'
 import { useState } from 'react'
-import Options from '../palettes/Options.jsx'
-import { useNavigate } from 'react-router-dom'
-import { URLS } from '../site/URLS.jsx'
 
 const Header = () => {
-  const navigate = useNavigate()
-  const { clonePalette } = usePalettes()
-  const { palette } = usePalette()
+  const {
+    palette,
+    options,
+    toggleNames, toggleInfo, toggleShow5s, toggleGrey
+  } = usePalette()
   const [copied, setCopied] = useState(false)
   const copy = (text) => {
     navigator.clipboard.writeText(text)
     setCopied(true)
     sleep(2000).then(() => setCopied(false))
   }
-  const onClonePalette = () => {
-    const p = clonePalette(palette)
-    navigate(URLS.palette.home(p.uri))
-  }
-
 
   return (
     <header>
@@ -45,29 +39,57 @@ const Header = () => {
         <div>
           { copied
             ? <Button
-                // text="Copied"
-                icon="check"
+                text="Copied"
+                iconRight="check"
                 color="violet"
-                // className="wd-8"
+                className="wd-8"
                 solid
               />
             : <Button
-                icon="clipboard"
+                text="Copy"
+                iconRight="clipboard"
                 color="violet"
-                solid
+                className="wd-8"
                 onClick={() => copy(JSON.stringify(palette, null, 2))}
               />
           }
-          <Button
-            icon="clone"
-            color="green"
+          {/*
+          <button
             className="mar-l-2"
-            solid
-            onClick={onClonePalette}
-          />
+            onClick={
+              () => navigator.clipboard.writeText(
+                base64CompressedPalette(palette)
+              )
+            }
+          >
+            Copy Compressed
+          </button>
+          */}
         </div>
       </div>
-      <Options/>
+      <div className="options gap-4 mar-v-4">
+        <Checkbox
+          label="Show Names"
+          checked={options.names}
+          toggle={toggleNames}
+        />
+        <Checkbox
+          label="Show Info"
+          checked={options.info}
+          toggle={toggleInfo}
+        />
+        <Checkbox
+          label="Show 5s"
+          checked={options.show5s}
+          toggle={toggleShow5s}
+        />
+        <Checkbox
+          label="Greyscale"
+          checked={options.grey}
+          toggle={toggleGrey}
+        />
+      </div>
+
     </header>
   )
 }

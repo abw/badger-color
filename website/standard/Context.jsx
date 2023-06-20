@@ -1,9 +1,7 @@
 import { Generator } from '@abw/react-context'
 
 const Context = ({palette, render}) => {
-  return render({
-    palette,
-  })
+  return render({ palette })
 }
 
 const generated = Generator(Context)

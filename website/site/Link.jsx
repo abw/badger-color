@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Button from '../ui/Button.jsx'
 
 const Link = ({
   to,
@@ -9,6 +10,8 @@ const Link = ({
   text,
   onClick,
   label,
+  button,
+  ...props
 }) =>
   <NavLink
     to={to}
@@ -18,7 +21,10 @@ const Link = ({
     aria-label={label}
     // ref={ref}
   >
-    {children||text}
+    { button
+      ? <Button text={text} {...props}/>
+      : (children||text)
+    }
   </NavLink>
 
 export default Link

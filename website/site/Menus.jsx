@@ -24,5 +24,6 @@ export const Standards = [
 ]
 
 export const Dev = [
+  { to: '/icons',  text: 'Icons' },
   { to: '/form',   text: 'Form Test' },
 ]

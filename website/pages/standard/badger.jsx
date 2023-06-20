@@ -1,8 +1,8 @@
 import React from 'react'
-import palette from '../../../config/palette/badger.json'
 import Standard from '../../standard/index.jsx'
+import StandardPalettes from '../../site/StandardPalettes.jsx'
 
 const Badger = () =>
-  <Standard palette={palette}/>
+  <Standard palette={StandardPalettes.badger}/>
 
 export default Badger

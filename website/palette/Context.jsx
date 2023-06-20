@@ -1,14 +1,10 @@
 import { useState } from 'react'
 import { Generator } from '@abw/react-context'
+import { usePalettes } from '../palettes/Context.jsx'
 
-const Context = ({source, render}) => {
+const Context = ({render}) => {
+  const { palette: source } = usePalettes()
   const [palette, setPalette] = useState(source)
-  const [options, setOptions] = useState({
-    names:  false,
-    info:   false,
-    grey:   false,
-    show5s: false
-  })
   const saveRange = range => setPalette(
     palette => ({
       ...palette,
@@ -18,23 +14,13 @@ const Context = ({source, render}) => {
       }
     })
   )
-  const setOption = (name, value) => setOptions({ ...options, [name]: value })
-  const toggleOption = name => setOption(name, ! options[name])
-  const toggler = name => () => toggleOption(name)
-  const toggleNames  = toggler('names')
-  const toggleInfo   = toggler('info')
-  const toggleGrey   = toggler('grey')
-  const toggleShow5s = toggler('show5s')
 
   const [editingRange, setEditingRange] = useState(false)
   const editRange = name => setEditingRange(editingRange === name ? false : name)
 
   return render({
     palette,
-    options,
     saveRange,
-    setOption, toggleOption,
-    toggleNames, toggleInfo, toggleShow5s, toggleGrey,
     editingRange, setEditingRange, editRange
   })
 }

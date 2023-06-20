@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Button from '../ui/Button.jsx'
-import Modal from '../ui/Modal.jsx'
+import Button from '../../ui/Button.jsx'
+import Modal from '../../ui/Modal.jsx'
 import { useNavigate } from 'react-router-dom'
-import { Consumer } from '../palettes/Context.jsx'
+import { Consumer } from '../../palettes/Context.jsx'
 
 const Delete = ({ deletePalette }) => {
   const navigate = useNavigate()
@@ -18,11 +18,11 @@ const Delete = ({ deletePalette }) => {
   return (
     <>
       <Button
-        text="Delete Palette"
         color="red"
         solid
-        iconRight="trash"
+        icon="trash"
         onClick={() => setOpen(true)}
+        className="mar-l-2"
       />
       <Modal open={open}>
         <p>

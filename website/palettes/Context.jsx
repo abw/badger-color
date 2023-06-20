@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { Generator } from '@abw/react-context'
 import { loadPaletteApp, savePaletteApp } from '../../lib/utils/storage.js'
-import { nameToURI, newPalette } from '../../lib/utils/palette.js'
+import { copyPalette, nameToURI, newPalette } from '../../lib/utils/palette.js'
 
 const Context = ({render}) => {
   const app = loadPaletteApp()
   const [palettes, setPalettes] = useState(app.palettes || { })
   const [palette,  setPalette]  = useState(app.palette && app.palettes[app.palette])
+
   const selectPalette = uri => {
     const palette = palettes[uri]
     if (palette) {
@@ -19,16 +20,31 @@ const Context = ({render}) => {
     return palette
   }
 
-  const createPalette = () => {
-    const p = newPalette(palettes)
+  const savePalettes = (palettes, palette) => {
+    setPalette(palette)
+    setPalettes(palettes)
+    savePaletteApp({ palettes, palette: palette?.uri })
+  }
+
+  const savePalette = p => {
     const uri = p.uri
-    // console.log(`created palette: ${uri}`)
+    console.log(`saving palette: ${uri}`)
     const ps = { ...palettes, [uri]: p }
-    // console.log(`new palettes: `, ps)
-    setPalette(p)
-    setPalettes(ps)
-    savePaletteApp({ palettes: ps, palette: uri })
+    console.log(`saving palettes: `, ps)
+    savePalettes(ps, p)
     return p
+  }
+
+  const createPalette = () => {
+    return savePalette(
+      newPalette(palettes)
+    )
+  }
+
+  const clonePalette = palette => {
+    return savePalette(
+      copyPalette(palette, palettes)
+    )
   }
 
   const renamePalette = name => {
@@ -40,9 +56,7 @@ const Context = ({render}) => {
     const ps = { ...palettes }
     delete ps[palette.uri]
     ps[uri] = p
-    setPalette(p)
-    setPalettes(ps)
-    savePaletteApp({ palettes: ps, palette: uri })
+    savePalettes(ps, p)
     return p
   }
 
@@ -52,9 +66,7 @@ const Context = ({render}) => {
     }
     const ps = { ...palettes }
     delete ps[palette.uri]
-    setPalette(null)
-    setPalettes(ps)
-    savePaletteApp({ palettes: ps, palette: null })
+    savePalettes(ps, null)
   }
 
   const [options, setOptions] = useState({
@@ -79,6 +91,7 @@ const Context = ({render}) => {
     palette,
     selectPalette,
     createPalette,
+    clonePalette,
     renamePalette,
     deletePalette,
     options,

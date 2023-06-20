@@ -1,6 +1,6 @@
 import React from 'react'
 import Checkbox from '../ui/Checkbox.jsx'
-import { Consumer } from '../palettes/Context.jsx'
+import { Consumer } from './Context.jsx'
 
 const Options = ({
   options,
