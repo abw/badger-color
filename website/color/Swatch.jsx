@@ -1,8 +1,8 @@
 import React from 'react'
 import Info from './Info.jsx'
-import { usePalette } from '../palette/Context.jsx'
 import { hslToGrey, hslToLuminance } from '../../lib/utils/color.js'
 import Icon from '../ui/Icon.jsx'
+import { usePalettes } from '../palettes/Context.jsx'
 
 const Swatch = ({
   color, stop,
@@ -15,7 +15,7 @@ const Swatch = ({
   unlockIcon='unlock',
   copyIcon='arrow-up',
 }) => {
-  const { options } = usePalette()
+  const { options } = usePalettes()
   const bgcol = options.grey
     ? hslToGrey(color)
     : `hsl(${color.h} ${color.s}% ${color.l}%)`

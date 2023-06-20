@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from './Menu.jsx'
-import { Dev, Palettes } from './Menus.jsx'
+import { Dev, Standards } from './Menus.jsx'
 import { Consumer } from '../palettes/Context.jsx'
 import Button from '../ui/Button.jsx'
 import Link from './Link.jsx'
@@ -44,7 +44,7 @@ const Sidebar = ({
       </div>
 
       {/* <Menu items={GettingStarted}/> */}
-      <Menu title="Standard Palettes" items={Palettes}/>
+      <Menu title="Standard Palettes" items={Standards}/>
       <Menu title="Developer Tests" items={Dev}/>
     </div>
   )

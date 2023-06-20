@@ -53,6 +53,9 @@ section.palette {
   .swatches {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    .span-all {
+      grid-column: 1/-1;
+    }
     .swatch {
       position: relative;
       font-size: $size-small;
@@ -144,3 +147,16 @@ section.palette {
   }
 }
 
+    .white,
+    .black {
+      font-size: $size-smaller;
+      text-align: center;
+    }
+    .white {
+      color: black;
+      background-color: white;
+    }
+    .black {
+      color: white;
+      background-color: black;
+    }

@@ -17,10 +17,10 @@ export const Styles = [
 export const Bezier = [
   { to: '/bezier', text: 'Bezier Editor' },
 ]
-export const Palettes = [
-  { to: '/palettes/badger',   text: 'Badger' },
-  { to: '/palettes/colar',    text: 'Colar' },
-  { to: '/palettes/tailwind', text: 'Tailwind' },
+export const Standards = [
+  { to: '/standard/badger',   text: 'Badger' },
+  { to: '/standard/colar',    text: 'Colar' },
+  { to: '/standard/tailwind', text: 'Tailwind' },
 ]
 
 export const Dev = [

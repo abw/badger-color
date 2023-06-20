@@ -7,7 +7,6 @@ const Context = ({render}) => {
   const app = loadPaletteApp()
   const [palettes, setPalettes] = useState(app.palettes || { })
   const [palette,  setPalette]  = useState(app.palette && app.palettes[app.palette])
-
   const selectPalette = uri => {
     const palette = palettes[uri]
     if (palette) {
@@ -58,13 +57,36 @@ const Context = ({render}) => {
     savePaletteApp({ palettes: ps, palette: null })
   }
 
+  const [options, setOptions] = useState({
+    names:  true,
+    stops:  true,
+    info:   false,
+    grey:   false,
+    show5s: false,
+  })
+  const setOption = (name, value) => setOptions({ ...options, [name]: value })
+  const toggleOption = name => setOption(name, ! options[name])
+  const toggler = name => () => toggleOption(name)
+  const toggleNames  = toggler('names')
+  const toggleInfo   = toggler('info')
+  const toggleGrey   = toggler('grey')
+  const toggleShow5s = toggler('show5s')
+  const toggleStops  = toggler('stops')
+
+
   return render({
     palettes,
     palette,
     selectPalette,
     createPalette,
     renamePalette,
-    deletePalette
+    deletePalette,
+    options,
+    toggleNames,
+    toggleInfo,
+    toggleGrey,
+    toggleShow5s,
+    toggleStops
   })
 }
 

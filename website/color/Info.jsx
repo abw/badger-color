@@ -1,9 +1,9 @@
 import React from 'react'
 import Icon from '../ui/Icon.jsx'
-import { usePalette } from '../palette/Context.jsx'
+import { usePalettes } from '../palettes/Context.jsx'
 
 const Info = ({color, stop, showLock}) => {
-  const { options } = usePalette()
+  const { options } = usePalettes()
   return (
     <div className="info">
       <div className={ options.info ? 'flex space' : 'text-right' }>
