@@ -1,6 +1,6 @@
 import React from 'react'
 import Info from './Info.jsx'
-import { hslToGrey, hslToLuminance } from '../../lib/utils/color.js'
+import { hslToCSS, hslToGrey, hslToLuminance } from '../../lib/utils/color.js'
 import Icon from '../ui/Icon.jsx'
 import { usePalettes } from '../palettes/Context.jsx'
 
@@ -18,7 +18,7 @@ const Swatch = ({
   const { options } = usePalettes()
   const bgcol = options.grey
     ? hslToGrey(color)
-    : `hsl(${color.h} ${color.s}% ${color.l}%)`
+    : hslToCSS(color)
   const lum = hslToLuminance(color)
 
   let classes = ['swatch', lum > 0.5 ? 'light' : 'dark']

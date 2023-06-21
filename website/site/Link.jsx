@@ -11,6 +11,7 @@ const Link = ({
   onClick,
   label,
   button,
+  style,
   ...props
 }) =>
   <NavLink
@@ -19,6 +20,7 @@ const Link = ({
     end={exact && 'end'}
     className={({ isActive }) => `${className} ${isActive ? 'active' : ''}`}
     aria-label={label}
+    style={style}
     // ref={ref}
   >
     { button

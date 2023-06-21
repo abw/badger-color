@@ -6,8 +6,10 @@ import Button from '../ui/Button.jsx'
 import Link from './Link.jsx'
 import { URLS } from './URLS.jsx'
 import { useNavigate } from 'react-router-dom'
+import { hslToCSS } from '../../lib/utils/color.js'
 
 const Sidebar = ({
+  palette,
   palettes,
   createPalette,
 }) => {
@@ -31,14 +33,12 @@ const Sidebar = ({
           />
         </div>
         { Object.entries(palettes).map(
-          ([uri, palette]) =>
-            <Link
+          ([uri, p]) =>
+            <PaletteLink
               key={uri}
-              to={URLS.palette.home(uri)}
-              className="item"
-              text={palette.name}
-              // className={`${name === palette?.name ? 'active' : ''} item`}
-              // onClick={() => selectPalette(name)}
+              uri={uri}
+              p={p}
+              palette={palette}
             />
         )}
       </div>
@@ -46,6 +46,44 @@ const Sidebar = ({
       {/* <Menu items={GettingStarted}/> */}
       <Menu title="Standard Palettes" items={Standards}/>
       <Menu title="Developer Tests" items={Dev}/>
+    </div>
+  )
+}
+
+const PaletteLink = ({ p, uri, palette })  => {
+  const selected = uri === palette?.uri
+  return (
+    <div className={`${selected ? 'active' : ''}`}>
+      <Link
+        to={URLS.palette.home(uri)}
+        className="item"
+        text={p.name}
+        // className={`${name === palette?.name ? 'active' : ''} item`}
+        // onClick={() => selectPalette(name)}
+      />
+      { selected &&
+        <div className="ranges menu">
+          { Object.entries(palette.ranges).map(
+            ([ruri, range]) =>
+              <Link
+                key={ruri}
+                to={URLS.palette.range(uri, ruri)}
+                className="item"
+                style={{
+                  // '--background': 'red',
+                  '--active-background': hslToCSS(range.stops[70]),
+                  '--swatch-background': hslToCSS(range.stops[50])
+                }}
+              >
+                <div
+                  className="swatch"
+                  // style={{ backgroundColor: hslToCSS(range.stops[50]) }}
+                />
+                {range.name}
+              </Link>
+          )}
+        </div>
+      }
     </div>
   )
 }
