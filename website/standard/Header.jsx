@@ -37,7 +37,7 @@ const Header = () => {
             }
             { palette.source &&
               <div className="source">
-                From: <a href={palette.source}>{palette.source}</a>
+                <a href={palette.source}>{palette.source}</a>
               </div>
             }
           </div>

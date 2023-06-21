@@ -9,7 +9,7 @@ const IconsPage = () =>
       { Object.keys(Icons).map(
         name =>
           <div key={name}>
-            <Button key={name} icon={name}/>
+            <Button key={name} icon={name} solid/>
             <div className="smaller">{name}</div>
           </div>
       )}
