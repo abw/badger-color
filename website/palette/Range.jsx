@@ -1,9 +1,9 @@
 import React from 'react'
 import Swatches from './Swatches.jsx'
-import { usePalette } from './Context.jsx'
+import { usePalettes } from '../palettes/Context.jsx'
 
 const Range = ({ range }) => {
-  const { options } = usePalette()
+  const { options } = usePalettes()
   return (
     <div className="range">
       { options.names &&

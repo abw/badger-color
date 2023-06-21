@@ -2,12 +2,11 @@ import React from 'react'
 import { usePalette } from '../palette/Context.jsx'
 import { range as numberRange } from '@abw/badger-utils'
 import Swatch from '../color/Swatch.jsx'
+import { usePalettes } from '../palettes/Context.jsx'
 
 const Swatches = ({range}) => {
-  const {
-    options,
-    editRange
-  } = usePalette()
+  const { options } = usePalettes()
+  const { editRange } = usePalette()
 
   return (
     <div className="swatches" onClick={() => editRange(range.name)}>

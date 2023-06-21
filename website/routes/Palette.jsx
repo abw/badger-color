@@ -2,7 +2,9 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Consumer } from '../palettes/Context.jsx'
 import { Outlet } from 'react-router-dom'
+import { Provider } from '../palette/Context.jsx'
 import Header from '../palette/Header.jsx'
+import Footer from '../palette/Footer.jsx'
 
 const Palette = ({ palette, selectPalette }) => {
   const { uri } = useParams()
@@ -19,10 +21,13 @@ const Palette = ({ palette, selectPalette }) => {
   }
 
   return (
-    <div>
-      <Header/>
-      <Outlet/>
-    </div>
+    <Provider>
+      <section className="palette">
+        <Header/>
+        <Outlet/>
+        <Footer/>
+      </section>
+    </Provider>
   )
 }
 

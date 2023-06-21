@@ -5,6 +5,8 @@ import { usePalettes } from '../palettes/Context.jsx'
 const Context = ({render}) => {
   const { palette: source } = usePalettes()
   const [palette, setPalette] = useState(source)
+  console.log(`source palette: `, palette)
+
   const saveRange = range => setPalette(
     palette => ({
       ...palette,

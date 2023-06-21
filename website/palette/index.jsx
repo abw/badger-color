@@ -4,8 +4,8 @@ import Main from './Main.jsx'
 import Footer from './Footer.jsx'
 import { Provider } from './Context.jsx'
 
-const Palette = ({palette}) =>
-  <Provider source={palette}>
+const Palette = () =>
+  <Provider>
     <section className="palette">
       <Header/>
       <Main/>

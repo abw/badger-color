@@ -6,7 +6,7 @@ import { Consumer } from './Context.jsx'
 const Main = ({ editingRange }) =>
   <main>
     <Ranges/>
-    { editingRange &&
+    { editingRange && false &&
       <Editor key={editingRange}/>
     }
   </main>
