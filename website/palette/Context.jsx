@@ -2,10 +2,11 @@ import { useState } from 'react'
 import { Generator } from '@abw/react-context'
 import { usePalettes } from '../palettes/Context.jsx'
 
+// DEPRECATED
+
 const Context = ({render}) => {
   const { palette: source } = usePalettes()
   const [palette, setPalette] = useState(source)
-  console.log(`source palette: `, palette)
 
   const saveRange = range => setPalette(
     palette => ({

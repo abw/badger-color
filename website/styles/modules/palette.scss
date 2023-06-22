@@ -1,7 +1,7 @@
 section.palette {
-  --option-back: var(--grey-100);
-  --option-border: var(--grey-70);
-  --option-hover-back: white;
+  a {
+    text-decoration: none;
+  }
   & > header {
     h1 {
       font-size: $size-larger;
@@ -13,118 +13,19 @@ section.palette {
     }
   }
   h2 {
-    font-size: $size-medium;
+    font-size: $size-large;
     margin-top: 0.5rem;
     margin-bottom: 0;
   }
   h3 {
-    font-size: $size-small;
+    font-size: $size-medium;
     margin-top: 0.5rem;
   }
   h2 + h3 {
     margin-top: 0;
   }
-  .options {
-    display: flex;
-    align-items: center;
-    user-select: none;
-    // margin-bottom: 1rem;
-    label {
-      display: flex;
-      align-items: center;
-      padding: 0.25rem 0.5rem;
-      // font-size: $size-largish;
-      background-color: var(--option-back);
-      border: 1px solid var(--option-border);
-      border-radius: 4px;
-      transition: all 0.25s;
-      line-height: 1;
-      input {
-        margin-right: 0.5em;
-      }
-      &:hover {
-        background-color: var(--option-hover-back);
-      }
-    }
-  }
   .ranges {
     margin: 1rem 0;
-  }
-  .swatches {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    .span-all {
-      grid-column: 1/-1;
-    }
-    .swatch {
-      position: relative;
-      font-size: $size-small;
-      padding: 0.5em;
-      min-height: 3rem;
-      .info {
-        .stop {
-          font-size: $size-small;
-          margin-bottom: 1em;
-        }
-        .specs {
-          font-size: $size-smaller;
-          opacity: 0.8;
-        }
-        .locked {
-          font-size: $size-smallish;
-        }
-      }
-      &.light {
-        color: black;
-      }
-      &.dark {
-        color: white;
-      }
-      &.grey {
-        min-height: 2rem;
-        padding: 0.125rem 0.5rem;
-        font-size: $size-smaller;
-      }
-      &.none {
-        background-color: var(--grey-90);
-        color: var(--grey-20);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      &.clickable {
-        cursor: pointer;
-        .hover-overlay {
-          display: none;
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: rgba(black, 0.5);
-          color: white;
-          .icon {
-            font-size: 2rem;
-            margin: 0 auto;
-          }
-        }
-        &:hover {
-          .hover-overlay {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .info .locked {
-            // opacity: 0.3;
-            display: none;
-          }
-        }
-        &.dark .hover-overlay {
-          //background-color: rgba(white, 0.5);
-          //color: black;
-        }
-      }
-    }
   }
   .range-editor {
     margin-top: 1rem;

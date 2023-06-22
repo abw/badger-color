@@ -43,6 +43,7 @@ const Context = ({render}) => {
   const resetHCurve = () => setHCurve(palette.ranges[name].curves.h)
   const resetSCurve = () => setSCurve(palette.ranges[name].curves.s)
   const resetLCurve = () => setLCurve(palette.ranges[name].curves.l)
+  const resetCurves = () => setCurves(palette.ranges[name].curves)
 
   // functions to update stops
   const setStops   = stops => setRange( range => ({ ...range, stops }) )

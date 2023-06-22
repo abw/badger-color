@@ -7,6 +7,7 @@ import Link from './Link.jsx'
 import { URLS } from './URLS.jsx'
 import { useNavigate } from 'react-router-dom'
 import { hslToCSS } from '../../lib/utils/color.js'
+import Options from '../palettes/Options.jsx'
 
 const Sidebar = ({
   palette,
@@ -45,6 +46,11 @@ const Sidebar = ({
 
       {/* <Menu items={GettingStarted}/> */}
       <Menu title="Standard Palettes" items={Standards}/>
+
+      <div className="menu">
+        <h4>Options</h4>
+        <Options/>
+      </div>
       <Menu title="Developer Tests" items={Dev}/>
     </div>
   )

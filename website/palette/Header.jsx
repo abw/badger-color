@@ -2,7 +2,7 @@ import React from 'react'
 import Controls from './Controls/index.jsx'
 import Name from './Name.jsx'
 import { Consumer } from '../palettes/Context.jsx'
-import Options from '../palettes/Options.jsx'
+// import Options from '../palettes/Options.jsx'
 
 const Header = ({ palette }) =>
   <header>
@@ -24,7 +24,7 @@ const Header = ({ palette }) =>
       </div>
       <Controls/>
     </div>
-    <Options/>
+    {/* <Options/> */}
   </header>
 
 export default Consumer(Header)

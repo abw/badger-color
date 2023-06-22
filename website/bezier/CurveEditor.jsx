@@ -2,10 +2,10 @@ import React, { useState, useRef } from 'react'
 import ControlPoint from '../bezier/ControlPoint.jsx'
 import { range as numberRange } from '@abw/badger-utils'
 import Checkbox from '../ui/Checkbox.jsx'
-import { usePalette } from '../palette/Context.jsx'
 import LockedPoint from './LockedPoint.jsx'
 import Button from '../ui/Button.jsx'
 import { bezier, bezierInverse, clamper } from '../../lib/utils/index.js'
+import Icon from '../ui/Icon.jsx'
 
 const gridLines = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 const tPoints = numberRange(0, 100)
@@ -22,9 +22,9 @@ const CurveEditor = ({
   item,
   stopRadius=2,
   stopClass='stop-point',
-  resetCurve, resetStops, curveToStops
+  resetCurve, resetStops, curveToStops,
+  options
 }) => {
-  const { options } = usePalette()
   const factor = scale / 100
   const svgRef = useRef(null)
   const [showCurve, setShowCurve] = useState(true)
@@ -246,6 +246,7 @@ const CurveEditor = ({
             iconLeft="undo"
             className="mar-r-2 mar-b-2"
             onClick={resetCurve}
+            solid
           />
           <Button
             text="Stops"
@@ -253,12 +254,13 @@ const CurveEditor = ({
             iconLeft="undo"
             className="mar-b-2"
             onClick={resetStops}
+            solid
           />
         </div>
         <Button
-          text="Curve to Stops"
-          color="blue"
-          iconRight="arrow-up"
+          text={<>Curve <Icon name="arrow-right" className="mar-h"/> Stops</>}
+          color="green"
+          // iconRight="arrow-up"
           className="mar-b-2"
           onClick={curveToStops}
           solid

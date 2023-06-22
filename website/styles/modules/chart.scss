@@ -1,5 +1,10 @@
 div.chart {
   // max-width: 600px;
+  .options {
+    display: flex;
+    --option-back: var(--grey-90);
+    --option-hover-back: var(--grey-100);
+  }
   margin: 0 auto;
   svg.chart {
     width: 100%;
