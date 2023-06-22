@@ -145,11 +145,13 @@ const CurveEditor = ({
               <ControlPoint
                 coordinates={{ x: control1.x, y: control1.y / factor }}
                 setCoordinates={moveControl1}
+                minY={-5} maxY={105}
                 svgRef={svgRef}
               />
               <ControlPoint
                 coordinates={{ x: control2.x, y: control2.y / factor }}
                 setCoordinates={moveControl2}
+                minY={-5} maxY={105}
                 svgRef={svgRef}
               />
               <ControlPoint
