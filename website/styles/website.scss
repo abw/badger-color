@@ -41,7 +41,7 @@ dialog {
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: var(--shadow-4);
-  max-width: 30rem;
+  // min-width: 30rem;
 }
 dialog::backdrop {
   background-color: rgba(black, 0.7);
