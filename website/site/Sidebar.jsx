@@ -13,11 +13,16 @@ const Sidebar = ({
   palette,
   palettes,
   createPalette,
+  createRange,
 }) => {
   const navigate = useNavigate()
   const newPalette = () => {
     const p = createPalette()
     navigate(URLS.palette.home(p.uri))
+  }
+  const newRange = () => {
+    const r = createRange()
+    navigate(URLS.palette.range(palette.uri, r.uri))
   }
 
   return (
@@ -40,6 +45,7 @@ const Sidebar = ({
               uri={uri}
               p={p}
               palette={palette}
+              newRange={newRange}
             />
         )}
       </div>
@@ -56,7 +62,7 @@ const Sidebar = ({
   )
 }
 
-const PaletteLink = ({ p, uri, palette })  => {
+const PaletteLink = ({ p, uri, palette, newRange })  => {
   const selected = uri === palette?.uri
   return (
     <div className={`${selected ? 'active' : ''}`}>
@@ -69,6 +75,16 @@ const PaletteLink = ({ p, uri, palette })  => {
       />
       { selected &&
         <div className="ranges menu">
+          <div className="flex space center">
+            <h4 className="mar-v-none">Ranges</h4>
+            <Button
+              color="green"
+              icon="plus"
+              className="small"
+              onClick={newRange}
+              solid
+            />
+          </div>
           { Object.entries(palette.ranges).map(
             ([ruri, range]) =>
               <Link

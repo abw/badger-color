@@ -1,10 +1,17 @@
 import { useState } from 'react'
 import { Generator } from '@abw/react-context'
-import { loadPaletteApp, savePaletteApp } from '../../lib/utils/storage.js'
-import { copyPalette, nameToURI, newPalette } from '../../lib/utils/palette.js'
 import { fail } from '@abw/badger-utils'
-import { setHex } from '../../lib/utils/color.js'
-import { bezier, bezierInverse } from '../../lib/utils/bezier.js'
+import {
+  setHex,
+  loadPaletteApp, savePaletteApp,
+  copyPalette, newPalette,
+  newRange,
+  hStopValueFromRange,
+  sStopValueFromRange,
+  lStopValueFromRange,
+  hslAtStopFromRange,
+  stopValueFromCurve
+} from '../../lib/utils/index.js'
 
 const Context = ({render}) => {
   //--------------------------------------------------------------------------
@@ -63,16 +70,17 @@ const Context = ({render}) => {
   const clonePalette = p =>
     savePalette( copyPalette(p, palettes) )
 
-  const renamePalette = name => {
+  const editPalette = details => {
     if (! palette) {
       return
     }
-    const uri = nameToURI(name)
-    const p = { ...palette, name, uri }
+    const uri = details.uri
+    const p = { ...palette, ...details }
     const ps = { ...palettes }
     delete ps[palette.uri]
     ps[uri] = p
     savePalettes(ps, p)
+    setPalette(p)
     return p
   }
 
@@ -99,25 +107,22 @@ const Context = ({render}) => {
   }
 
   const resetRange = () => setRange(palette.ranges[range.uri])
-  const saveRange  = () => savePalette({
-    ...palette,
-    ranges: {
-      ...palette.ranges,
-      [range.uri]: range
-    }
-  })
-
-  /*
-  const saveRange = r => {
-    const uri = r.uri
-    console.log(`saveRange: ${uri}`)
-    const ps = { ...palettes, [uri]: p }
-    savePalettes(ps)
-    return p
+  const saveRange  = (r=range) => {
+    savePalette({
+      ...palette,
+      ranges: {
+        ...palette.ranges,
+        [r.uri]: r
+      }
+    })
+    return r
   }
 
   const createRange = options =>
     saveRange( newRange(options) )
+
+  /*
+
 
   const cloneRange = r =>
     saveRange( copyRange(r, palette.ranges) )
@@ -214,24 +219,11 @@ const Context = ({render}) => {
   const resetLCurve = () => setLCurve(palette.ranges[range.uri].curves.l)
   const resetCurves = () => setCurves(palette.ranges[range.uri].curves)
 
-  // calculate stop value from a curve
-  const atStop = (stop, curve) =>
-    Math.round(
-      bezier(
-        bezierInverse(stop, 0, curve.minControl.x, curve.maxControl.x, 100),
-        curve.min, curve.minControl.y, curve.maxControl.y, curve.max
-      )
-    )
-
   // calculate h/s/l stop values from a curve
-  const hAtStop   = stop => atStop(stop, range.curves.h)
-  const sAtStop   = stop => atStop(stop, range.curves.s)
-  const lAtStop   = stop => atStop(stop, range.curves.l)
-  const hslAtStop = stop => setHex({
-    h: hAtStop(stop),
-    s: sAtStop(stop),
-    l: lAtStop(stop),
-  })
+  const hAtStop   = stop => hStopValueFromRange(stop, range)
+  const sAtStop   = stop => sStopValueFromRange(stop, range)
+  const lAtStop   = stop => lStopValueFromRange(stop, range)
+  const hslAtStop = stop => hslAtStopFromRange(stop, range)
 
   // update stop value calculated from curve
   const curveToStops = item => setStops(
@@ -241,7 +233,7 @@ const Context = ({render}) => {
           ? color
           : setHex({
             ...color,
-            [item]: atStop(stop, range.curves[item])
+            [item]: stopValueFromCurve(stop, range.curves[item])
           })
         return stops
       },
@@ -260,7 +252,7 @@ const Context = ({render}) => {
       (stops, [stop, color]) => {
         stops[stop] = color.locked
           ? color
-          : setHex( hslAtStop(stop) )
+          : hslAtStop(stop)
         return stops
       },
       { }
@@ -270,7 +262,7 @@ const Context = ({render}) => {
   // copy values calculated from curves to a single stop
   const curvesToStop = stop => setStop(
     stop,
-    setHex( hslAtStop(stop) )
+    hslAtStop(stop)
   )
 
   return render({
@@ -287,13 +279,15 @@ const Context = ({render}) => {
     selectPalette,
     createPalette,
     clonePalette,
-    renamePalette,
+    // renamePalette,
+    editPalette,
     deletePalette,
     // ranges
     range,
     selectRange,
     resetRange,
     saveRange,
+    createRange,
     // curves
     setHMin, setHMax, setHMinControl, setHMaxControl,
     setSMin, setSMax, setSMinControl, setSMaxControl,
