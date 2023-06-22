@@ -10,7 +10,8 @@ import {
   sStopValueFromRange,
   lStopValueFromRange,
   hslAtStopFromRange,
-  stopValueFromCurve
+  stopValueFromCurve,
+  copyRange
 } from '../../lib/utils/index.js'
 
 const Context = ({render}) => {
@@ -49,7 +50,6 @@ const Context = ({render}) => {
   // Palette
   //--------------------------------------------------------------------------
   const selectPalette = uri => {
-    console.log(`selectPalette(${uri})`)
     const palette = palettes[uri] || fail(`Invalid palette selected: ${uri}`)
     setPalette(palette)
     return palette
@@ -57,7 +57,6 @@ const Context = ({render}) => {
 
   const savePalette = p => {
     const uri = p.uri
-    console.log(`newPalette: ${uri}`)
     const ps = { ...palettes, [uri]: p }
     savePalettes(ps)
     setPalette(p)
@@ -107,6 +106,7 @@ const Context = ({render}) => {
   }
 
   const resetRange = () => setRange(palette.ranges[range.uri])
+
   const saveRange  = (r=range) => {
     savePalette({
       ...palette,
@@ -122,11 +122,35 @@ const Context = ({render}) => {
   const createRange = options =>
     saveRange( newRange(palette.ranges, options) )
 
+  const cloneRange = r =>
+    saveRange( copyRange(r, palette.ranges) )
+
+  const editRange = details => {
+    if (! range) {
+      return
+    }
+    const uri = details.uri
+    const r = { ...range, ...details }
+    const ranges = { ...palette.ranges }
+    delete ranges[range.uri]
+    ranges[uri] = r
+    savePalette({ ...palette, ranges })
+    setRange(r)
+    return r
+  }
+
+  const deleteRange = () => {
+    if (! range) {
+      return
+    }
+    const ranges = { ...palette.ranges }
+    delete ranges[range.uri]
+    savePalette({ ...palette, ranges })
+  }
+
   /*
 
 
-  const cloneRange = r =>
-    saveRange( copyRange(r, palette.ranges) )
 
   const renameRange = name => {
     if (! range) {
@@ -141,20 +165,6 @@ const Context = ({render}) => {
     return p
   }
 
-  const deleteRange = () => {
-    if (! range) {
-      return
-    }
-    const palette = {
-      ...palette,
-      ranges: {
-        ...palette
-      }
-    }
-    const rs = { ...palette.ranges }
-    delete rs[range.uri]
-    savePalettes(ps, null)
-  }
   */
 
   //--------------------------------------------------------------------------
@@ -289,6 +299,9 @@ const Context = ({render}) => {
     resetRange,
     copyRangeToPalette,
     createRange,
+    cloneRange,
+    editRange,
+    deleteRange,
     // curves
     setHMin, setHMax, setHMinControl, setHMaxControl,
     setSMin, setSMax, setSMinControl, setSMaxControl,

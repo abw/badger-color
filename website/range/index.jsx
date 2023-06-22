@@ -6,11 +6,11 @@ import CurrentSwatches from './CurrentSwatches.jsx'
 import StopSwatches from './StopSwatches.jsx'
 import CurveSwatches from './CurveSwatches.jsx'
 import Button from '../ui/Button.jsx'
+import Header from './Header.jsx'
 
 const Range = ({
   range,
   selectRange,
-  // resetRange,
   copyRangeToPalette,
   curvesToStops,
   resetCurves,
@@ -28,7 +28,7 @@ const Range = ({
   }
   return (
     <section className="range">
-      <h2>{range.name}</h2>
+      <Header/>
       <h3>Current</h3>
       <CurrentSwatches/>
       <div className="flex space end mar-v">
