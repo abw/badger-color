@@ -117,9 +117,10 @@ const Context = ({render}) => {
     })
     return r
   }
+  const copyRangeToPalette = () => saveRange(range)
 
   const createRange = options =>
-    saveRange( newRange(options) )
+    saveRange( newRange(palette.ranges, options) )
 
   /*
 
@@ -286,7 +287,7 @@ const Context = ({render}) => {
     range,
     selectRange,
     resetRange,
-    saveRange,
+    copyRangeToPalette,
     createRange,
     // curves
     setHMin, setHMax, setHMinControl, setHMaxControl,

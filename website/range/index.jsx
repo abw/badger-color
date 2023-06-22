@@ -11,7 +11,7 @@ const Range = ({
   range,
   selectRange,
   // resetRange,
-  saveRange,
+  copyRangeToPalette,
   curvesToStops,
   resetCurves,
   resetStops,
@@ -45,7 +45,7 @@ const Range = ({
             color="green"
             solid
             className="mar-l-2"
-            onClick={saveRange}
+            onClick={copyRangeToPalette}
           />
         </div>
       </div>
