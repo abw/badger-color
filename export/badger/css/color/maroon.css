@@ -1,0 +1,26 @@
+:where(html) {
+  /* maroon */
+  --maroon:    hsl(346 66% 48%);
+  --maroon-hue: 346;
+  --maroon-0:  hsl(346 76% 7%);
+  --maroon-5:  hsl(346 74% 8%);
+  --maroon-10: hsl(346 72% 10%);
+  --maroon-15: hsl(346 71% 12%);
+  --maroon-20: hsl(346 69% 15%);
+  --maroon-25: hsl(346 68% 18%);
+  --maroon-30: hsl(346 66% 22%);
+  --maroon-35: hsl(346 65% 27%);
+  --maroon-40: hsl(346 65% 33%);
+  --maroon-45: hsl(346 65% 40%);
+  --maroon-50: hsl(346 66% 48%);
+  --maroon-55: hsl(346 70% 57%);
+  --maroon-60: hsl(346 76% 66%);
+  --maroon-65: hsl(346 82% 74%);
+  --maroon-70: hsl(346 86% 81%);
+  --maroon-75: hsl(346 89% 86%);
+  --maroon-80: hsl(346 91% 90%);
+  --maroon-85: hsl(346 93% 93%);
+  --maroon-90: hsl(346 94% 96%);
+  --maroon-95: hsl(346 95% 97%);
+  --maroon-100: hsl(346 96% 98%);
+}

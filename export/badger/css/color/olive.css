@@ -1,0 +1,26 @@
+:where(html) {
+  /* olive */
+  --olive:    hsl(68 69% 47%);
+  --olive-hue: 68;
+  --olive-0:  hsl(76 76% 5%);
+  --olive-5:  hsl(75 78% 7%);
+  --olive-10: hsl(74 79% 9%);
+  --olive-15: hsl(73 80% 11%);
+  --olive-20: hsl(72 80% 14%);
+  --olive-25: hsl(72 79% 18%);
+  --olive-30: hsl(71 78% 22%);
+  --olive-35: hsl(70 76% 28%);
+  --olive-40: hsl(69 74% 33%);
+  --olive-45: hsl(69 72% 40%);
+  --olive-50: hsl(68 69% 47%);
+  --olive-55: hsl(67 67% 55%);
+  --olive-60: hsl(67 65% 62%);
+  --olive-65: hsl(66 63% 69%);
+  --olive-70: hsl(66 62% 75%);
+  --olive-75: hsl(66 61% 80%);
+  --olive-80: hsl(65 60% 85%);
+  --olive-85: hsl(65 59% 89%);
+  --olive-90: hsl(64 59% 92%);
+  --olive-95: hsl(64 59% 95%);
+  --olive-100: hsl(64 59% 97%);
+}

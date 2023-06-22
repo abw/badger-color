@@ -1,0 +1,26 @@
+:where(html) {
+  /* purple */
+  --purple:    hsl(280 80% 55%);
+  --purple-hue: 280;
+  --purple-0:  hsl(280 81% 8%);
+  --purple-5:  hsl(280 78% 10%);
+  --purple-10: hsl(280 75% 12%);
+  --purple-15: hsl(280 72% 15%);
+  --purple-20: hsl(280 69% 19%);
+  --purple-25: hsl(280 67% 23%);
+  --purple-30: hsl(280 66% 28%);
+  --purple-35: hsl(280 66% 34%);
+  --purple-40: hsl(280 69% 41%);
+  --purple-45: hsl(280 75% 48%);
+  --purple-50: hsl(280 80% 55%);
+  --purple-55: hsl(280 84% 63%);
+  --purple-60: hsl(280 87% 70%);
+  --purple-65: hsl(280 89% 77%);
+  --purple-70: hsl(280 90% 83%);
+  --purple-75: hsl(280 92% 88%);
+  --purple-80: hsl(280 92% 91%);
+  --purple-85: hsl(280 93% 94%);
+  --purple-90: hsl(280 94% 96%);
+  --purple-95: hsl(280 94% 97%);
+  --purple-100: hsl(280 94% 98%);
+}

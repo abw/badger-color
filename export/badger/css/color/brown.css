@@ -1,0 +1,26 @@
+:where(html) {
+  /* brown */
+  --brown:    hsl(13 68% 53%);
+  --brown-hue: 13;
+  --brown-0:  hsl(0 87% 9%);
+  --brown-5:  hsl(2 84% 11%);
+  --brown-10: hsl(4 81% 13%);
+  --brown-15: hsl(6 78% 15%);
+  --brown-20: hsl(8 75% 18%);
+  --brown-25: hsl(9 73% 22%);
+  --brown-30: hsl(10 71% 26%);
+  --brown-35: hsl(11 70% 31%);
+  --brown-40: hsl(12 69% 38%);
+  --brown-45: hsl(12 68% 45%);
+  --brown-50: hsl(13 68% 53%);
+  --brown-55: hsl(13 68% 62%);
+  --brown-60: hsl(14 69% 70%);
+  --brown-65: hsl(14 71% 77%);
+  --brown-70: hsl(14 72% 82%);
+  --brown-75: hsl(14 74% 87%);
+  --brown-80: hsl(14 76% 91%);
+  --brown-85: hsl(14 79% 93%);
+  --brown-90: hsl(14 81% 96%);
+  --brown-95: hsl(14 83% 97%);
+  --brown-100: hsl(14 86% 98%);
+}
