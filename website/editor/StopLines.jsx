@@ -21,14 +21,6 @@ const StopLines = ({
 
   return (
     <g className="stop-lines">
-      <DraggablePoint
-        x={stopX}
-        y={0}
-        maxY={0}
-        setXY={xy => setStopX(snapper(xy.x))}
-        radius={stopSelectRadius}
-        svgRef={svgRef}
-      />
       <line
         x1={stopX}
         y1={0}
@@ -40,6 +32,14 @@ const StopLines = ({
         y1={stopY / yFactor}
         x2="100"
         y2={stopY / yFactor}
+      />
+      <DraggablePoint
+        x={stopX}
+        y={0}
+        maxY={0}
+        setXY={xy => setStopX(snapper(xy.x))}
+        radius={stopSelectRadius}
+        svgRef={svgRef}
       />
       <text
         x={-5}

@@ -33,7 +33,7 @@ div.editor {
     --stop-line-stroke: var(--violet-50);
     --stop-control-stroke: var(--violet-50);
     --stop-control-fill: var(--violet-70);
-    --control-opacity: 0.6;
+    --control-opacity: 0.7;
     --control-hover-opacity: 1;
 
     width: 100%;
@@ -138,7 +138,7 @@ div.editor {
 
 #site.dark {
   svg.graph {
-    --background: black;
+    --background: var(--grey-10);
     --outline: var(--grey-30);
     --border-line: var(--grey-30);
     --grid-line: var(--grey-50);
@@ -148,11 +148,11 @@ div.editor {
     --locked-fill: var(--grey-30);
     --control-stroke: var(--blue-50);
     --control-fill: var(--blue-20);
-    --curve-stroke: var(--blue-50);
+    --curve-stroke: var(--blue-40);
     //--stop-line-stroke: var(--violet-50);
     //--stop-control-stroke: var(--violet-50);
     --stop-control-fill: var(--violet-30);
-    --control-opacity: 0.5;
-    --control-hover-opacity: 0.9;
+    --control-opacity: 0.7;
+    --control-hover-opacity: 1;
   }
 }

@@ -1,9 +1,9 @@
 import React from 'react'
-import Swatches from './Swatches.jsx'
+import Ranges from './Ranges.jsx'
 
 const Main = () =>
   <main>
-    <Swatches/>
+    <Ranges/>
   </main>
 
 export default Main

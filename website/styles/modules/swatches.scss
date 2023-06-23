@@ -9,6 +9,12 @@
     font-size: $size-small;
     padding: 0.5em;
     min-height: 3rem;
+    &:first-child {
+      border-radius: var(--swatch-radius) 0 0 var(--swatch-radius);
+    }
+    &:last-child {
+      border-radius: 0 var(--swatch-radius) var(--swatch-radius) 0;
+    }
     .info {
       .stop {
         font-size: $size-small;
@@ -75,3 +81,4 @@
     }
   }
 }
+

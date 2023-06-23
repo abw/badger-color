@@ -8,6 +8,9 @@ import { URLS } from './URLS.jsx'
 import { useNavigate } from 'react-router-dom'
 import { hslToCSS } from '../../lib/utils/color.js'
 import Options from '../palettes/Options.jsx'
+import { Routes } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import Theme from './Theme.jsx'
 
 const Sidebar = ({
   palette,
@@ -29,10 +32,10 @@ const Sidebar = ({
     <div>
       <div className="menu">
         <div className="flex space end mar-b-2">
-          <h4 className="mar-v-none">Palettes</h4>
+          <h3 className="mar-v-none">Palettes</h3>
           <Button
             color="green"
-            className="small mar-r-2"
+            className="small"
             icon="plus"
             solid
             onClick={newPalette}
@@ -54,7 +57,7 @@ const Sidebar = ({
       <Menu title="Standard Palettes" items={Standards}/>
 
       <div className="menu">
-        <h4>Options</h4>
+        <h3>Options</h3>
         <Options/>
       </div>
       <Menu title="Developer Tests" items={Dev}/>
@@ -63,51 +66,54 @@ const Sidebar = ({
 }
 
 const PaletteLink = ({ p, uri, palette, newRange })  => {
-  const selected = uri === palette?.uri
   return (
-    <div className={`${selected ? 'active' : ''}`}>
+    <div>
       <Link
         to={URLS.palette.home(uri)}
         className="item"
         text={p.name}
-        // className={`${name === palette?.name ? 'active' : ''} item`}
-        // onClick={() => selectPalette(name)}
       />
-      { selected &&
-        <div className="ranges menu">
-          <div className="flex space center">
-            <h4 className="mar-v-none">Ranges</h4>
-            <Button
-              color="green"
-              icon="plus"
-              className="small"
-              onClick={newRange}
-              solid
-            />
-          </div>
-          { Object.entries(palette.ranges).map(
-            ([ruri, range]) =>
-              <Link
-                key={ruri}
-                to={URLS.palette.range(uri, ruri)}
-                className="item"
-                style={{
-                  // '--background': 'red',
-                  '--active-background': hslToCSS(range.stops[70]),
-                  '--swatch-background': hslToCSS(range.stops[50])
-                }}
-              >
-                <div
-                  className="swatch"
-                  // style={{ backgroundColor: hslToCSS(range.stops[50]) }}
-                />
-                {range.name}
-              </Link>
-          )}
-        </div>
+      { palette &&
+      <Routes>
+        <Route
+          path={`${URLS.palette.home(uri)}/*`}
+          element={<PaletteMenu palette={palette} newRange={newRange}/>}
+        >
+        </Route>
+      </Routes>
       }
     </div>
   )
 }
+
+const PaletteMenu = ({palette, newRange}) =>
+  <div className="ranges menu">
+    <div className="flex space end pad-v">
+      <h4 className="mar-v-none">Ranges</h4>
+      <Button
+        color={Theme.colors.add}
+        icon="plus"
+        className="smaller"
+        onClick={newRange}
+        solid
+      />
+    </div>
+    { Object.entries(palette.ranges).map(
+      ([uri, range]) =>
+        <Link
+          key={uri}
+          to={URLS.palette.range(palette.uri, uri)}
+          className="item"
+          style={{
+            '--active-light-background': hslToCSS(range.stops[70]),
+            '--active-dark-background': hslToCSS(range.stops[30]),
+            '--swatch-background': hslToCSS(range.stops[50])
+          }}
+        >
+          <div className="swatch"/>
+          {range.name}
+        </Link>
+    )}
+  </div>
 
 export default Consumer(Sidebar)

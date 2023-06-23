@@ -1,5 +1,6 @@
 export const Theme = {
   colors: {
+    add:       'green',
     cancel:    'grey',
     clipboard: 'violet',
     clone:     'blue',

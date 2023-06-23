@@ -3,7 +3,7 @@ import Link from './Link.jsx'
 
 const Menu = ({title, items}) =>
   <div className="menu">
-    <h4>{title}</h4>
+    <h3>{title}</h3>
     { items.map(
       item => <Link key={item.to} className="item" {...item}/>
     )}

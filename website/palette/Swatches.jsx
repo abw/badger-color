@@ -10,24 +10,21 @@ const Swatches = ({
   uri,
   range,
   options
-}) => {
-  return (
-    <Link to={URLS.palette.range(palette.uri, uri)}>
-      <div className="swatches">
-        { options.blackWhite && <Black/> }
-        { numberRange(0, 100, options.show5s ? 5 : 10).map(
-          stop =>
-            <Swatch
-              key={stop}
-              stop={stop}
-              color={range.stops[stop]}
-              clickable={true}
-            />
-        )}
-        { options.blackWhite && <White/> }
-      </div>
-    </Link>
-  )
-}
+}) =>
+  <Link to={URLS.palette.range(palette.uri, uri)}>
+    <div className="swatches">
+      { options.blackWhite && <Black/> }
+      { numberRange(0, 100, options.show5s ? 5 : 10).map(
+        stop =>
+          <Swatch
+            key={stop}
+            stop={stop}
+            color={range.stops[stop]}
+            clickable={true}
+          />
+      )}
+      { options.blackWhite && <White/> }
+    </div>
+  </Link>
 
 export default Consumer(Swatches)

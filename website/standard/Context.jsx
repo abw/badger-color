@@ -1,7 +1,9 @@
 import { Generator } from '@abw/react-context'
+import { usePalettes } from '../palettes/Context.jsx'
 
 const Context = ({palette, render}) => {
-  return render({ palette })
+  const { options } = usePalettes()
+  return render({ palette, options })
 }
 
 const generated = Generator(Context)

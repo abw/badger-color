@@ -51,4 +51,9 @@ dialog::backdrop {
   dialog::backdrop {
     // background-color: rgba(white, 0.5);
   }
+  #app > aside .menu .menu.ranges a.active {
+    background-color: var(--active-dark-background);
+    color: white;
+
+  }
 }

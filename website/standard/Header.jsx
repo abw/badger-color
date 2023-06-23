@@ -4,7 +4,6 @@ import { usePalettes } from '../palettes/Context.jsx'
 import { usePalette } from './Context.jsx'
 import { sleep } from '@abw/badger-utils'
 import { useState } from 'react'
-import Options from '../palettes/Options.jsx'
 import { useNavigate } from 'react-router-dom'
 import { URLS } from '../site/URLS.jsx'
 
@@ -67,7 +66,6 @@ const Header = () => {
           />
         </div>
       </div>
-      <Options/>
     </header>
   )
 }
