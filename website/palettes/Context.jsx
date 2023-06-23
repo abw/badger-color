@@ -148,25 +148,6 @@ const Context = ({render}) => {
     savePalette({ ...palette, ranges })
   }
 
-  /*
-
-
-
-  const renameRange = name => {
-    if (! range) {
-      return
-    }
-    const uri = nameToURI(name)
-    const p = { ...palette, name, uri }
-    const ps = { ...palettes }
-    delete ps[palette.uri]
-    ps[uri] = p
-    savePalettes(ps, p)
-    return p
-  }
-
-  */
-
   //--------------------------------------------------------------------------
   // Range stops
   //--------------------------------------------------------------------------
@@ -178,6 +159,7 @@ const Context = ({render}) => {
   const lockStop   = stop => setStop(stop, { ...range.stops[stop], locked: true  })
   const unlockStop = stop => setStop(stop, { ...range.stops[stop], locked: false })
   const toggleLock = stop => range.stops[stop].locked ? unlockStop(stop) : lockStop(stop)
+  const resetStops = () => setStops(palette.ranges[range.uri].stops)
 
   // reset stops to their original h/s/l
   const resetStopsItem = item => setStops(
@@ -192,52 +174,35 @@ const Context = ({render}) => {
       { }
     )
   )
-  const resetHStops = () => resetStopsItem('h')
-  const resetSStops = () => resetStopsItem('s')
-  const resetLStops = () => resetStopsItem('l')
-  const resetStops  = () => setStops(palette.ranges[range.uri].stops)
 
   //--------------------------------------------------------------------------
   // Range curves
   //--------------------------------------------------------------------------
   // functions to update curves
-  const setCurves = curves => setRange( range => ({ ...range, curves }) )
-  const setHCurve = h      => setCurves({ ...range.curves, h })
-  const setSCurve = s      => setCurves({ ...range.curves, s })
-  const setLCurve = l      => setCurves({ ...range.curves, l })
-
-  // set hue curve
-  const setHMin        = min        => setHCurve({ ...range.curves.h, min })
-  const setHMax        = max        => setHCurve({ ...range.curves.h, max })
-  const setHMinControl = minControl => setHCurve({ ...range.curves.h, minControl })
-  const setHMaxControl = maxControl => setHCurve({ ...range.curves.h, maxControl })
-
-  // set saturation curve
-  const setSMin        = min        => setSCurve({ ...range.curves.s, min })
-  const setSMax        = max        => setSCurve({ ...range.curves.s, max })
-  const setSMinControl = minControl => setSCurve({ ...range.curves.s, minControl })
-  const setSMaxControl = maxControl => setSCurve({ ...range.curves.s, maxControl })
-
-  // set lightness curve
-  const setLMin        = min        => setLCurve({ ...range.curves.l, min })
-  const setLMax        = max        => setLCurve({ ...range.curves.l, max })
-  const setLMinControl = minControl => setLCurve({ ...range.curves.l, minControl })
-  const setLMaxControl = maxControl => setLCurve({ ...range.curves.l, maxControl })
-
-  // reset curves
-  const resetHCurve = () => setHCurve(palette.ranges[range.uri].curves.h)
-  const resetSCurve = () => setSCurve(palette.ranges[range.uri].curves.s)
-  const resetLCurve = () => setLCurve(palette.ranges[range.uri].curves.l)
-  const resetCurves = () => setCurves(palette.ranges[range.uri].curves)
+  const setCurves   = curves => setRange( range => ({ ...range, curves }) )
+  const setHCurve   = h      => setCurves({ ...range.curves, h })
+  const setSCurve   = s      => setCurves({ ...range.curves, s })
+  const setLCurve   = l      => setCurves({ ...range.curves, l })
+  const modHCurve   = mods   => setHCurve({ ...range.curves.h, ...mods })
+  const modSCurve   = mods   => setSCurve({ ...range.curves.s, ...mods })
+  const modLCurve   = mods   => setLCurve({ ...range.curves.l, ...mods })
+  const resetCurves = ()     => setCurves(palette.ranges[range.uri].curves)
 
   // calculate h/s/l stop values from a curve
-  const hAtStop   = stop => hStopValueFromRange(stop, range)
-  const sAtStop   = stop => sStopValueFromRange(stop, range)
-  const lAtStop   = stop => lStopValueFromRange(stop, range)
-  const hslAtStop = stop => hslAtStopFromRange(stop, range)
+  const hAtStop     = stop   => hStopValueFromRange(stop, range)
+  const sAtStop     = stop   => sStopValueFromRange(stop, range)
+  const lAtStop     = stop   => lStopValueFromRange(stop, range)
+  const hslAtStop   = stop   => hslAtStopFromRange(stop, range)
 
-  // update stop value calculated from curve
-  const curveToStops = item => setStops(
+  // reset an h/s/l curve to its original settings
+  const resetCurveItem = item =>
+    setCurves({
+      ...range.curves,
+      [item]: palette.ranges[range.uri].curves[item]
+    })
+
+  // update stop for an h/s/l value calculated from curve
+  const curveToStopsItem = item => setStops(
     Object.entries(range.stops).reduce(
       (stops, [stop, color]) => {
         stops[stop] = color.locked
@@ -251,11 +216,6 @@ const Context = ({render}) => {
       { }
     )
   )
-
-  // update h/s/l stops calculated from respective curves
-  const hCurveToStops = () => curveToStops('h')
-  const sCurveToStops = () => curveToStops('s')
-  const lCurveToStops = () => curveToStops('l')
 
   // update all of h/s/l for stops from curves
   const curvesToStops = () => setStops(
@@ -275,6 +235,39 @@ const Context = ({render}) => {
     stop,
     hslAtStop(stop)
   )
+
+  const controls = {
+    h: {
+      setStop:        setHStop,
+      setMin:         min => modHCurve({ min }),
+      setMax:         max => modHCurve({ max }),
+      setMinControl:  minControl => modHCurve({ minControl }),
+      setMaxControl:  maxControl => modHCurve({ maxControl }),
+      resetCurve:     () => resetCurveItem('h'),
+      resetStops:     () => resetStopsItem('h'),
+      curveToStops:   () => curveToStopsItem('h'),
+    },
+    s: {
+      setStop:        setSStop,
+      setMin:         min => modSCurve({ min }),
+      setMax:         max => modSCurve({ max }),
+      setMinControl:  minControl => modSCurve({ minControl }),
+      setMaxControl:  maxControl => modSCurve({ maxControl }),
+      resetCurve:     () => resetCurveItem('s'),
+      resetStops:     () => resetStopsItem('s'),
+      curveToStops:   () => curveToStopsItem('s'),
+    },
+    l: {
+      setStop:        setLStop,
+      setMin:         min => modLCurve({ min }),
+      setMax:         max => modLCurve({ max }),
+      setMinControl:  minControl => modLCurve({ minControl }),
+      setMaxControl:  maxControl => modLCurve({ maxControl }),
+      resetCurve:     () => resetCurveItem('l'),
+      resetStops:     () => resetStopsItem('l'),
+      curveToStops:   () => curveToStopsItem('l'),
+    }
+  }
 
   return render({
     // options
@@ -302,18 +295,19 @@ const Context = ({render}) => {
     cloneRange,
     editRange,
     deleteRange,
-    // curves
-    setHMin, setHMax, setHMinControl, setHMaxControl,
-    setSMin, setSMax, setSMinControl, setSMaxControl,
-    setLMin, setLMax, setLMinControl, setLMaxControl,
-    resetCurves, resetHCurve, resetSCurve, resetLCurve,
-    // stops
-    setHStop, setSStop, setLStop,
-    lockStop, unlockStop, toggleLock,
-    resetStops, resetHStops, resetSStops, resetLStops,
-    hAtStop, sAtStop, lAtStop, hslAtStop,
-    hCurveToStops, sCurveToStops, lCurveToStops,
-    curvesToStops, curvesToStop
+    // curves and stops
+    controls,
+    curvesToStop,
+    curvesToStops,
+    resetStops,
+    resetCurves,
+    lockStop,
+    unlockStop,
+    toggleLock,
+    hAtStop,
+    sAtStop,
+    lAtStop,
+    hslAtStop,
   })
 }
 

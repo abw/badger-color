@@ -261,7 +261,7 @@ const CurveEditor = ({
         </div>
         <Button
           text={<>Curve <Icon name="arrow-right" className="mar-h"/> Stops</>}
-          color="green"
+          color="blue"
           // iconRight="arrow-up"
           className="mar-b-2"
           onClick={curveToStops}

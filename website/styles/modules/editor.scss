@@ -1,0 +1,133 @@
+div.editor {
+  & > header {
+    margin-bottom: 0.25rem;
+    .options {
+      display: flex;
+      --option-back: var(--grey-90);
+      --option-hover-back: var(--grey-100);
+      padding-right: 0;
+    }
+  }
+  svg.graph {
+    --outline: var(--grey-60);
+    --border-line: var(--grey-50);
+    --grid-line: var(--grey-60);
+    --stop-stroke: var(--pink-50);
+    --stop-fill: var(--pink-70);
+    --locked-stroke: var(--grey-60);
+    --locked-fill: var(--grey-70);
+    --control-stroke: var(--blue-50);
+    --control-fill: var(--blue-80);
+    /*
+    --min-stroke: var(--green-50);
+    --min-fill: var(--green-80);
+    --max-stroke: var(--red-50);
+    --max-fill: var(--red-80);
+    */
+    --min-stroke: var(--control-stroke);
+    --min-fill: var(--control-fill);
+    --max-stroke: var(--control-stroke);
+    --max-fill: var(--control-fill);
+    --curve-stroke: var(--blue-50);
+    --stop-line-stroke: var(--violet-50);
+    --stop-control-stroke: var(--violet-50);
+    --stop-control-fill: var(--violet-70);
+    --control-opacity: 0.5;
+    --control-hover-opacity: 0.9;
+
+    width: 100%;
+    user-select: none;
+    background-color: white;
+    margin: 0;
+    border: 1px solid var(--outline);
+    .grid {
+      rect {
+        fill: none;
+        stroke-width: 0.5;
+        stroke: var(--border-line);
+      }
+      line {
+        fill: none;
+        stroke-width: 0.1;
+        stroke: var(--grid-line);
+      }
+    }
+    .stops {
+      circle {
+        stroke-width: 0.5;
+        stroke: var(--stop-stroke);
+        fill: var(--stop-fill);
+        opacity: var(--control-opacity);
+        &.locked {
+          stroke: var(--locked-stroke);
+          fill: var(--locked-fill);
+        }
+        &:hover:not(.locked) {
+          opacity: var(--control-hover-opacity);
+        }
+      }
+    }
+    .curve {
+      .point {
+        stroke-width: 1;
+        opacity: var(--control-opacity);
+        &.hover {
+          opacity: var(--control-hover-opacity);
+        }
+        &.end.min {
+          stroke: var(--min-stroke);
+          fill: var(--min-fill);
+        }
+        &.end.max {
+          stroke: var(--max-stroke);
+          fill: var(--max-fill);
+        }
+        &.control {
+          stroke: var(--control-stroke);
+          fill: var(--control-fill);
+        }
+      }
+      .control-line {
+        stroke: var(--control-stroke);
+        stroke-width: 0.25;
+        stroke-dasharray: 2 1;
+      }
+      polyline {
+        fill: none;
+        stroke-width: 1;
+        stroke-linecap: round;
+        stroke: var(--curve-stroke);
+      }
+    }
+    .stop-lines {
+      line {
+        stroke: var(--stop-line-stroke);
+        stroke-width: 0.25;
+        stroke-dasharray: 1.5 0.5;
+      }
+      circle {
+        stroke-width: 1;
+        stroke: var(--stop-control-stroke);
+        fill: var(--stop-control-fill);
+        opacity: var(--control-opacity);
+        &.hover {
+          opacity: var(--control-hover-opacity);
+        }
+      }
+      text {
+        font-size: 3.5px;
+        fill: var(--stop-control-stroke);
+      }
+    }
+  }
+  .curve-inputs {
+    margin-bottom: 0.5rem;
+    div.field {
+      margin-bottom: 0;
+      label {
+        font-size: $size-smaller;
+        line-height: 1.5;
+      }
+    }
+  }
+}

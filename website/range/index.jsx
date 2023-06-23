@@ -42,7 +42,7 @@ const Range = ({
           />
           <Button
             icon="arrow-up"
-            color="green"
+            color="blue"
             solid
             className="mar-l-2"
             onClick={copyRangeToPalette}
@@ -61,7 +61,7 @@ const Range = ({
           />
           <Button
             icon="arrow-up"
-            color="green"
+            color="blue"
             solid
             className="mar-l-2"
             onClick={curvesToStops}
