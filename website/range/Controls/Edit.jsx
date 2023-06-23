@@ -6,6 +6,7 @@ import { Consumer } from '../../palettes/Context.jsx'
 import { useNavigate } from 'react-router-dom'
 import { Form, Field, useForm } from '@abw/react-formula'
 import { nameToURI } from '../../../lib/utils/index.js'
+import Theme from '../../site/Theme.jsx'
 
 const fields = {
   name: {
@@ -53,7 +54,7 @@ const Edit = ({ palette, range, editRange }) => {
   return (
     <>
       <Button
-        color="blue"
+        color={Theme.colors.edit}
         icon="pen"
         onClick={() => setOpen(true)}
         className="mar-l-2"
@@ -73,13 +74,13 @@ const Edit = ({ palette, range, editRange }) => {
         </Form>
         <div className="flex space mar-t-8">
           <Button
-            color="grey"
+            color={Theme.colors.cancel}
             text="Cancel"
             iconRight="cross"
             onClick={cancel}
           />
           <Button
-            color="green"
+            color={Theme.colors.save}
             text="Save"
             iconRight="check"
             solid

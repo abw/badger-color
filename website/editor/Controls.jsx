@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../ui/Button.jsx'
 import Icon from '../ui/Icon.jsx'
 import { Consumer } from './Context.jsx'
+import Theme from '../site/Theme.jsx'
 
 const Controls = ({
   resetCurve,
@@ -12,7 +13,7 @@ const Controls = ({
     <div>
       <Button
         text="Curve"
-        color="orange"
+        color={Theme.colors.undo}
         iconLeft="undo"
         className="mar-r-2 mar-b-2"
         onClick={resetCurve}
@@ -20,7 +21,7 @@ const Controls = ({
       />
       <Button
         text="Stops"
-        color="orange"
+        color={Theme.colors.undo}
         iconLeft="undo"
         className="mar-b-2"
         onClick={resetStops}
@@ -29,7 +30,7 @@ const Controls = ({
     </div>
     <Button
       text={<>Curve <Icon name="arrow-right" className="mar-h"/> Stops</>}
-      color="blue"
+      color={Theme.colors.commit}
       // iconRight="arrow-up"
       className="mar-b-2"
       onClick={curveToStops}

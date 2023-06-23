@@ -32,6 +32,10 @@
   --dialog-back:          var(--grey-100);
   --dialog-border:        var(--grey-20);
   --dialog-backdrop:      rgba(black, 0.5);
+  --option-back:          var(--grey-70);
+  --option-hover-back:    var(--grey-90);
+  --editor-option-back:       var(--grey-90);
+  --editor-option-hover-back: var(--grey-100);
 }
 #site.dark {
   --body-text:          var(--grey-60);
@@ -67,4 +71,8 @@
   --dialog-back:          var(--grey-10);
   --dialog-border:        var(--grey-20);
   --dialog-backdrop:      rgba(white, 0.5);
+  --option-back:          var(--grey-0);
+  --option-hover-back:    var(--grey-10);
+  --editor-option-back:       var(--grey-10);
+  --editor-option-hover-back: var(--grey-0);
 }

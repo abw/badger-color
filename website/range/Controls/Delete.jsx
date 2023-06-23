@@ -4,6 +4,7 @@ import Modal from '../../ui/Modal.jsx'
 import { useNavigate } from 'react-router-dom'
 import { Consumer } from '../../palettes/Context.jsx'
 import { URLS } from '../../site/URLS.jsx'
+import Theme from '../../site/Theme.jsx'
 
 const Delete = ({ palette, deleteRange }) => {
   const navigate = useNavigate()
@@ -19,7 +20,7 @@ const Delete = ({ palette, deleteRange }) => {
   return (
     <>
       <Button
-        color="red"
+        color={Theme.colors.delete}
         solid
         icon="trash"
         onClick={() => setOpen(true)}
@@ -31,13 +32,13 @@ const Delete = ({ palette, deleteRange }) => {
         </p>
         <div className="flex space mar-t-8">
           <Button
-            color="grey"
+            color={Theme.colors.cancel}
             text="Cancel"
             iconRight="cross"
             onClick={cancel}
           />
           <Button
-            color="red"
+            color={Theme.colors.delete}
             text="Delete"
             iconRight="trash"
             solid

@@ -6,6 +6,7 @@ const Button = ({
   text,
   icon, iconLeft, iconRight,
   color,
+  size,
   className,
   onClick,
   solid
@@ -16,7 +17,7 @@ const Button = ({
       'has-icon-right': iconRight,
       solid
     },
-    'button', color, className
+    'button', color, size, className
   )
   return (
     <button

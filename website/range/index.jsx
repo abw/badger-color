@@ -7,6 +7,7 @@ import StopSwatches from './StopSwatches.jsx'
 import CurveSwatches from './CurveSwatches.jsx'
 import Button from '../ui/Button.jsx'
 import Header from './Header.jsx'
+import Theme from '../site/Theme.jsx'
 
 const Range = ({
   range,
@@ -36,13 +37,13 @@ const Range = ({
         <div className="small">
           <Button
             icon="undo"
-            color="orange"
+            color={Theme.colors.undo}
             solid
             onClick={resetStops}
           />
           <Button
             icon="arrow-up"
-            color="blue"
+            color={Theme.colors.commit}
             solid
             className="mar-l-2"
             onClick={copyRangeToPalette}
@@ -55,13 +56,13 @@ const Range = ({
         <div className="small">
           <Button
             icon="undo"
-            color="orange"
+            color={Theme.colors.undo}
             solid
             onClick={resetCurves}
           />
           <Button
             icon="arrow-up"
-            color="blue"
+            color={Theme.colors.commit}
             solid
             className="mar-l-2"
             onClick={curvesToStops}

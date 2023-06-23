@@ -3,6 +3,7 @@ import Delete from './Delete.jsx'
 import Clipboard from './Clipboard.jsx'
 import Clone from './Clone.jsx'
 import Edit from './Edit.jsx'
+import Help from './Help.jsx'
 
 const Controls = () =>
   <div className="smallish">
@@ -10,6 +11,7 @@ const Controls = () =>
     <Clipboard/>
     <Edit/>
     <Clone/>
+    <Help/>
   </div>
 
 export default Controls

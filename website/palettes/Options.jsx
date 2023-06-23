@@ -8,28 +8,27 @@ const Options = ({
   // toggleStops,
   toggleInfo,
   toggleShow5s,
-  toggleGrey
+  toggleGrey,
+  toggleBlackWhite,
 }) =>
   <div className="options">
     <Checkbox
-      label="Show Names"
+      label="Range Names"
       checked={options.names}
       toggle={toggleNames}
     />
     <Checkbox
-      label="Show Info"
+      label="Swatch Info"
       checked={options.info}
       toggle={toggleInfo}
     />
-    {/*
     <Checkbox
-      label="Show Stops"
-      checked={options.stops}
-      toggle={toggleStops}
+      label="Black &amp; White"
+      checked={options.blackWhite}
+      toggle={toggleBlackWhite}
     />
-    */}
     <Checkbox
-      label="Show 5s"
+      label="5 Stops"
       checked={options.show5s}
       toggle={toggleShow5s}
     />

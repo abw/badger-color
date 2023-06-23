@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from '../../ui/Button.jsx'
 import Modal from '../../ui/Modal.jsx'
+import Theme from '../../site/Theme.jsx'
 import { useNavigate } from 'react-router-dom'
 import { Consumer } from '../../palettes/Context.jsx'
 
@@ -18,7 +19,7 @@ const Delete = ({ deletePalette }) => {
   return (
     <>
       <Button
-        color="red"
+        color={Theme.colors.delete}
         solid
         icon="trash"
         onClick={() => setOpen(true)}
@@ -30,13 +31,13 @@ const Delete = ({ deletePalette }) => {
         </p>
         <div className="flex space mar-t-8">
           <Button
-            color="grey"
+            color={Theme.colors.cancel}
             text="Cancel"
             iconRight="cross"
             onClick={cancel}
           />
           <Button
-            color="red"
+            color={Theme.colors.delete}
             text="Delete"
             iconRight="trash"
             solid

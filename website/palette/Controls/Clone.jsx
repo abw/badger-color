@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../../ui/Button.jsx'
+import Theme from '../../site/Theme.jsx'
 import { Consumer } from '../../palettes/Context.jsx'
 import { useNavigate } from 'react-router-dom'
 import { URLS } from '../../site/URLS.jsx'
@@ -14,7 +15,7 @@ const Clone = ({ palette, clonePalette }) => {
   return (
     <Button
       icon="clone"
-      color="green"
+      color={Theme.colors.clone}
       className="mar-l-2"
       onClick={onClonePalette}
       solid

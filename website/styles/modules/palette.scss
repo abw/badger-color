@@ -47,17 +47,3 @@ section.palette {
     }
   }
 }
-
-    .white,
-    .black {
-      font-size: $size-smaller;
-      text-align: center;
-    }
-    .white {
-      color: black;
-      background-color: white;
-    }
-    .black {
-      color: white;
-      background-color: black;
-    }

@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { Form, Field, Fields, useForm } from '@abw/react-formula'
 import * as yup  from 'yup'
 import { nameToURI } from '../../../lib/utils/index.js'
+import Theme from '../../site/Theme.jsx'
 
 const fields = {
   name: {
@@ -70,7 +71,7 @@ const Edit = ({ palette, palettes, editPalette }) => {
   return (
     <>
       <Button
-        color="blue"
+        color={Theme.colors.edit}
         icon="pen"
         onClick={() => setOpen(true)}
         className="mar-l-2"
@@ -91,13 +92,13 @@ const Edit = ({ palette, palettes, editPalette }) => {
         </Form>
         <div className="flex space mar-t-8">
           <Button
-            color="grey"
+            color={Theme.colors.cancel}
             text="Cancel"
             iconRight="cross"
             onClick={cancel}
           />
           <Button
-            color="green"
+            color={Theme.colors.save}
             text="Save"
             iconRight="check"
             solid

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Button from '../../ui/Button.jsx'
+import Theme from '../../site/Theme.jsx'
 import { sleep } from '@abw/badger-utils'
 import { Consumer } from '../../palettes/Context.jsx'
 
@@ -14,13 +15,13 @@ const Clipboard = ({ palette }) => {
   return copied
     ? <Button
         icon="check"
-        color="violet"
+        color={Theme.colors.clipboard}
         solid
         className="mar-l-2"
       />
     : <Button
         icon="clipboard"
-        color="violet"
+        color={Theme.colors.clipboard}
         solid
         className="mar-l-2"
         onClick={() => copy(JSON.stringify(palette, null, 2))}

@@ -10,7 +10,7 @@ const Context = ({
   curveName,
   scale=100,
   stopRadius=2,
-  lockedRadius=1.5,
+  lockedRadius=1.8,
   endRadius=3,
   controlRadius=2.5,
   stopSelectRadius=2.5,

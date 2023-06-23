@@ -19,20 +19,20 @@ const Context = ({render}) => {
   // Options
   //--------------------------------------------------------------------------
   const [options, setOptions] = useState({
-    names:  true,
-    stops:  true,
-    info:   false,
-    grey:   false,
-    show5s: false,
+    names:      true,
+    info:       false,
+    blackWhite: false,
+    show5s:     false,
+    grey:       false,
   })
-  const setOption    = (name, value) => setOptions({ ...options, [name]: value })
-  const toggleOption = name => setOption(name, ! options[name])
-  const toggler      = name => () => toggleOption(name)
-  const toggleNames  = toggler('names')
-  const toggleInfo   = toggler('info')
-  const toggleGrey   = toggler('grey')
-  const toggleShow5s = toggler('show5s')
-  const toggleStops  = toggler('stops')
+  const setOption        = (name, value) => setOptions({ ...options, [name]: value })
+  const toggleOption     = name => setOption(name, ! options[name])
+  const toggler          = name => () => toggleOption(name)
+  const toggleNames      = toggler('names')
+  const toggleInfo       = toggler('info')
+  const toggleGrey       = toggler('grey')
+  const toggleShow5s     = toggler('show5s')
+  const toggleBlackWhite = toggler('blackWhite')
 
   //--------------------------------------------------------------------------
   // Palettes
@@ -276,7 +276,7 @@ const Context = ({render}) => {
     toggleInfo,
     toggleGrey,
     toggleShow5s,
-    toggleStops,
+    toggleBlackWhite,
     // palettes
     palettes,
     palette,

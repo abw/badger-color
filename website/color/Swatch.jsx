@@ -4,7 +4,7 @@ import { hslToCSS, hslToGrey, hslToLuminance } from '../../lib/utils/color.js'
 import Icon from '../ui/Icon.jsx'
 import { usePalettes } from '../palettes/Context.jsx'
 
-const Swatch = ({
+export const Swatch = ({
   color, stop,
   onClick,
   clickable,
