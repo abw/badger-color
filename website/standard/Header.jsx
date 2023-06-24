@@ -22,7 +22,6 @@ const Header = () => {
     navigate(URLS.palette.home(p.uri))
   }
 
-
   return (
     <header>
       <div className="flex space start">

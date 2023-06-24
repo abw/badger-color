@@ -49,5 +49,58 @@
       }
     }
   }
+}
+.apology {
+  --apology-text: var(--grey-30);
+  --apology-back: var(--grey-70);
+  --apology-bold: var(--red-50);
+  --apology-border: var(--grey-60);
+  margin-top: 5rem;
+  padding: 1.5rem 2rem;
+  color: var(--apology-text);
+  background-color: var(--apology-back);
+  border: 1px solid var(--apology-border);
+  border-radius: 8px;
+  display: flex;
+  // box-shadow: 2px 4px 6px var(--app-top-shadow);
+  h2 {
+    margin-top: 0;
+    b {
+      color: var(--apology-bold);
+    }
+  }
+  p:last-child {
+    margin-bottom: 1rem;
+  }
+  .flags {
+    flex-basis: 30%;
+    margin-right: 2rem;
+    svg {
+      width: 100%;
+      height: auto;
+      margin: 0.5rem 0;
+    }
+  }
+  .text {
+    flex-basis: 70%;
+  }
+}
 
+#site.dark .apology {
+  --apology-text: var(--grey-70);
+  --apology-back: var(--grey-30);
+  --apology-border: var(--grey-40);
+  --apology-bold: var(--red-50);
+}
+
+@media only screen and (max-width: 800px) {
+  .apology {
+    flex-direction: column;
+    .flags {
+      width: 100%;
+      display: flex;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+  }
 }
