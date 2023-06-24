@@ -4,6 +4,7 @@ import Icon  from '../ui/Icon.jsx'
 import { Toggle, useTheme } from '@abw/react-night-and-day'
 import { ReactComponent as Github } from '../svg/github.svg'
 import { SIDEBAR, NO_SIDEBAR } from './Constants.jsx'
+import { version } from './Utils.jsx'
 
 
 const Header = () => {
@@ -17,7 +18,8 @@ const Header = () => {
             className="toggle-sidebar action"
             onClick={() => setVariant(variant === SIDEBAR ? NO_SIDEBAR : SIDEBAR)}
           />
-          <Link to="/" className="home mar-l-2" text="Badger-Color"/>
+          <Link to="/" className="home mar-l-2" text="Badger Color"/>
+          <span className="small mar-l-2">v{version}</span>
         </div>
         <div>
           <a href="https://github.com/abw/badger-color">

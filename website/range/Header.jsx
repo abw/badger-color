@@ -5,9 +5,11 @@ import Controls from './Controls/index.jsx'
 const Header = ({
   range,
 }) =>
-  <div className="flex space end stack-tablet">
-    <h2>{range.name}</h2>
-    <Controls/>
-  </div>
+  <header>
+    <div className="flex space end stack-tablet">
+      <h2>{range.name}</h2>
+      <Controls/>
+    </div>
+  </header>
 
 export default Consumer(Header)

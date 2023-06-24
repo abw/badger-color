@@ -1,8 +1,16 @@
-import React  from 'react'
+import React from 'react'
+import { version, date } from './Utils.jsx'
 
 const Footer = () =>
   <footer>
-    FOOTER
+    <div className="flex space">
+      <div>
+        &copy; Copyright 2023 Andy Wardley
+      </div>
+      <div>
+        Version {version} {date}
+      </div>
+    </div>
   </footer>
 
 export default Footer

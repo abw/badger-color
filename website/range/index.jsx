@@ -36,10 +36,12 @@ const Range = ({
         <h3>Stops</h3>
         <div className="small">
           <Button
-            icon="undo"
+            iconLeft="undo"
+            text="Stops"
             color={Theme.colors.undo}
             solid
             onClick={resetStops}
+            className="wd-7"
           />
           <Button
             icon="arrow-up"
@@ -55,10 +57,12 @@ const Range = ({
         <h3>Curves</h3>
         <div className="small">
           <Button
-            icon="undo"
+            iconLeft="undo"
+            text="Curves"
             color={Theme.colors.undo}
             solid
             onClick={resetCurves}
+            className="wd-7"
           />
           <Button
             icon="arrow-up"

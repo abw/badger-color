@@ -35,7 +35,7 @@ const Sidebar = ({
           <h3 className="mar-v-none">My Palettes</h3>
           <Button
             color="green"
-            className="small"
+            className="smaller"
             icon="plus"
             solid
             onClick={newPalette}
