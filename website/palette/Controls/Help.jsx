@@ -7,9 +7,7 @@ import Theme from '../../site/Theme.jsx'
 
 const Help = () => {
   const [open, setOpen] = useState(false)
-  const ok = () => {
-    setOpen(false)
-  }
+  const close = () => setOpen(false)
 
   return (
     <>
@@ -20,8 +18,9 @@ const Help = () => {
         onClick={() => setOpen(true)}
         className="mar-l-2"
       />
-      <Modal open={open} className="text-left">
+      <Modal open={open} close={close} className="text-left">
         <h2 className="mar-t-none mar-b-6">Help</h2>
+        <h3 className="mar-b-3">Palette Controls</h3>
         <ButtonHelp
           color={Theme.colors.delete}
           icon="trash"
@@ -60,7 +59,7 @@ const Help = () => {
             text="OK"
             iconRight="check"
             solid
-            onClick={ok}
+            onClick={close}
           />
         </div>
       </Modal>

@@ -8,9 +8,7 @@ import { Consumer } from '../../palettes/Context.jsx'
 const Delete = ({ deletePalette }) => {
   const navigate = useNavigate()
   const [open, setOpen] = useState(false)
-  const cancel = () => {
-    setOpen(false)
-  }
+  const close = () => setOpen(false)
   const confirm = () => {
     deletePalette()
     navigate('/')
@@ -24,7 +22,7 @@ const Delete = ({ deletePalette }) => {
         icon="trash"
         onClick={() => setOpen(true)}
       />
-      <Modal open={open} className="text-left">
+      <Modal open={open} close={close} className="text-left">
         <p>
           Are you sure you want to delete this palette?
         </p>
@@ -33,7 +31,7 @@ const Delete = ({ deletePalette }) => {
             color={Theme.colors.cancel}
             text="Cancel"
             iconRight="cross"
-            onClick={cancel}
+            onClick={close}
           />
           <Button
             color={Theme.colors.delete}

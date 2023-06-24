@@ -46,9 +46,7 @@ const Edit = ({ palette, palettes, editPalette }) => {
   const [open, setOpen] = useState(false)
   const [form, setForm] = useState(false)
   const initialURI = palette.uri
-  const cancel = () => {
-    setOpen(false)
-  }
+  const close = () => setOpen(false)
   const submit = values => {
     editPalette(values)
     setOpen(false)
@@ -77,7 +75,7 @@ const Edit = ({ palette, palettes, editPalette }) => {
         className="mar-l-2"
         solid
       />
-      <Modal open={open} className="text-left">
+      <Modal open={open} close={close} className="text-left">
         <Form
           values={palette} fields={fields}
           onLoad={setForm}
@@ -95,7 +93,7 @@ const Edit = ({ palette, palettes, editPalette }) => {
             color={Theme.colors.cancel}
             text="Cancel"
             iconRight="cross"
-            onClick={cancel}
+            onClick={close}
           />
           <Button
             color={Theme.colors.save}

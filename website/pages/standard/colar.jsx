@@ -1,8 +1,8 @@
 import React from 'react'
-import palette from '../../../config/palette/colar.json'
 import Standard from '../../standard/index.jsx'
+import { standardPalette } from '../../site/StandardPalettes.jsx'
 
 const Colar = () =>
-  <Standard palette={palette}/>
+  <Standard palette={standardPalette('colar')}/>
 
 export default Colar

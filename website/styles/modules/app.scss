@@ -132,4 +132,9 @@
     }
   }
 }
-
+#site.dark {
+  #app > aside .menu .menu.ranges a.active {
+    background-color: var(--active-dark-background);
+    color: white;
+  }
+}

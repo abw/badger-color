@@ -12,7 +12,7 @@ const ShowExamples = ({ palette }) => {
   const { isDark } = useTheme()
   const [open, setOpen] = useState(false)
   const [dark, setDark] = useState(isDark)
-  const ok = () => setOpen(false)
+  const close = () => setOpen(false)
   const toggleDark = () => setDark( dark => ! dark )
 
   return (
@@ -24,16 +24,18 @@ const ShowExamples = ({ palette }) => {
         onClick={() => setOpen(true)}
         className="mar-l-2"
       />
-      <Modal open={open} className="text-left">
+      <Modal open={open} close={close} className="text-left">
         <div className="flex space end mar-b-6">
           <h2 className="mar-v-none">Examples</h2>
-          <Checkbox
-            label="Dark"
-            checked={dark}
-            toggle={toggleDark}
-          />
+          <div className="options pad-r-none">
+            <Checkbox
+              label="Dark"
+              checked={dark}
+              toggle={toggleDark}
+            />
+          </div>
         </div>
-        <div className="grid-3 gap-2 stack-laptop">
+        <div className="grid-3 gap-4 stack-laptop">
           { Object.values(palette.ranges).map(
             range =>
               <div
@@ -52,7 +54,7 @@ const ShowExamples = ({ palette }) => {
             text="OK"
             iconRight="check"
             solid
-            onClick={ok}
+            onClick={close}
           />
         </div>
       </Modal>

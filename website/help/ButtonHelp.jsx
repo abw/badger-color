@@ -8,7 +8,7 @@ const ButtonHelp = ({
   subtext,
   children
 }) =>
-  <div className="flex start gap-2 mar-b-2" style={{ minHeight: '3rem' }}>
+  <div className="flex start gap-4 mar-b-2" style={{ minHeight: '3rem' }}>
     <Button
       color={color}
       icon={icon}

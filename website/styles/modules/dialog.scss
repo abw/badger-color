@@ -1,0 +1,45 @@
+dialog {
+  --dialog-back:     var(--grey-80);
+  --dialog-border:   var(--grey-20);
+  --close-text: var(--grey-10);
+  --close-back: var(--grey-60);
+  --close-hover-text: var(--grey-100);
+  --close-hover-back: var(--orange-50);
+  border: 1px solid var(--dialog-border);
+  background-color: var(--dialog-back);
+  position: relative;
+  border-radius: 8px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: var(--shadow-4);
+  .close {
+    transition: all 0.25s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--close-text);
+    background-color: var(--close-back);
+    padding: 0 0.6em;
+    border-radius: 0 7px 0 8px;
+    border: 1px solid var(--close-back);
+    line-height: 1.6;
+    &:hover {
+      color: var(--close-hover-text);
+      background-color: var(--close-hover-back);
+      border-color: var(--close-hover-back);
+    }
+  }
+  .options {
+    --option-back: var(--dialog-back);
+  }
+}
+dialog::backdrop {
+  background-color: rgba(black, 0.6);
+}
+#site.dark {
+  dialog {
+    --dialog-back:   var(--grey-20);
+    --dialog-border: var(--grey-30);
+    --close-text:    var(--grey-50);
+    --close-back:    var(--grey-30);
+  }
+}

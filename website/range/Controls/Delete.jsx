@@ -9,9 +9,7 @@ import Theme from '../../site/Theme.jsx'
 const Delete = ({ palette, deleteRange }) => {
   const navigate = useNavigate()
   const [open, setOpen] = useState(false)
-  const cancel = () => {
-    setOpen(false)
-  }
+  const close = () => setOpen(false)
   const confirm = () => {
     deleteRange()
     navigate(URLS.palette.home(palette.uri))
@@ -25,7 +23,7 @@ const Delete = ({ palette, deleteRange }) => {
         icon="trash"
         onClick={() => setOpen(true)}
       />
-      <Modal open={open} className="text-left">
+      <Modal open={open} close={close} className="text-left">
         <p>
           Are you sure you want to delete this range?
         </p>
@@ -34,7 +32,7 @@ const Delete = ({ palette, deleteRange }) => {
             color={Theme.colors.cancel}
             text="Cancel"
             iconRight="cross"
-            onClick={cancel}
+            onClick={close}
           />
           <Button
             color={Theme.colors.delete}

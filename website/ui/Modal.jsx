@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from 'react'
+import Icon from './Icon.jsx'
 
 const Modal = ({
   open,
+  close,
   className,
   children
 }) => {
@@ -25,6 +27,11 @@ const Modal = ({
       ref={ref}
       className={className}
     >
+      { close &&
+        <div className="close" onClick={close}>
+          <Icon name="cross"/>
+        </div>
+      }
       {children}
     </dialog>
   )
