@@ -7,6 +7,7 @@ export const Theme = {
     commit:    'green',
     delete:    'red',
     edit:      'indigo',
+    examples:  'purple',
     help:      'teal',
     ok:        'blue',
     save:      'green',

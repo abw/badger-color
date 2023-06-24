@@ -1,0 +1,107 @@
+div.examples {
+  --text: var(--grey-0);
+  --back: var(--grey-100);
+  --alert-text: var(--color-30);
+  --alert-head: var(--color-10);
+  --alert-back: var(--color-90);
+  --alert-edge: var(--color-50);
+  --button-text: var(--color-10);
+  --button-back: var(--color-95);
+  --button-edge: var(--color-50);
+  --button-hover-text: var(--color-0);
+  --button-hover-back: var(--color-90);
+  --button-solid-text: white;
+  --button-solid-back: var(--color-50);
+  --button-solid-hover-text: white;
+  --button-solid-hover-back: var(--color-45);
+  --table-head-text: var(--color-0);
+  --table-head-back: var(--color-70);
+  --table-cell-text: var(--color-10);
+  --table-cell-back: var(--color-90);
+  --table-alt-back:  var(--color-80);
+
+  color: var(--text);
+  background-color: var(--back);
+  padding: 0.5rem 1rem;
+  .example {
+    margin-bottom: 1rem;
+  }
+  h2, h3 {
+    color: var(--text);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .alert {
+    color: var(--alert-text);
+    background-color: var(--alert-back);
+    border: 2px solid var(--alert-edge);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    h3 {
+      color: var(--alert-head);
+      margin: 0 0 1rem 0;
+    }
+  }
+  button {
+    color: var(--button-text);
+    background-color: var(--button-back);
+    border: 1px solid var(--button-edge);
+    &:hover {
+      color: var(--button-hover-text);
+      background-color: var(--button-hover-back);
+    }
+    &.solid {
+      --button-back: var(--button-solid-back);
+      color: var(--button-solid-text);
+      &:hover {
+        color: var(--button-solid-hover-text);
+        background-color: var(--button-solid-hover-back);
+
+      }
+    }
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th, td {
+      padding: 0.25em 0.5em;
+    }
+    thead th {
+      color: var(--table-head-text);
+      background-color: var(--table-head-back);
+    }
+    tbody {
+      tr {
+        td {
+          color: var(--table-cell-text);
+          background-color: var(--table-cell-back);
+        }
+        &:nth-child(even) {
+          --table-cell-back: var(--table-alt-back);
+        }
+      }
+    }
+  }
+  &.dark {
+    --text: var(--grey-100);
+    --back: var(--grey-0);
+    --alert-text: var(--color-70);
+    --alert-head: var(--color-90);
+    --alert-back: var(--color-20);
+    --alert-edge: var(--color-40);
+    --button-text: var(--color-90);
+    --button-back: var(--color-20);
+    --button-edge: var(--color-40);
+    --button-hover-text: var(--color-100);
+    --button-hover-back: var(--color-25);
+    --button-solid-text: var(--color-90);
+    --button-solid-back: var(--button-edge);
+    --button-solid-hover-text: white;
+    --button-solid-hover-back: var(--color-45);
+    --table-head-text: var(--color-100);
+    --table-head-back: var(--color-30);
+    --table-cell-text: var(--color-95);
+    --table-cell-back: var(--color-10);
+    --table-alt-back:  var(--color-20);
+  }
+}

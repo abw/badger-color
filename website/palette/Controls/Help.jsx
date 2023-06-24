@@ -29,6 +29,11 @@ const Help = () => {
           subtext="(you will be asked for confirmation)"
         />
         <ButtonHelp
+          color={Theme.colors.examples}
+          icon="eye"
+          text="View UI examples"
+        />
+        <ButtonHelp
           color={Theme.colors.clipboard}
           icon="clipboard"
           text="Copy palette data to clipboard"

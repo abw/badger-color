@@ -24,7 +24,7 @@ const Delete = ({ deletePalette }) => {
         icon="trash"
         onClick={() => setOpen(true)}
       />
-      <Modal open={open}>
+      <Modal open={open} className="text-left">
         <p>
           Are you sure you want to delete this palette?
         </p>

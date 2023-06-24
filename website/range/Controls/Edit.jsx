@@ -60,7 +60,7 @@ const Edit = ({ palette, range, editRange }) => {
         className="mar-l-2"
         solid
       />
-      <Modal open={open}>
+      <Modal open={open} className="text-left">
         <Form
           values={range} fields={fields}
           onLoad={setForm}

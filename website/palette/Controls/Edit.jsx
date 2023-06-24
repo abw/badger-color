@@ -77,7 +77,7 @@ const Edit = ({ palette, palettes, editPalette }) => {
         className="mar-l-2"
         solid
       />
-      <Modal open={open}>
+      <Modal open={open} className="text-left">
         <Form
           values={palette} fields={fields}
           onLoad={setForm}
