@@ -1,7 +1,7 @@
 :where(html) {
   --body-text:            var(--grey-20);
   --head-text:            var(--grey-20);
-  --navbar-back:          var(--grey-30);
+  --navbar-back:          var(--grey-40);
   --navbar-text:          var(--grey-90);
   --navbar-link:          var(--grey-70);
   --navbar-hover:         var(--brand-100);
@@ -10,7 +10,7 @@
   --app-side-back:        var(--grey-70);
   --app-side-border:      var(--grey-60);
   --app-side-shadow:    rgba(0, 0, 0, 0.04);
-  --app-top-shadow:     rgba(0, 0, 0, 0.15);
+  --app-top-shadow:     rgba(0, 0, 0, 0.1);
   --footer-text:          var(--grey-70);
   --footer-back:          var(--grey-30);
   --menu-text:            var(--grey-10);
@@ -47,16 +47,16 @@
 #site.dark {
   --body-text:          var(--grey-60);
   --head-text:          var(--grey-80);
-  --navbar-back:        var(--brand-30);
-  --navbar-text:        var(--brand-60);
-  --navbar-link:        var(--brand-70);
-  --navbar-hover:       var(--brand-90);
+  --navbar-back:        var(--grey-30);
+  --navbar-text:        var(--grey-60);
+  --navbar-link:        var(--grey-70);
+  --navbar-hover:       var(--grey-90);
   --app-back:           var(--grey-0);
   --app-main-back:      var(--grey-20);
   --app-side-back:      var(--grey-10);
   --app-side-border:    var(--grey-30);
   --app-side-shadow:   rgba(0, 0, 0, 0.2);
-  --app-top-shadow:    rgba(0, 0, 0, 0.2);
+  --app-top-shadow:    rgba(0, 0, 0, 0.15);
   --footer-text:        var(--grey-60);
   --footer-back:        var(--grey-30);
   --menu-text:          var(--grey-60);

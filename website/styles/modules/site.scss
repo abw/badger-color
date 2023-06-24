@@ -1,4 +1,21 @@
 #site {
+  --sidebar-width: 320px;
+  --sidebar-margin-left: 0;
+  --sidebar-padding: 0.5rem;
+  position: relative;
+  background-color: var(--app-main-back);
+  &.no-sidebar {
+    --sidebar-margin-left: -320px;
+  }
+  & > header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $navbar-height;
+    z-index: 100;
+    box-shadow: 0 4px 3px -2px var(--app-top-shadow);
+  }
   & > header > nav {
     color: var(--navbar-text);
     background-color: var(--navbar-back);
@@ -9,7 +26,7 @@
     padding: 0 1rem;
     font-size: $size-largish;
     line-height: 1rem;
-    a, .night-and-day--switcher {
+    a, .action, .night-and-day--switcher {
       text-decoration: none;
       color: var(--navbar-link);
       &:hover {
