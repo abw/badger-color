@@ -109,6 +109,7 @@
         padding-bottom: 0.5rem;
         a {
           display: flex;
+          margin-bottom: 0.25em;
           &:hover {
           }
           &.active {
@@ -123,6 +124,10 @@
           height: 2em;
           background-color: var(--swatch-background);
           border-radius: 3px;
+        }
+        a.active .swatch {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
         }
       }
     }

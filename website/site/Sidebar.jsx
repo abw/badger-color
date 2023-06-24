@@ -32,7 +32,7 @@ const Sidebar = ({
     <div>
       <div className="menu">
         <div className="flex space end mar-b-2">
-          <h3 className="mar-v-none">Palettes</h3>
+          <h3 className="mar-v-none">My Palettes</h3>
           <Button
             color="green"
             className="small"
