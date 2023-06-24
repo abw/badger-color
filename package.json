@@ -25,8 +25,8 @@
     "dev": "vite --config vite.docs.js",
     "build": "vite build",
     "test": "vitest --ui --coverage",
-    "build:docs": "vite build --outDir docs --config vite.docs.js",
-    "preview": "vite preview --outDir docs --config vite.docs.js",
+    "build:docs": "vite build --config vite.docs.js",
+    "preview": "vite preview --config vite.docs.js",
     "lint": "eslint 'website/**/*.{js,jsx}' 'lib/**/*.{js,jsx}'"
   },
   "repository": {
@@ -37,13 +37,14 @@
     "url": "https://github.com/abw/badger-color/issues"
   },
   "dependencies": {
-    "@abw/badger-filesystem": "^1.0.3",
-    "@abw/react-formula": "0.0.2-alpha.2"
+    "chroma-js": "^2.4.2"
   },
   "devDependencies": {
+    "@abw/badger-filesystem": "^1.0.3",
     "@abw/badger-timestamp": "^1.0.4",
     "@abw/badger-utils": "^1.0.19",
     "@abw/react-context": "^2.0.3",
+    "@abw/react-formula": "0.0.2-alpha.2",
     "@abw/react-night-and-day": "^0.0.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -53,7 +54,6 @@
     "@vitest/coverage-c8": "^0.31.0",
     "@vitest/ui": "^0.31.0",
     "bezier-easing": "^2.1.0",
-    "chroma-js": "^2.4.2",
     "eslint": "^8.37.0",
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^21.1.1",
