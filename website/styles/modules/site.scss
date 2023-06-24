@@ -4,9 +4,6 @@
   --sidebar-padding: 0.5rem;
   position: relative;
   background-color: var(--app-main-back);
-  &.no-sidebar {
-    --sidebar-margin-left: -320px;
-  }
   & > header {
     position: sticky;
     top: 0;
@@ -39,4 +36,15 @@
     background-color: var(--footer-back);
     padding: 1rem;
   }
+  &.no-sidebar {
+    --sidebar-margin-left: -320px;
+    & > header > nav .toggle-sidebar.action {
+      transition: opacity 0.5s;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
 }

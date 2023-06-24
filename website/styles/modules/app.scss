@@ -25,8 +25,7 @@
       inset -2px 0 2px var(--app-side-shadow);
     flex-basis: var(--sidebar-width);
     margin-left: var(--sidebar-margin-left);
-    transition: margin-left 300ms ease-in-out;
-    transition: background-color $theme-transition ease-in-out;
+    transition: margin-left 300ms ease-in-out, background-color $theme-transition ease-in-out;
   }
   & > main {
     background-color: var(--app-main-back);
