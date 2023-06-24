@@ -10,5 +10,8 @@
     [class*="grid-"].stack-#{$name} {
       grid-template-columns: 1fr;
     }
+    .flex.stack-#{$name} {
+      display: block !important;
+    }
   }
 }

@@ -33,6 +33,28 @@ const Curve = ({
         y2={maxControl.y / yFactor}
         className="control-line"
       />
+      <polyline
+        points={
+          polyPoints.map(
+            x => [
+              bezier(
+                x/100,
+                0,
+                minControl.x,
+                maxControl.x,
+                100
+              ),
+              bezier(
+                x/100,
+                min / yFactor,
+                minControl.y / yFactor,
+                maxControl.y / yFactor,
+                max / yFactor
+              )
+            ].join(',')
+          ).join(' ')
+        }
+      />
       <DraggablePoint
         x={0}
         y={min / yFactor}
@@ -69,60 +91,6 @@ const Curve = ({
         svgRef={svgRef}
         className="max end point"
       />
-      <polyline
-        points={
-          polyPoints.map(
-            x => [
-              bezier(
-                x/100,
-                0,
-                minControl.x,
-                maxControl.x,
-                100
-              ),
-              bezier(
-                x/100,
-                min / yFactor,
-                minControl.y / yFactor,
-                maxControl.y / yFactor,
-                max / yFactor
-              )
-            ].join(',')
-          ).join(' ')
-        }
-      />
     </g>
-/*
-              <ControlPoint
-                coordinates={{ x: stopX, y: 0 }}
-                setCoordinates={xy => setStopX(snap ? Math.round(xy.x/5) * 5 : Math.round(xy.x))}
-                maxY={0} radius={2} className="stop-select-point"
-                svgRef={svgRef}
-              />
-              <line
-                x1={stopX} y1={0} x2={stopX} y2={100}
-                className="stop-line"
-              />
-              <line
-                x1="0" y1={stopY / factor} x2="100" y2={stopY / factor}
-                className="stop-line"
-              />
-              <text
-                x={-2} y={-stopY / factor + 2}
-                textAnchor="end" transform="scale(1, -1)"
-                className="stop-text"
-              >
-                {Math.round(stopY)}
-              </text>
-              <text
-                x={stopX} y={8} transform="scale(1, -1)"
-                textAnchor="middle"
-                className="stop-text"
-              >
-                {stopX}
-              </text>
-            </g>
-          }
-*/
 
 export default Consumer(Curve)

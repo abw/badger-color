@@ -6,7 +6,7 @@ import Edit from './Edit.jsx'
 import Help from './Help.jsx'
 
 const Controls = () =>
-  <div>
+  <div className="text-right">
     <Delete/>
     <Clipboard/>
     <Edit/>

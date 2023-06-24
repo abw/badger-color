@@ -23,7 +23,6 @@ const Delete = ({ deletePalette }) => {
         solid
         icon="trash"
         onClick={() => setOpen(true)}
-        className="mar-l-2"
       />
       <Modal open={open}>
         <p>

@@ -4,7 +4,7 @@ import { Consumer } from '../palettes/Context.jsx'
 
 const Header = ({ palette }) =>
   <header>
-    <div className="flex space start">
+    <div className="flex space start stack-tablet">
       <div>
         <h1>{palette.name}</h1>
         <div className="info">

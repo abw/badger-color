@@ -20,7 +20,7 @@ const Help = () => {
         onClick={() => setOpen(true)}
         className="mar-l-2"
       />
-      <Modal open={open}>
+      <Modal open={open} className="text-left">
         <h2 className="mar-t-none mar-b-6">Help</h2>
         <ButtonHelp
           color={Theme.colors.delete}

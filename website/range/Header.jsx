@@ -5,7 +5,7 @@ import Controls from './Controls/index.jsx'
 const Header = ({
   range,
 }) =>
-  <div className="flex space end">
+  <div className="flex space end stack-tablet">
     <h2>{range.name}</h2>
     <Controls/>
   </div>

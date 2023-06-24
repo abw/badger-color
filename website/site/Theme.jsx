@@ -10,7 +10,7 @@ export const Theme = {
     help:      'teal',
     ok:        'blue',
     save:      'green',
-    undo:      'brown',
+    undo:      'grey',
   }
 }
 
