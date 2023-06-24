@@ -6,8 +6,10 @@ import { Consumer } from '../../palettes/Context.jsx'
 
 const Clipboard = ({ palette }) => {
   const [copied, setCopied] = useState(false)
-  const copy = (text) => {
-    navigator.clipboard.writeText(text)
+  const copy = () => {
+    navigator.clipboard.writeText(
+      JSON.stringify(palette, null, 2)
+    )
     setCopied(true)
     sleep(2000).then(() => setCopied(false))
   }
@@ -24,7 +26,7 @@ const Clipboard = ({ palette }) => {
         color={Theme.colors.clipboard}
         solid
         className="mar-l-2"
-        onClick={() => copy(JSON.stringify(palette, null, 2))}
+        onClick={copy}
       />
 }
 

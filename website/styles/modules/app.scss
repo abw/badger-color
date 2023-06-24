@@ -1,3 +1,4 @@
+$item-margin-left: 0.5rem;
 
 #app {
   $gap: 1rem;
@@ -106,6 +107,7 @@
         --active-dark-background: var(--menu-hover-back);
         --active-background: var(--active-light-background);
         --swatch-background: var(--app-main-back);
+        margin-left: $item-margin-left;
         padding-bottom: 0.5rem;
         a {
           display: flex;

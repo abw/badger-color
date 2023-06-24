@@ -6,7 +6,7 @@ import { Consumer } from '../palettes/Context.jsx'
 
 const Editor = () =>
   <div className="range-editor">
-    <div className="grid-3 gap-4 stack-desktop mar-t-2">
+    <div className="grid-3 gap-6 stack-desktop mar-t-2">
       <Hue/>
       <Saturation/>
       <Lightness/>

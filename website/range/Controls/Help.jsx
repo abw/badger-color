@@ -38,6 +38,11 @@ const Help = () => {
           text="Copy range data to clipboard"
         />
         <ButtonHelp
+          color={Theme.colors.download}
+          icon="download"
+          text="Download range data as JSON"
+        />
+        <ButtonHelp
           color={Theme.colors.edit}
           icon="pen"
           text="Edit range details"

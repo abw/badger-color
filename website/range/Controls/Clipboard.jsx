@@ -7,8 +7,6 @@ import { Consumer } from '../../palettes/Context.jsx'
 const Clipboard = ({ range }) => {
   const [copied, setCopied] = useState(false)
   const copy = () => {
-    console.log(`copying range to clipboard: `, range)
-
     navigator.clipboard.writeText(
       JSON.stringify(range, null, 2)
     )

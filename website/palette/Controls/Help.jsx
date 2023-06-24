@@ -38,6 +38,11 @@ const Help = () => {
           text="Copy palette data to clipboard"
         />
         <ButtonHelp
+          color={Theme.colors.download}
+          icon="download"
+          text="Download palette data as JSON"
+        />
+        <ButtonHelp
           color={Theme.colors.edit}
           icon="pen"
           text="Edit palette details"

@@ -5,12 +5,14 @@ import Clone from './Clone.jsx'
 import Edit from './Edit.jsx'
 import Help from './Help.jsx'
 import Examples from './Examples.jsx'
+import Download from './Download.jsx'
 
 const Controls = () =>
   <div className="text-right">
     <Delete/>
     <Examples/>
     <Clipboard/>
+    <Download/>
     <Edit/>
     <Clone/>
     <Help/>
