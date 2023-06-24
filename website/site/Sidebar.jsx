@@ -60,7 +60,7 @@ const Sidebar = ({
         <h3>Options</h3>
         <Options/>
       </div>
-      <Menu title="Developer Tests" items={Dev}/>
+      {/* <Menu title="Developer Tests" items={Dev}/> */}
     </div>
   )
 }
