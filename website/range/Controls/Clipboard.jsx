@@ -19,13 +19,11 @@ const Clipboard = ({ range }) => {
         icon="check"
         color={Theme.colors.clipboard}
         solid
-        className="mar-l-2"
       />
     : <Button
         icon="clipboard"
         color={Theme.colors.clipboard}
         solid
-        className="mar-l-2"
         onClick={copy}
       />
 }

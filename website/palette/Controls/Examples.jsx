@@ -22,7 +22,6 @@ const ShowExamples = ({ palette }) => {
         solid
         icon="eye"
         onClick={() => setOpen(true)}
-        className="mar-l-2"
       />
       <Modal open={open} close={close} className="text-left">
         <div className="flex space end mar-b-6">

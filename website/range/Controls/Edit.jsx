@@ -55,7 +55,6 @@ const Edit = ({ palette, range, editRange }) => {
         color={Theme.colors.edit}
         icon="pen"
         onClick={() => setOpen(true)}
-        className="mar-l-2"
         solid
       />
       <Modal open={open} close={close} className="text-left">

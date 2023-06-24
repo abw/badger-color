@@ -16,7 +16,6 @@ const Clone = ({ palette, clonePalette }) => {
     <Button
       icon="clone"
       color={Theme.colors.clone}
-      className="mar-l-2"
       onClick={onClonePalette}
       solid
     />

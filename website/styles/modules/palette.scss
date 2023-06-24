@@ -24,6 +24,13 @@ section.palette {
   h2 + h3 {
     margin-top: 0;
   }
+  .controls {
+    flex-basis: 400px;
+    font-size: $size-smallish;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
   .ranges {
     margin: 1rem 0;
     &.nameless {

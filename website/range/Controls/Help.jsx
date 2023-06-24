@@ -16,7 +16,6 @@ const Help = () => {
         solid
         icon="info"
         onClick={() => setOpen(true)}
-        className="mar-l-2"
       />
       <Modal open={open} close={close} className="text-left">
         <h2 className="mar-t-none mar-b-6">Help</h2>
