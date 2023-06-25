@@ -35,6 +35,8 @@ div.editor {
     --stop-control-fill: var(--violet-70);
     --control-opacity: 0.7;
     --control-hover-opacity: 1;
+    --master-stroke: var(--orange-50);
+    --master-fill: var(--orange-80);
 
     width: 100%;
     margin: 0;
@@ -104,7 +106,7 @@ div.editor {
       line {
         stroke: var(--stop-line-stroke);
         stroke-width: 0.25;
-        stroke-dasharray: 1.5 0.5;
+        stroke-dasharray: 2 1;
       }
       circle {
         stroke-width: 0.5;
@@ -118,6 +120,30 @@ div.editor {
       text {
         font-size: 3.5px;
         fill: var(--stop-control-stroke);
+      }
+    }
+    .master {
+      line.slider {
+        stroke: var(--master-stroke);
+        stroke-width: 0.3;
+      }
+      line.dashed {
+        stroke: var(--master-stroke);
+        stroke-width: 0.25;
+        stroke-dasharray: 2 1;
+      }
+      circle {
+        stroke-width: 0.5;
+        stroke: var(--master-stroke);
+        fill: var(--master-fill);
+        opacity: var(--control-opacity);
+        &.hover {
+          opacity: var(--control-hover-opacity);
+        }
+      }
+      text {
+        font-size: 3.5px;
+        fill: var(--master-stroke);
       }
     }
   }
@@ -154,5 +180,7 @@ div.editor {
     --stop-control-fill: var(--violet-30);
     --control-opacity: 0.7;
     --control-hover-opacity: 1;
+    --master-stroke: var(--orange-40);
+    --master-fill: var(--orange-20);
   }
 }

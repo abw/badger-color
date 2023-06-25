@@ -14,6 +14,7 @@ const Context = ({
   endRadius=3,
   controlRadius=2.5,
   stopSelectRadius=2.5,
+  masterRadius=2.5,
   render
 }) => {
   const { range, options, controls } = usePalettes()
@@ -23,7 +24,7 @@ const Context = ({
   const {
     setMin, setMax, setMinControl, setMaxControl,
     resetCurve, resetStops, curveToStops,
-    setStop
+    setStop, curveAtStop, modCurve
   } = controls[curveName]
 
   const yFactor = scale / 100
@@ -78,6 +79,19 @@ const Context = ({
     })
   }
 
+  // master midpoint slider
+  const mid = curveAtStop(50)
+  const moveMid = xy => {
+    const newMid = Math.round(xy.y * yFactor)
+    const dy     = newMid - mid
+    modCurve({
+      min: clampRange(min + dy),
+      max: clampRange(max + dy),
+      minControl: { x: minControl.x, y: clampRange(minControl.y + dy) },
+      maxControl: { x: maxControl.x, y: clampRange(maxControl.y + dy) },
+    })
+  }
+
   // functions to select a stop line by dragging
   const [stopX, setStopX] = useState(50)
   const stopTime = bezierInverse(stopX, 0, minControl.x, maxControl.x, 100)
@@ -113,6 +127,10 @@ const Context = ({
     changeMaxControlX,
     changeMaxControlY,
     moveMaxControl,
+    mid,
+    moveMid,
+    // changeMid,
+    // moveMid,
     // draggable stop line
     stopX,
     stopY,
@@ -130,6 +148,7 @@ const Context = ({
     endRadius,
     controlRadius,
     stopSelectRadius,
+    masterRadius
   })
 }
 

@@ -25,12 +25,12 @@ const StopLines = ({
         x1={stopX}
         y1={0}
         x2={stopX}
-        y2={100}
+        y2={stopY / yFactor}
       />
       <line
         x1="0"
         y1={stopY / yFactor}
-        x2="100"
+        x2={stopX}
         y2={stopY / yFactor}
       />
       <DraggablePoint

@@ -23,14 +23,14 @@ const Options = ({
       toggle={toggleInfo}
     />
     <Checkbox
-      label="Black &amp; White"
-      checked={options.blackWhite}
-      toggle={toggleBlackWhite}
-    />
-    <Checkbox
       label="5 Stops"
       checked={options.show5s}
       toggle={toggleShow5s}
+    />
+    <Checkbox
+      label="Black &amp; White"
+      checked={options.blackWhite}
+      toggle={toggleBlackWhite}
     />
     <Checkbox
       label="Greyscale"

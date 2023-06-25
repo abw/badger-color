@@ -247,6 +247,7 @@ const Context = ({render}) => {
   const controls = {
     h: {
       setStop:        setHStop,
+      modCurve:       modHCurve,
       setMin:         min => modHCurve({ min }),
       setMax:         max => modHCurve({ max }),
       setMinControl:  minControl => modHCurve({ minControl }),
@@ -254,9 +255,11 @@ const Context = ({render}) => {
       resetCurve:     () => resetCurveItem('h'),
       resetStops:     () => resetStopsItem('h'),
       curveToStops:   () => curveToStopsItem('h'),
+      curveAtStop:    hAtStop,
     },
     s: {
       setStop:        setSStop,
+      modCurve:       modSCurve,
       setMin:         min => modSCurve({ min }),
       setMax:         max => modSCurve({ max }),
       setMinControl:  minControl => modSCurve({ minControl }),
@@ -264,9 +267,11 @@ const Context = ({render}) => {
       resetCurve:     () => resetCurveItem('s'),
       resetStops:     () => resetStopsItem('s'),
       curveToStops:   () => curveToStopsItem('s'),
+      curveAtStop:    sAtStop,
     },
     l: {
       setStop:        setLStop,
+      modCurve:       modLCurve,
       setMin:         min => modLCurve({ min }),
       setMax:         max => modLCurve({ max }),
       setMinControl:  minControl => modLCurve({ minControl }),
@@ -274,6 +279,7 @@ const Context = ({render}) => {
       resetCurve:     () => resetCurveItem('l'),
       resetStops:     () => resetStopsItem('l'),
       curveToStops:   () => curveToStopsItem('l'),
+      curveAtStop:    lAtStop,
     }
   }
 
