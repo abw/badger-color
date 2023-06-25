@@ -19,6 +19,7 @@ export const Bezier = [
 ]
 export const Standards = [
   { to: '/standard/badger',   text: 'Badger' },
+  { to: '/standard/badger2',  text: 'Badger 2' },
   { to: '/standard/semantic', text: 'Semantic' },
   { to: '/standard/colar',    text: 'Colar' },
   { to: '/standard/tailwind', text: 'Tailwind' },

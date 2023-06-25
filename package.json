@@ -42,7 +42,7 @@
   "devDependencies": {
     "@abw/badger-filesystem": "^1.0.3",
     "@abw/badger-timestamp": "^1.0.4",
-    "@abw/badger-utils": "^1.0.19",
+    "@abw/badger-utils": "^1.0.21",
     "@abw/react-context": "^2.0.3",
     "@abw/react-formula": "0.0.2-alpha.2",
     "@abw/react-night-and-day": "^0.0.5",

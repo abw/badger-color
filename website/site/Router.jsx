@@ -11,7 +11,8 @@ const routes = Object.entries(ROUTES).map(
     path: route
       .replace(/^[./]*pages/, '')
       .replace(/\.jsx$/, '')
-      .replace(/index$/, ''),
+      .replace(/index$/, '')
+      .replace(/^\//, ''),
     Component: module.default
   })
 )
@@ -19,7 +20,7 @@ const routes = Object.entries(ROUTES).map(
 const Router = createBrowserRouter(
   [
     {
-      path:     '/',
+      path:     '/*',
       element:  <Layout/>,
       children: [
         ...routes,

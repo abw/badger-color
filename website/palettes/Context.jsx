@@ -11,7 +11,8 @@ import {
   lStopValueFromRange,
   hslAtStopFromRange,
   stopValueFromCurve,
-  copyRange
+  copyRange,
+  sortRanges
 } from '../../lib/utils/index.js'
 
 const Context = ({render}) => {
@@ -110,14 +111,15 @@ const Context = ({render}) => {
   const saveRange  = (r=range) => {
     savePalette({
       ...palette,
-      ranges: {
+      ranges: sortRanges({
         ...palette.ranges,
         [r.uri]: r
-      }
+      })
     })
     return r
   }
-  const copyRangeToPalette = () => saveRange(range)
+  const copyRangeToPalette = () =>
+    saveRange(range)
 
   const createRange = options =>
     saveRange( newRange(palette.ranges, options) )
@@ -134,7 +136,10 @@ const Context = ({render}) => {
     const ranges = { ...palette.ranges }
     delete ranges[range.uri]
     ranges[uri] = r
-    savePalette({ ...palette, ranges })
+    savePalette({
+      ...palette,
+      ranges: sortRanges(ranges)
+    })
     setRange(r)
     return r
   }
@@ -145,7 +150,10 @@ const Context = ({render}) => {
     }
     const ranges = { ...palette.ranges }
     delete ranges[range.uri]
-    savePalette({ ...palette, ranges })
+    savePalette({
+      ...palette,
+      ranges: sortRanges(ranges)
+    })
   }
 
   //--------------------------------------------------------------------------

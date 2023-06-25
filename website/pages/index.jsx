@@ -19,8 +19,8 @@ const Index = () =>
       </p>
       <p>
         Look out for this button to get help:
-        <NotYet className="smallish mar-l-2"/>
       </p>
+      <NotYet className="smallish mar-l-2"/>
       <h2>Terminology <span className="small">(as used here)</span></h2>
       <p>
       </p>
