@@ -23,7 +23,7 @@ const Sidebar = ({
 
   return (
     <div className="menu">
-      <div className="flex space end mar-b-2">
+      <div className="flex space start mar-b-2">
         <h3 className="mar-v-none">My Palettes</h3>
         <Button
           color="green"

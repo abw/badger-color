@@ -1,5 +1,40 @@
 @use "sass:map";
+@import "color/red.scss";
+@import "color/brown.scss";
+@import "color/orange.scss";
+@import "color/yellow.scss";
+@import "color/olive.scss";
+@import "color/green.scss";
+@import "color/teal.scss";
+@import "color/blue.scss";
+@import "color/indigo.scss";
+@import "color/violet.scss";
+@import "color/purple.scss";
+@import "color/pink.scss";
+@import "color/maroon.scss";
+@import "color/grey-red.scss";
+@import "color/grey-yellow.scss";
+@import "color/grey-green.scss";
+@import "color/grey-teal.scss";
+@import "color/grey-blue.scss";
+@import "color/grey-violet.scss";
+@import "color/grey-pink.scss";
+@import "color/grey-maroon.scss";
+@import "color/grey.scss";
 
+$black:       #000;
+$white:       #fff;
+
+
+$color-names:
+  'red', 'brown', 'orange', 'yellow', 'olive', 'green',
+  'teal', 'blue', 'indigo', 'violet', 'purple', 'pink',
+  'maroon', 'grey';
+
+$black: #000;
+$white: #fff;
+
+/*
 $color-names:
   'red', 'brown', 'orange', 'yellow', 'olive', 'green',
   'teal', 'blue', 'indigo', 'violet', 'purple', 'pink',
@@ -39,8 +74,6 @@ $hues: (
 $brand-color: 'violet' !default;
 $brand-hue:   map.get($hues, $brand-color) !default;
 $grey-hue:    $brand-hue !default;
-$black:       #000;
-$white:       #fff;
 
 $red-0:       hsl($red-hue    80%  8%) !default;
 $red-10:      hsl($red-hue    65% 15%) !default;
@@ -409,3 +442,4 @@ $brand-70:  map.get($brand, '70')  !default;
 $brand-80:  map.get($brand, '80')  !default;
 $brand-90:  map.get($brand, '90')  !default;
 $brand-100: map.get($brand, '100') !default;
+*/
