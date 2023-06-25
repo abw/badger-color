@@ -8,7 +8,6 @@ import { URLS } from '../../site/URLS.jsx'
 const Clone = ({ palette, range, cloneRange }) => {
   const navigate = useNavigate()
   const onCloneRange = () => {
-    console.log(`onCloneRange`)
     const r = cloneRange(range)
     navigate(URLS.palette.range(palette.uri, r.uri))
   }

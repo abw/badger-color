@@ -99,7 +99,6 @@ const Context = ({render}) => {
   const [range, setRange] = useState(null)
 
   const selectRange = uri => {
-    console.log(`selectRange(${uri}): `)
     const range = palette?.ranges?.[uri] || fail(`Invalid range selected: ${uri}`)
     range.uri = uri
     setRange(range)
