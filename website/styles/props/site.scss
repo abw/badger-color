@@ -1,5 +1,6 @@
 :where(html) {
   --body-text:            var(--grey-20);
+  --bold-text:            var(--grey-10);
   --head-text:            var(--grey-20);
   --navbar-back:          var(--blue-100);
   // --navbar-back:          var(--grey-100);
@@ -49,6 +50,7 @@
 }
 #site.dark {
   --body-text:          var(--grey-60);
+  --bold-text:          var(--grey-70);
   --head-text:          var(--grey-80);
   --navbar-back:        var(--grey-30);
   --navbar-text:        var(--grey-60);

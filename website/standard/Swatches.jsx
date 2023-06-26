@@ -15,7 +15,7 @@ const Swatches = ({
           key={stop}
           stop={stop}
           color={range.stops[stop]}
-          clickable={true}
+          clickable={false}
         />
     )}
     { options.blackWhite && <White/> }
