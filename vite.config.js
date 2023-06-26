@@ -34,37 +34,31 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [
-        'react',
-        'react-dom',
-        'react/jsx-runtime'
+        '@abw/badger',
+        '@abw/badger-filesystem',
+        '@abw/badger-utils',
+        'chroma-js',
       ],
       output: {
         globals: {
-          'react': 'react',
-          'react-dom': 'ReactDOM',
-          'react/jsx-runtime': 'react/jsx-runtime'
+          '@abw/badger': '@abw/badger',
+          '@abw/badger-filesystem': '@abw/badger-filesystem',
+          '@abw/badger-utils': '@abw/badger-utils',
+          'chroma-js': 'chroma-js'
         },
       },
       plugins: [
         copy({
           targets: [
             {
-              src: 'styles/*',
-              dest: 'dist/styles',
-            },
-            {
-              src: 'src/config/*',
-              dest: 'dist/config',
-            },
-            {
-              src: 'bin/*',
+              src: 'bin/badger-color-scss.js',
               dest: 'dist/bin',
               transform: (contents) =>
                 contents
                   .toString()
                   .replace(
-                    '../src/config/',
-                    `${PACKAGE_DIST}/config/`
+                    "'PACKAGE_VERSION'",
+                    define.PACKAGE_VERSION
                   )
                   .replace(
                     '../lib/index.js',

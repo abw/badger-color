@@ -1,7 +1,7 @@
 {
   "name": "@abw/badger-color",
   "version": "0.0.2",
-  "description": "Color Scheme Editor",
+  "description": "Color Palette Designer",
   "type": "module",
   "main": "./dist/badger-color.umd.cjs",
   "module": "./dist/badger-color.js",
@@ -12,9 +12,7 @@
     ".": {
       "import": "./dist/badger-color.js",
       "require": "./dist/badger-color.umd.cjs"
-    },
-    "./config/*": "./dist/config/*",
-    "./styles/*": "./dist/styles/*"
+    }
   },
   "bin": {
     "badger-color-scss": "./dist/bin/badger-color-scss.js"
