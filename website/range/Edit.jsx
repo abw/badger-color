@@ -4,7 +4,7 @@ import { URLS } from '../site/URLS.jsx'
 import { Consumer } from '../palettes/Context.jsx'
 import { useNavigate } from 'react-router-dom'
 import { Form, Field, useForm } from '@abw/react-formula'
-import { nameToURI } from '../../lib/utils/index.js'
+import { nameToURI, namesToAliases } from '../../lib/utils/index.js'
 import Theme from '../site/Theme.jsx'
 
 const fields = {
@@ -18,6 +18,14 @@ const fields = {
     required: true,
     help: 'A unique identifier used for links',
     prepareValue: value => nameToURI(value),
+    validateOnChange: true,
+    minValidateLength: 1,
+  },
+  aliases: {
+    label: 'Aliases',
+    required: false,
+    help: 'Any aliases for this range',
+    prepareValue: value => namesToAliases(value),
     validateOnChange: true,
     minValidateLength: 1,
   },
@@ -64,6 +72,7 @@ const Edit = ({ palette, range, editRange, close }) => {
           name="uri"
           validate={checkURIAvailable}
         />
+        <Field name="aliases"/>
         <Field name="greyscale"/>
       </Form>
       <div className="flex space mar-t-8">
