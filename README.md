@@ -1,11 +1,13 @@
 # badger-color
 
 This is a collection of tools including an online editor for designing color
-palettes and exporting them as CSS or SCSS variables.
+palettes and exporting them as CSS and/or SCSS variables.
 
-The only palette editor is available here: https://abw.github.io/badger-color
+The palette editor is available here: https://abw.github.io/badger-color
 
-## Getting Started
+This is a work-in-progress in a pre-release state.
+
+## Installation
 
 Add the `@abw/badger-color` module to your project using your favourite
 package manager.  Unless you're planning on running the online editor it
@@ -22,14 +24,67 @@ $ yarn add -D @abw/badger-color
 $ pnpm add -D @abw/badger-color
 ```
 
-## Documentation TODO
+## Design a Palette
 
-At the time of writing the emphasis has been on getting the online editor
-working.  There are some back-end tools for exporting palette data to CSS
-and SCSS variables but they still need some polishing and they're not
-documented yet.
+Use the [online palette editor](https://abw.github.io/badger-color) to design
+a color palette.
 
-Sorry about that.  Watch this space.
+Click on the download button to download the palette data as a JSON file.
+Save this to your project somewhere.
+
+## Export Palette Data
+
+Run the following command to export the palette data as SCSS files containing
+SCSS variables and CSS custom properties for each of the color ranges in your
+palette.
+
+```bash
+$ npm badger-color-scss
+```
+
+It will prompt you to enter the path to your palette JSON file and an output
+directory for the generated files.
+
+```bash
+✔ Where is the palette data file? … path/to/palette.json
+✔ Where should the output files be written? … styles
+```
+
+You can also provide command line options to avoid the questions.  Use the
+`-h` or `--help` option to see a summary of the options.  A typical invocation
+will look like this:
+
+```bash
+$ npm badger-color-scss -p path/to/palette.json -o outdir -y -q
+```
+
+The script will generate a `colors.scss` file in the output directory and
+separate files in the `color` sub-directory for each of the color ranges in
+your palette.  The `colors.scss` will import each of the color range files.
+
+## Add Palette Data to Your Stylesheet
+
+Import the generated `colors.scss` file into your main stylesheet SCSS file.
+
+```scss
+@import "path/to/colors.scss";
+```
+
+Then start using the colors.  You can use the generated SCSS variables:
+
+```scss
+.example {
+  color: $blue-50;
+}
+```
+
+Or you can use the generated CSS custom properties:
+
+```css
+.example {
+  color: var(--blue-50);
+}
+```
 
 ## Notes for Maintainers
 
