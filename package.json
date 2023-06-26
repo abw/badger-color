@@ -16,6 +16,9 @@
     "./config/*": "./dist/config/*",
     "./styles/*": "./dist/styles/*"
   },
+  "bin": {
+    "badger-color-scss": "./dist/bin/badger-color-scss.js"
+  },
   "author": "Andy Wardley",
   "license": "ISC",
   "keywords": [
@@ -37,12 +40,13 @@
     "url": "https://github.com/abw/badger-color/issues"
   },
   "dependencies": {
+    "@abw/badger": "^1.1.15",
+    "@abw/badger-filesystem": "^1.0.3",
+    "@abw/badger-utils": "^1.0.21",
     "chroma-js": "^2.4.2"
   },
   "devDependencies": {
-    "@abw/badger-filesystem": "^1.0.3",
     "@abw/badger-timestamp": "^1.0.4",
-    "@abw/badger-utils": "^1.0.21",
     "@abw/react-context": "^2.0.3",
     "@abw/react-formula": "0.0.2-alpha.2",
     "@abw/react-night-and-day": "^0.0.5",
@@ -53,7 +57,6 @@
     "@vitejs/plugin-react": "^3.1.0",
     "@vitest/coverage-c8": "^0.31.0",
     "@vitest/ui": "^0.31.0",
-    "bezier-easing": "^2.1.0",
     "eslint": "^8.37.0",
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^21.1.1",

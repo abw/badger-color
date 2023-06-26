@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@abw/badger': ^1.1.15
   '@abw/badger-filesystem': ^1.0.3
   '@abw/badger-timestamp': ^1.0.4
   '@abw/badger-utils': ^1.0.21
@@ -14,7 +15,6 @@ specifiers:
   '@vitejs/plugin-react': ^3.1.0
   '@vitest/coverage-c8': ^0.31.0
   '@vitest/ui': ^0.31.0
-  bezier-easing: ^2.1.0
   chroma-js: ^2.4.2
   eslint: ^8.37.0
   eslint-plugin-react: ^7.32.2
@@ -31,12 +31,13 @@ specifiers:
   yup: ^1.2.0
 
 dependencies:
+  '@abw/badger': 1.1.15
+  '@abw/badger-filesystem': 1.0.3
+  '@abw/badger-utils': 1.0.21
   chroma-js: 2.4.2
 
 devDependencies:
-  '@abw/badger-filesystem': 1.0.3
   '@abw/badger-timestamp': 1.0.4
-  '@abw/badger-utils': 1.0.21
   '@abw/react-context': 2.0.3
   '@abw/react-formula': 0.0.2-alpha.2_biqbaboplfbrettd7655fr4n2y
   '@abw/react-night-and-day': 0.0.5_biqbaboplfbrettd7655fr4n2y
@@ -47,7 +48,6 @@ devDependencies:
   '@vitejs/plugin-react': 3.1.0_vite@4.3.9
   '@vitest/coverage-c8': 0.31.4_vitest@0.31.4
   '@vitest/ui': 0.31.4_vitest@0.31.4
-  bezier-easing: 2.1.0
   eslint: 8.42.0
   eslint-plugin-react: 7.32.2_eslint@8.42.0
   jsdom: 21.1.2
@@ -69,24 +69,35 @@ packages:
     dependencies:
       '@abw/badger-utils': 1.0.21
       js-yaml: 4.1.0
-    dev: true
+    dev: false
 
   /@abw/badger-filesystem/1.0.3:
     resolution: {integrity: sha512-7y3rqD4Ybx71zaUYiVYEI2YnbDyvJ8947MaIvSpyq4/NyhMWCENIIQlOg+8wqK+Lyu/mgTFHpfrgZYL+Q1lsCg==}
     dependencies:
       '@abw/badger-codecs': 1.0.3
       '@abw/badger-utils': 1.0.21
-    dev: true
+    dev: false
 
   /@abw/badger-timestamp/1.0.4:
     resolution: {integrity: sha512-7JBcF9rxwihiiEG1UQlv1/jdntg8BJmzTADAj5psTWbRNvDh4XHkdeoVnbf0nRCq08q5472mx8wbpgNzrwb2RQ==}
     dependencies:
       '@abw/badger-utils': 1.0.21
-    dev: true
 
   /@abw/badger-utils/1.0.21:
     resolution: {integrity: sha512-MsfT1UdDeHyTLVdtx/i02YEj/8N1PRQjuw/k5WBSJ08177nGbvrTNgjgtok6QJeJVTiWCyucOQQeqDnG0fHsZQ==}
-    dev: true
+
+  /@abw/badger/1.1.15:
+    resolution: {integrity: sha512-VCw0O/pWzO/GZRNZAgIhda9F8EKtNJcFhVEES9Or2VjpUiLBf0/RUhepKjOa5joHofCS2sSzeZHzK2kd3aCEOw==}
+    dependencies:
+      '@abw/badger-codecs': 1.0.3
+      '@abw/badger-filesystem': 1.0.3
+      '@abw/badger-timestamp': 1.0.4
+      '@abw/badger-utils': 1.0.21
+      commander: 10.0.1
+      dotenv: 16.3.1
+      js-yaml: 4.1.0
+      prompts: 2.4.2
+    dev: false
 
   /@abw/react-context/2.0.3:
     resolution: {integrity: sha512-9kjqEB09vdWh8ZjcIgf8Ci43WrkDIrhRBCm0juDxDfe/5QjPUhrK7A3zjaTkw+qHYvF6+c/kpndLrCjowyLaJA==}
@@ -1184,7 +1195,6 @@ packages:
 
   /argparse/2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
-    dev: true
 
   /aria-query/5.1.3:
     resolution: {integrity: sha512-R5iJ5lkuHybztUfuOAznmboyjWq8O6sqNqtK7CLOqdydi54VNbORp49mb14KbWgG1QD3JFO9hJdZ+y4KutfdOQ==}
@@ -1256,10 +1266,6 @@ packages:
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
-    dev: true
-
-  /bezier-easing/2.1.0:
-    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
     dev: true
 
   /binary-extensions/2.2.0:
@@ -1463,6 +1469,11 @@ packages:
     resolution: {integrity: sha512-GHuDRO12Sypu2cV70d1dkA2EUmXHgntrzbpvOB+Qy+49ypNfGgFQIC2fhhXbnyrJRynDCAARsT7Ou0M6hirpfw==}
     dev: true
 
+  /commander/10.0.1:
+    resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
+    engines: {node: '>=14'}
+    dev: false
+
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
@@ -1639,6 +1650,11 @@ packages:
     dependencies:
       webidl-conversions: 7.0.0
     dev: true
+
+  /dotenv/16.3.1:
+    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /electron-to-chromium/1.4.432:
     resolution: {integrity: sha512-yz3U/khQgAFT2HURJA3/F4fKIyO2r5eK09BQzBZFd6BvBSSaRuzKc2ZNBHtJcO75/EKiRYbVYJZ2RB0P4BuD2g==}
@@ -2620,7 +2636,6 @@ packages:
     hasBin: true
     dependencies:
       argparse: 2.0.1
-    dev: true
 
   /jsdom/21.1.2:
     resolution: {integrity: sha512-sCpFmK2jv+1sjff4u7fzft+pUh2KSUbUrEHYHyfSIbGTIcmnjyp83qg6qLwdJ/I3LpTXx33ACxeRL7Lsyc6lGQ==}
@@ -2704,6 +2719,11 @@ packages:
       array-includes: 3.1.6
       object.assign: 4.1.4
     dev: true
+
+  /kleur/3.0.3:
+    resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
+    engines: {node: '>=6'}
+    dev: false
 
   /levn/0.3.0:
     resolution: {integrity: sha512-0OO4y2iOHix2W6ujICbKIaEQXvFQHue65vUG3pb5EUomzPI90z9hsA1VsO/dbIIpC53J8gxM9Q4Oho0jrCM/yA==}
@@ -3135,6 +3155,14 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /prompts/2.4.2:
+    resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
+    engines: {node: '>= 6'}
+    dependencies:
+      kleur: 3.0.3
+      sisteransi: 1.0.5
+    dev: false
+
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
     dependencies:
@@ -3424,6 +3452,10 @@ packages:
       mrmime: 1.0.1
       totalist: 3.0.1
     dev: true
+
+  /sisteransi/1.0.5:
+    resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
+    dev: false
 
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}

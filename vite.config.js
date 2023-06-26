@@ -28,7 +28,7 @@ export default defineConfig({
     minify: true,
     sourcemap: false,
     lib: {
-      entry: 'lib/index.jsx',
+      entry: 'lib/index.js',
       name: PACKAGE_DIST,
       fileName: PACKAGE_NAME,
     },
@@ -65,6 +65,10 @@ export default defineConfig({
                   .replace(
                     '../src/config/',
                     `${PACKAGE_DIST}/config/`
+                  )
+                  .replace(
+                    '../lib/index.js',
+                    PACKAGE_DIST
                   )
             },
           ],
