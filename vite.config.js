@@ -36,15 +36,13 @@ export default defineConfig({
       external: [
         '@abw/badger',
         '@abw/badger-filesystem',
-        '@abw/badger-utils',
-        'chroma-js',
+        '@abw/badger-utils'
       ],
       output: {
         globals: {
           '@abw/badger': '@abw/badger',
           '@abw/badger-filesystem': '@abw/badger-filesystem',
-          '@abw/badger-utils': '@abw/badger-utils',
-          'chroma-js': 'chroma-js'
+          '@abw/badger-utils': '@abw/badger-utils'
         },
       },
       plugins: [
