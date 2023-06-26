@@ -20,7 +20,10 @@
   "author": "Andy Wardley",
   "license": "ISC",
   "keywords": [
-    "react"
+    "badger",
+    "color",
+    "palette",
+    "designer"
   ],
   "scripts": {
     "dev": "vite --config vite.docs.js",
@@ -40,8 +43,7 @@
   "dependencies": {
     "@abw/badger": "^1.1.15",
     "@abw/badger-filesystem": "^1.0.3",
-    "@abw/badger-utils": "^1.0.21",
-    "chroma-js": "^2.4.2"
+    "@abw/badger-utils": "^1.0.21"
   },
   "devDependencies": {
     "@abw/badger-timestamp": "^1.0.4",
@@ -55,6 +57,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "@vitest/coverage-c8": "^0.31.0",
     "@vitest/ui": "^0.31.0",
+    "chroma-js": "^2.4.2",
     "eslint": "^8.37.0",
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^21.1.1",
