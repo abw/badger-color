@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Grey Yellow */
+$grey-yellow-hue: 50 !default;
+$grey-yellow-0:   hsl($grey-yellow-hue 5% 5%) !default;
+$grey-yellow-5:   hsl($grey-yellow-hue 5% 10%) !default;
+$grey-yellow-10:  hsl($grey-yellow-hue 5% 14%) !default;
+$grey-yellow-15:  hsl($grey-yellow-hue 5% 19%) !default;
+$grey-yellow-20:  hsl($grey-yellow-hue 5% 24%) !default;
+$grey-yellow-25:  hsl($grey-yellow-hue 5% 29%) !default;
+$grey-yellow-30:  hsl($grey-yellow-hue 5% 33%) !default;
+$grey-yellow-35:  hsl($grey-yellow-hue 5% 39%) !default;
+$grey-yellow-40:  hsl($grey-yellow-hue 5% 44%) !default;
+$grey-yellow-45:  hsl($grey-yellow-hue 5% 49%) !default;
+$grey-yellow-50:  hsl($grey-yellow-hue 5% 54%) !default;
+$grey-yellow-55:  hsl($grey-yellow-hue 5% 59%) !default;
+$grey-yellow-60:  hsl($grey-yellow-hue 5% 64%) !default;
+$grey-yellow-65:  hsl($grey-yellow-hue 5% 69%) !default;
+$grey-yellow-70:  hsl($grey-yellow-hue 5% 74%) !default;
+$grey-yellow-75:  hsl($grey-yellow-hue 5% 78%) !default;
+$grey-yellow-80:  hsl($grey-yellow-hue 5% 83%) !default;
+$grey-yellow-85:  hsl($grey-yellow-hue 5% 87%) !default;
+$grey-yellow-90:  hsl($grey-yellow-hue 5% 91%) !default;
+$grey-yellow-95:  hsl($grey-yellow-hue 5% 94%) !default;
+$grey-yellow-100: hsl($grey-yellow-hue 5% 98%) !default;
+
+:where(html) {
+  --grey-yellow-0:   #{$grey-yellow-0};
+  --grey-yellow-5:   #{$grey-yellow-5};
+  --grey-yellow-10:  #{$grey-yellow-10};
+  --grey-yellow-15:  #{$grey-yellow-15};
+  --grey-yellow-20:  #{$grey-yellow-20};
+  --grey-yellow-25:  #{$grey-yellow-25};
+  --grey-yellow-30:  #{$grey-yellow-30};
+  --grey-yellow-35:  #{$grey-yellow-35};
+  --grey-yellow-40:  #{$grey-yellow-40};
+  --grey-yellow-45:  #{$grey-yellow-45};
+  --grey-yellow-50:  #{$grey-yellow-50};
+  --grey-yellow-55:  #{$grey-yellow-55};
+  --grey-yellow-60:  #{$grey-yellow-60};
+  --grey-yellow-65:  #{$grey-yellow-65};
+  --grey-yellow-70:  #{$grey-yellow-70};
+  --grey-yellow-75:  #{$grey-yellow-75};
+  --grey-yellow-80:  #{$grey-yellow-80};
+  --grey-yellow-85:  #{$grey-yellow-85};
+  --grey-yellow-90:  #{$grey-yellow-90};
+  --grey-yellow-95:  #{$grey-yellow-95};
+  --grey-yellow-100: #{$grey-yellow-100};
+}
+
+:where(.grey-yellow) {
+  --color-0:   var(--grey-yellow-0);
+  --color-5:   var(--grey-yellow-5);
+  --color-10:  var(--grey-yellow-10);
+  --color-15:  var(--grey-yellow-15);
+  --color-20:  var(--grey-yellow-20);
+  --color-25:  var(--grey-yellow-25);
+  --color-30:  var(--grey-yellow-30);
+  --color-35:  var(--grey-yellow-35);
+  --color-40:  var(--grey-yellow-40);
+  --color-45:  var(--grey-yellow-45);
+  --color-50:  var(--grey-yellow-50);
+  --color-55:  var(--grey-yellow-55);
+  --color-60:  var(--grey-yellow-60);
+  --color-65:  var(--grey-yellow-65);
+  --color-70:  var(--grey-yellow-70);
+  --color-75:  var(--grey-yellow-75);
+  --color-80:  var(--grey-yellow-80);
+  --color-85:  var(--grey-yellow-85);
+  --color-90:  var(--grey-yellow-90);
+  --color-95:  var(--grey-yellow-95);
+  --color-100: var(--grey-yellow-100);
+}

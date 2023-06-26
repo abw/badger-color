@@ -29,6 +29,7 @@
     "dev": "vite --config vite.docs.js",
     "build": "vite build",
     "test": "vitest --ui --coverage",
+    "color":  "bin/badger-color-scss.js -p config/palette/badger2.json -o styles/palette -y -v",
     "build:docs": "vite build --config vite.docs.js",
     "preview": "vite preview --config vite.docs.js",
     "lint": "eslint 'website/**/*.{js,jsx}' 'lib/**/*.{js,jsx}'"

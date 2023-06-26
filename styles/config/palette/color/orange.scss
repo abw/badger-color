@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Orange */
+$orange-hue: 26 !default;
+$orange-0:   hsl($orange-hue - 1 100% 6%) !default;
+$orange-5:   hsl($orange-hue - 1 100% 8%) !default;
+$orange-10:  hsl($orange-hue 100% 11%) !default;
+$orange-15:  hsl($orange-hue 100% 15%) !default;
+$orange-20:  hsl($orange-hue 100% 18%) !default;
+$orange-25:  hsl($orange-hue 100% 22%) !default;
+$orange-30:  hsl($orange-hue 99% 27%) !default;
+$orange-35:  hsl($orange-hue 99% 32%) !default;
+$orange-40:  hsl($orange-hue 99% 38%) !default;
+$orange-45:  hsl($orange-hue 98% 43%) !default;
+$orange-50:  hsl($orange-hue 98% 49%) !default;
+$orange-55:  hsl($orange-hue 97% 55%) !default;
+$orange-60:  hsl($orange-hue 96% 62%) !default;
+$orange-65:  hsl($orange-hue 95% 68%) !default;
+$orange-70:  hsl($orange-hue - 1 94% 73%) !default;
+$orange-75:  hsl($orange-hue - 1 93% 79%) !default;
+$orange-80:  hsl($orange-hue - 2 92% 84%) !default;
+$orange-85:  hsl($orange-hue - 2 91% 88%) !default;
+$orange-90:  hsl($orange-hue - 3 90% 91%) !default;
+$orange-95:  hsl($orange-hue - 4 88% 95%) !default;
+$orange-100: hsl($orange-hue - 6 87% 97%) !default;
+
+:where(html) {
+  --orange-0:   #{$orange-0};
+  --orange-5:   #{$orange-5};
+  --orange-10:  #{$orange-10};
+  --orange-15:  #{$orange-15};
+  --orange-20:  #{$orange-20};
+  --orange-25:  #{$orange-25};
+  --orange-30:  #{$orange-30};
+  --orange-35:  #{$orange-35};
+  --orange-40:  #{$orange-40};
+  --orange-45:  #{$orange-45};
+  --orange-50:  #{$orange-50};
+  --orange-55:  #{$orange-55};
+  --orange-60:  #{$orange-60};
+  --orange-65:  #{$orange-65};
+  --orange-70:  #{$orange-70};
+  --orange-75:  #{$orange-75};
+  --orange-80:  #{$orange-80};
+  --orange-85:  #{$orange-85};
+  --orange-90:  #{$orange-90};
+  --orange-95:  #{$orange-95};
+  --orange-100: #{$orange-100};
+}
+
+:where(.orange) {
+  --color-0:   var(--orange-0);
+  --color-5:   var(--orange-5);
+  --color-10:  var(--orange-10);
+  --color-15:  var(--orange-15);
+  --color-20:  var(--orange-20);
+  --color-25:  var(--orange-25);
+  --color-30:  var(--orange-30);
+  --color-35:  var(--orange-35);
+  --color-40:  var(--orange-40);
+  --color-45:  var(--orange-45);
+  --color-50:  var(--orange-50);
+  --color-55:  var(--orange-55);
+  --color-60:  var(--orange-60);
+  --color-65:  var(--orange-65);
+  --color-70:  var(--orange-70);
+  --color-75:  var(--orange-75);
+  --color-80:  var(--orange-80);
+  --color-85:  var(--orange-85);
+  --color-90:  var(--orange-90);
+  --color-95:  var(--orange-95);
+  --color-100: var(--orange-100);
+}

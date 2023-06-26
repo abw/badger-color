@@ -1,0 +1,71 @@
+/* Badger 2 - Yellow */
+$yellow-hue: 41 !default;
+$yellow-0:   hsl($yellow-hue + 11 99% 5%) !default;
+$yellow-5:   hsl($yellow-hue + 10 99% 8%) !default;
+$yellow-10:  hsl($yellow-hue + 8 99% 11%) !default;
+$yellow-15:  hsl($yellow-hue + 7 99% 14%) !default;
+$yellow-20:  hsl($yellow-hue + 6 99% 18%) !default;
+$yellow-25:  hsl($yellow-hue + 5 98% 22%) !default;
+$yellow-30:  hsl($yellow-hue + 4 98% 27%) !default;
+$yellow-35:  hsl($yellow-hue + 3 97% 32%) !default;
+$yellow-40:  hsl($yellow-hue + 2 96% 38%) !default;
+$yellow-45:  hsl($yellow-hue + 1 95% 44%) !default;
+$yellow-50:  hsl($yellow-hue 94% 49%) !default;
+$yellow-55:  hsl($yellow-hue 93% 55%) !default;
+$yellow-60:  hsl($yellow-hue - 1 92% 61%) !default;
+$yellow-65:  hsl($yellow-hue - 2 90% 67%) !default;
+$yellow-70:  hsl($yellow-hue - 2 88% 73%) !default;
+$yellow-75:  hsl($yellow-hue - 3 87% 78%) !default;
+$yellow-80:  hsl($yellow-hue - 3 85% 83%) !default;
+$yellow-85:  hsl($yellow-hue - 3 84% 87%) !default;
+$yellow-90:  hsl($yellow-hue - 4 82% 91%) !default;
+$yellow-95:  hsl($yellow-hue - 4 82% 94%) !default;
+$yellow-100: hsl($yellow-hue - 4 82% 96%) !default;
+
+:where(html) {
+  --yellow-0:   #{$yellow-0};
+  --yellow-5:   #{$yellow-5};
+  --yellow-10:  #{$yellow-10};
+  --yellow-15:  #{$yellow-15};
+  --yellow-20:  #{$yellow-20};
+  --yellow-25:  #{$yellow-25};
+  --yellow-30:  #{$yellow-30};
+  --yellow-35:  #{$yellow-35};
+  --yellow-40:  #{$yellow-40};
+  --yellow-45:  #{$yellow-45};
+  --yellow-50:  #{$yellow-50};
+  --yellow-55:  #{$yellow-55};
+  --yellow-60:  #{$yellow-60};
+  --yellow-65:  #{$yellow-65};
+  --yellow-70:  #{$yellow-70};
+  --yellow-75:  #{$yellow-75};
+  --yellow-80:  #{$yellow-80};
+  --yellow-85:  #{$yellow-85};
+  --yellow-90:  #{$yellow-90};
+  --yellow-95:  #{$yellow-95};
+  --yellow-100: #{$yellow-100};
+}
+
+:where(.yellow) {
+  --color-0:   var(--yellow-0);
+  --color-5:   var(--yellow-5);
+  --color-10:  var(--yellow-10);
+  --color-15:  var(--yellow-15);
+  --color-20:  var(--yellow-20);
+  --color-25:  var(--yellow-25);
+  --color-30:  var(--yellow-30);
+  --color-35:  var(--yellow-35);
+  --color-40:  var(--yellow-40);
+  --color-45:  var(--yellow-45);
+  --color-50:  var(--yellow-50);
+  --color-55:  var(--yellow-55);
+  --color-60:  var(--yellow-60);
+  --color-65:  var(--yellow-65);
+  --color-70:  var(--yellow-70);
+  --color-75:  var(--yellow-75);
+  --color-80:  var(--yellow-80);
+  --color-85:  var(--yellow-85);
+  --color-90:  var(--yellow-90);
+  --color-95:  var(--yellow-95);
+  --color-100: var(--yellow-100);
+}

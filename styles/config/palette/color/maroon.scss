@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Maroon */
+$maroon-hue: 346 !default;
+$maroon-0:   hsl($maroon-hue 76% 6%) !default;
+$maroon-5:   hsl($maroon-hue 75% 8%) !default;
+$maroon-10:  hsl($maroon-hue 75% 10%) !default;
+$maroon-15:  hsl($maroon-hue 74% 12%) !default;
+$maroon-20:  hsl($maroon-hue 74% 15%) !default;
+$maroon-25:  hsl($maroon-hue 74% 19%) !default;
+$maroon-30:  hsl($maroon-hue 74% 23%) !default;
+$maroon-35:  hsl($maroon-hue 74% 28%) !default;
+$maroon-40:  hsl($maroon-hue 75% 33%) !default;
+$maroon-45:  hsl($maroon-hue 76% 39%) !default;
+$maroon-50:  hsl($maroon-hue 77% 46%) !default;
+$maroon-55:  hsl($maroon-hue 78% 53%) !default;
+$maroon-60:  hsl($maroon-hue 80% 60%) !default;
+$maroon-65:  hsl($maroon-hue 82% 67%) !default;
+$maroon-70:  hsl($maroon-hue 83% 74%) !default;
+$maroon-75:  hsl($maroon-hue 85% 80%) !default;
+$maroon-80:  hsl($maroon-hue 87% 86%) !default;
+$maroon-85:  hsl($maroon-hue 88% 90%) !default;
+$maroon-90:  hsl($maroon-hue 89% 94%) !default;
+$maroon-95:  hsl($maroon-hue 89% 96%) !default;
+$maroon-100: hsl($maroon-hue 90% 98%) !default;
+
+:where(html) {
+  --maroon-0:   #{$maroon-0};
+  --maroon-5:   #{$maroon-5};
+  --maroon-10:  #{$maroon-10};
+  --maroon-15:  #{$maroon-15};
+  --maroon-20:  #{$maroon-20};
+  --maroon-25:  #{$maroon-25};
+  --maroon-30:  #{$maroon-30};
+  --maroon-35:  #{$maroon-35};
+  --maroon-40:  #{$maroon-40};
+  --maroon-45:  #{$maroon-45};
+  --maroon-50:  #{$maroon-50};
+  --maroon-55:  #{$maroon-55};
+  --maroon-60:  #{$maroon-60};
+  --maroon-65:  #{$maroon-65};
+  --maroon-70:  #{$maroon-70};
+  --maroon-75:  #{$maroon-75};
+  --maroon-80:  #{$maroon-80};
+  --maroon-85:  #{$maroon-85};
+  --maroon-90:  #{$maroon-90};
+  --maroon-95:  #{$maroon-95};
+  --maroon-100: #{$maroon-100};
+}
+
+:where(.maroon) {
+  --color-0:   var(--maroon-0);
+  --color-5:   var(--maroon-5);
+  --color-10:  var(--maroon-10);
+  --color-15:  var(--maroon-15);
+  --color-20:  var(--maroon-20);
+  --color-25:  var(--maroon-25);
+  --color-30:  var(--maroon-30);
+  --color-35:  var(--maroon-35);
+  --color-40:  var(--maroon-40);
+  --color-45:  var(--maroon-45);
+  --color-50:  var(--maroon-50);
+  --color-55:  var(--maroon-55);
+  --color-60:  var(--maroon-60);
+  --color-65:  var(--maroon-65);
+  --color-70:  var(--maroon-70);
+  --color-75:  var(--maroon-75);
+  --color-80:  var(--maroon-80);
+  --color-85:  var(--maroon-85);
+  --color-90:  var(--maroon-90);
+  --color-95:  var(--maroon-95);
+  --color-100: var(--maroon-100);
+}

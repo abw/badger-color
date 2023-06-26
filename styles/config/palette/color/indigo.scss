@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Indigo */
+$indigo-hue: 232 !default;
+$indigo-0:   hsl($indigo-hue - 4 50% 9%) !default;
+$indigo-5:   hsl($indigo-hue - 3 50% 12%) !default;
+$indigo-10:  hsl($indigo-hue - 3 51% 16%) !default;
+$indigo-15:  hsl($indigo-hue - 2 53% 20%) !default;
+$indigo-20:  hsl($indigo-hue - 2 55% 24%) !default;
+$indigo-25:  hsl($indigo-hue - 1 57% 29%) !default;
+$indigo-30:  hsl($indigo-hue - 1 61% 34%) !default;
+$indigo-35:  hsl($indigo-hue 65% 39%) !default;
+$indigo-40:  hsl($indigo-hue 70% 45%) !default;
+$indigo-45:  hsl($indigo-hue 75% 52%) !default;
+$indigo-50:  hsl($indigo-hue 78% 58%) !default;
+$indigo-55:  hsl($indigo-hue + 1 80% 65%) !default;
+$indigo-60:  hsl($indigo-hue + 1 82% 71%) !default;
+$indigo-65:  hsl($indigo-hue + 1 83% 77%) !default;
+$indigo-70:  hsl($indigo-hue + 1 84% 82%) !default;
+$indigo-75:  hsl($indigo-hue + 2 84% 86%) !default;
+$indigo-80:  hsl($indigo-hue + 2 84% 90%) !default;
+$indigo-85:  hsl($indigo-hue + 2 83% 93%) !default;
+$indigo-90:  hsl($indigo-hue + 2 83% 95%) !default;
+$indigo-95:  hsl($indigo-hue + 2 82% 97%) !default;
+$indigo-100: hsl($indigo-hue + 2 81% 99%) !default;
+
+:where(html) {
+  --indigo-0:   #{$indigo-0};
+  --indigo-5:   #{$indigo-5};
+  --indigo-10:  #{$indigo-10};
+  --indigo-15:  #{$indigo-15};
+  --indigo-20:  #{$indigo-20};
+  --indigo-25:  #{$indigo-25};
+  --indigo-30:  #{$indigo-30};
+  --indigo-35:  #{$indigo-35};
+  --indigo-40:  #{$indigo-40};
+  --indigo-45:  #{$indigo-45};
+  --indigo-50:  #{$indigo-50};
+  --indigo-55:  #{$indigo-55};
+  --indigo-60:  #{$indigo-60};
+  --indigo-65:  #{$indigo-65};
+  --indigo-70:  #{$indigo-70};
+  --indigo-75:  #{$indigo-75};
+  --indigo-80:  #{$indigo-80};
+  --indigo-85:  #{$indigo-85};
+  --indigo-90:  #{$indigo-90};
+  --indigo-95:  #{$indigo-95};
+  --indigo-100: #{$indigo-100};
+}
+
+:where(.indigo) {
+  --color-0:   var(--indigo-0);
+  --color-5:   var(--indigo-5);
+  --color-10:  var(--indigo-10);
+  --color-15:  var(--indigo-15);
+  --color-20:  var(--indigo-20);
+  --color-25:  var(--indigo-25);
+  --color-30:  var(--indigo-30);
+  --color-35:  var(--indigo-35);
+  --color-40:  var(--indigo-40);
+  --color-45:  var(--indigo-45);
+  --color-50:  var(--indigo-50);
+  --color-55:  var(--indigo-55);
+  --color-60:  var(--indigo-60);
+  --color-65:  var(--indigo-65);
+  --color-70:  var(--indigo-70);
+  --color-75:  var(--indigo-75);
+  --color-80:  var(--indigo-80);
+  --color-85:  var(--indigo-85);
+  --color-90:  var(--indigo-90);
+  --color-95:  var(--indigo-95);
+  --color-100: var(--indigo-100);
+}

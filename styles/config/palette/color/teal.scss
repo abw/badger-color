@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Teal */
+$teal-hue: 165 !default;
+$teal-0:   hsl($teal-hue 67% 5%) !default;
+$teal-5:   hsl($teal-hue 69% 7%) !default;
+$teal-10:  hsl($teal-hue 71% 10%) !default;
+$teal-15:  hsl($teal-hue 72% 13%) !default;
+$teal-20:  hsl($teal-hue 74% 16%) !default;
+$teal-25:  hsl($teal-hue 75% 19%) !default;
+$teal-30:  hsl($teal-hue 76% 23%) !default;
+$teal-35:  hsl($teal-hue 76% 27%) !default;
+$teal-40:  hsl($teal-hue 76% 31%) !default;
+$teal-45:  hsl($teal-hue 74% 37%) !default;
+$teal-50:  hsl($teal-hue 69% 42%) !default;
+$teal-55:  hsl($teal-hue 60% 49%) !default;
+$teal-60:  hsl($teal-hue 55% 56%) !default;
+$teal-65:  hsl($teal-hue 54% 64%) !default;
+$teal-70:  hsl($teal-hue 54% 72%) !default;
+$teal-75:  hsl($teal-hue 55% 80%) !default;
+$teal-80:  hsl($teal-hue 57% 86%) !default;
+$teal-85:  hsl($teal-hue 59% 90%) !default;
+$teal-90:  hsl($teal-hue 60% 94%) !default;
+$teal-95:  hsl($teal-hue 63% 96%) !default;
+$teal-100: hsl($teal-hue 65% 98%) !default;
+
+:where(html) {
+  --teal-0:   #{$teal-0};
+  --teal-5:   #{$teal-5};
+  --teal-10:  #{$teal-10};
+  --teal-15:  #{$teal-15};
+  --teal-20:  #{$teal-20};
+  --teal-25:  #{$teal-25};
+  --teal-30:  #{$teal-30};
+  --teal-35:  #{$teal-35};
+  --teal-40:  #{$teal-40};
+  --teal-45:  #{$teal-45};
+  --teal-50:  #{$teal-50};
+  --teal-55:  #{$teal-55};
+  --teal-60:  #{$teal-60};
+  --teal-65:  #{$teal-65};
+  --teal-70:  #{$teal-70};
+  --teal-75:  #{$teal-75};
+  --teal-80:  #{$teal-80};
+  --teal-85:  #{$teal-85};
+  --teal-90:  #{$teal-90};
+  --teal-95:  #{$teal-95};
+  --teal-100: #{$teal-100};
+}
+
+:where(.teal) {
+  --color-0:   var(--teal-0);
+  --color-5:   var(--teal-5);
+  --color-10:  var(--teal-10);
+  --color-15:  var(--teal-15);
+  --color-20:  var(--teal-20);
+  --color-25:  var(--teal-25);
+  --color-30:  var(--teal-30);
+  --color-35:  var(--teal-35);
+  --color-40:  var(--teal-40);
+  --color-45:  var(--teal-45);
+  --color-50:  var(--teal-50);
+  --color-55:  var(--teal-55);
+  --color-60:  var(--teal-60);
+  --color-65:  var(--teal-65);
+  --color-70:  var(--teal-70);
+  --color-75:  var(--teal-75);
+  --color-80:  var(--teal-80);
+  --color-85:  var(--teal-85);
+  --color-90:  var(--teal-90);
+  --color-95:  var(--teal-95);
+  --color-100: var(--teal-100);
+}

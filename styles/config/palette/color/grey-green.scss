@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Grey Green */
+$grey-green-hue: 100 !default;
+$grey-green-0:   hsl($grey-green-hue 4% 5%) !default;
+$grey-green-5:   hsl($grey-green-hue 4% 9%) !default;
+$grey-green-10:  hsl($grey-green-hue 4% 13%) !default;
+$grey-green-15:  hsl($grey-green-hue 4% 17%) !default;
+$grey-green-20:  hsl($grey-green-hue 4% 21%) !default;
+$grey-green-25:  hsl($grey-green-hue 4% 26%) !default;
+$grey-green-30:  hsl($grey-green-hue 4% 31%) !default;
+$grey-green-35:  hsl($grey-green-hue 4% 37%) !default;
+$grey-green-40:  hsl($grey-green-hue 4% 42%) !default;
+$grey-green-45:  hsl($grey-green-hue 4% 48%) !default;
+$grey-green-50:  hsl($grey-green-hue 4% 53%) !default;
+$grey-green-55:  hsl($grey-green-hue 4% 59%) !default;
+$grey-green-60:  hsl($grey-green-hue 4% 64%) !default;
+$grey-green-65:  hsl($grey-green-hue 4% 70%) !default;
+$grey-green-70:  hsl($grey-green-hue 4% 75%) !default;
+$grey-green-75:  hsl($grey-green-hue 4% 80%) !default;
+$grey-green-80:  hsl($grey-green-hue 4% 84%) !default;
+$grey-green-85:  hsl($grey-green-hue 4% 88%) !default;
+$grey-green-90:  hsl($grey-green-hue 4% 92%) !default;
+$grey-green-95:  hsl($grey-green-hue 4% 95%) !default;
+$grey-green-100: hsl($grey-green-hue 4% 98%) !default;
+
+:where(html) {
+  --grey-green-0:   #{$grey-green-0};
+  --grey-green-5:   #{$grey-green-5};
+  --grey-green-10:  #{$grey-green-10};
+  --grey-green-15:  #{$grey-green-15};
+  --grey-green-20:  #{$grey-green-20};
+  --grey-green-25:  #{$grey-green-25};
+  --grey-green-30:  #{$grey-green-30};
+  --grey-green-35:  #{$grey-green-35};
+  --grey-green-40:  #{$grey-green-40};
+  --grey-green-45:  #{$grey-green-45};
+  --grey-green-50:  #{$grey-green-50};
+  --grey-green-55:  #{$grey-green-55};
+  --grey-green-60:  #{$grey-green-60};
+  --grey-green-65:  #{$grey-green-65};
+  --grey-green-70:  #{$grey-green-70};
+  --grey-green-75:  #{$grey-green-75};
+  --grey-green-80:  #{$grey-green-80};
+  --grey-green-85:  #{$grey-green-85};
+  --grey-green-90:  #{$grey-green-90};
+  --grey-green-95:  #{$grey-green-95};
+  --grey-green-100: #{$grey-green-100};
+}
+
+:where(.grey-green) {
+  --color-0:   var(--grey-green-0);
+  --color-5:   var(--grey-green-5);
+  --color-10:  var(--grey-green-10);
+  --color-15:  var(--grey-green-15);
+  --color-20:  var(--grey-green-20);
+  --color-25:  var(--grey-green-25);
+  --color-30:  var(--grey-green-30);
+  --color-35:  var(--grey-green-35);
+  --color-40:  var(--grey-green-40);
+  --color-45:  var(--grey-green-45);
+  --color-50:  var(--grey-green-50);
+  --color-55:  var(--grey-green-55);
+  --color-60:  var(--grey-green-60);
+  --color-65:  var(--grey-green-65);
+  --color-70:  var(--grey-green-70);
+  --color-75:  var(--grey-green-75);
+  --color-80:  var(--grey-green-80);
+  --color-85:  var(--grey-green-85);
+  --color-90:  var(--grey-green-90);
+  --color-95:  var(--grey-green-95);
+  --color-100: var(--grey-green-100);
+}

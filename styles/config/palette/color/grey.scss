@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Grey */
+$grey-hue: 200 !default;
+$grey-0:   hsl($grey-hue 5% 5%) !default;
+$grey-5:   hsl($grey-hue 5% 8%) !default;
+$grey-10:  hsl($grey-hue 5% 12%) !default;
+$grey-15:  hsl($grey-hue 5% 16%) !default;
+$grey-20:  hsl($grey-hue 5% 20%) !default;
+$grey-25:  hsl($grey-hue 5% 24%) !default;
+$grey-30:  hsl($grey-hue 5% 29%) !default;
+$grey-35:  hsl($grey-hue 5% 34%) !default;
+$grey-40:  hsl($grey-hue 5% 39%) !default;
+$grey-45:  hsl($grey-hue 5% 45%) !default;
+$grey-50:  hsl($grey-hue 5% 51%) !default;
+$grey-55:  hsl($grey-hue 5% 57%) !default;
+$grey-60:  hsl($grey-hue 5% 63%) !default;
+$grey-65:  hsl($grey-hue 5% 69%) !default;
+$grey-70:  hsl($grey-hue 5% 75%) !default;
+$grey-75:  hsl($grey-hue 5% 81%) !default;
+$grey-80:  hsl($grey-hue 5% 86%) !default;
+$grey-85:  hsl($grey-hue 5% 90%) !default;
+$grey-90:  hsl($grey-hue 5% 94%) !default;
+$grey-95:  hsl($grey-hue 5% 96%) !default;
+$grey-100: hsl($grey-hue 5% 98%) !default;
+
+:where(html) {
+  --grey-0:   #{$grey-0};
+  --grey-5:   #{$grey-5};
+  --grey-10:  #{$grey-10};
+  --grey-15:  #{$grey-15};
+  --grey-20:  #{$grey-20};
+  --grey-25:  #{$grey-25};
+  --grey-30:  #{$grey-30};
+  --grey-35:  #{$grey-35};
+  --grey-40:  #{$grey-40};
+  --grey-45:  #{$grey-45};
+  --grey-50:  #{$grey-50};
+  --grey-55:  #{$grey-55};
+  --grey-60:  #{$grey-60};
+  --grey-65:  #{$grey-65};
+  --grey-70:  #{$grey-70};
+  --grey-75:  #{$grey-75};
+  --grey-80:  #{$grey-80};
+  --grey-85:  #{$grey-85};
+  --grey-90:  #{$grey-90};
+  --grey-95:  #{$grey-95};
+  --grey-100: #{$grey-100};
+}
+
+:where(.grey) {
+  --color-0:   var(--grey-0);
+  --color-5:   var(--grey-5);
+  --color-10:  var(--grey-10);
+  --color-15:  var(--grey-15);
+  --color-20:  var(--grey-20);
+  --color-25:  var(--grey-25);
+  --color-30:  var(--grey-30);
+  --color-35:  var(--grey-35);
+  --color-40:  var(--grey-40);
+  --color-45:  var(--grey-45);
+  --color-50:  var(--grey-50);
+  --color-55:  var(--grey-55);
+  --color-60:  var(--grey-60);
+  --color-65:  var(--grey-65);
+  --color-70:  var(--grey-70);
+  --color-75:  var(--grey-75);
+  --color-80:  var(--grey-80);
+  --color-85:  var(--grey-85);
+  --color-90:  var(--grey-90);
+  --color-95:  var(--grey-95);
+  --color-100: var(--grey-100);
+}

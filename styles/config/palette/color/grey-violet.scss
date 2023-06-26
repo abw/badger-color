@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Grey Violet */
+$grey-violet-hue: 250 !default;
+$grey-violet-0:   hsl($grey-violet-hue 7% 5%) !default;
+$grey-violet-5:   hsl($grey-violet-hue 7% 9%) !default;
+$grey-violet-10:  hsl($grey-violet-hue 7% 14%) !default;
+$grey-violet-15:  hsl($grey-violet-hue 7% 18%) !default;
+$grey-violet-20:  hsl($grey-violet-hue 7% 23%) !default;
+$grey-violet-25:  hsl($grey-violet-hue 7% 28%) !default;
+$grey-violet-30:  hsl($grey-violet-hue 7% 33%) !default;
+$grey-violet-35:  hsl($grey-violet-hue 7% 39%) !default;
+$grey-violet-40:  hsl($grey-violet-hue 7% 44%) !default;
+$grey-violet-45:  hsl($grey-violet-hue 7% 50%) !default;
+$grey-violet-50:  hsl($grey-violet-hue 7% 56%) !default;
+$grey-violet-55:  hsl($grey-violet-hue 7% 61%) !default;
+$grey-violet-60:  hsl($grey-violet-hue 7% 67%) !default;
+$grey-violet-65:  hsl($grey-violet-hue 7% 72%) !default;
+$grey-violet-70:  hsl($grey-violet-hue 7% 77%) !default;
+$grey-violet-75:  hsl($grey-violet-hue 7% 82%) !default;
+$grey-violet-80:  hsl($grey-violet-hue 7% 86%) !default;
+$grey-violet-85:  hsl($grey-violet-hue 7% 90%) !default;
+$grey-violet-90:  hsl($grey-violet-hue 7% 93%) !default;
+$grey-violet-95:  hsl($grey-violet-hue 7% 96%) !default;
+$grey-violet-100: hsl($grey-violet-hue 7% 98%) !default;
+
+:where(html) {
+  --grey-violet-0:   #{$grey-violet-0};
+  --grey-violet-5:   #{$grey-violet-5};
+  --grey-violet-10:  #{$grey-violet-10};
+  --grey-violet-15:  #{$grey-violet-15};
+  --grey-violet-20:  #{$grey-violet-20};
+  --grey-violet-25:  #{$grey-violet-25};
+  --grey-violet-30:  #{$grey-violet-30};
+  --grey-violet-35:  #{$grey-violet-35};
+  --grey-violet-40:  #{$grey-violet-40};
+  --grey-violet-45:  #{$grey-violet-45};
+  --grey-violet-50:  #{$grey-violet-50};
+  --grey-violet-55:  #{$grey-violet-55};
+  --grey-violet-60:  #{$grey-violet-60};
+  --grey-violet-65:  #{$grey-violet-65};
+  --grey-violet-70:  #{$grey-violet-70};
+  --grey-violet-75:  #{$grey-violet-75};
+  --grey-violet-80:  #{$grey-violet-80};
+  --grey-violet-85:  #{$grey-violet-85};
+  --grey-violet-90:  #{$grey-violet-90};
+  --grey-violet-95:  #{$grey-violet-95};
+  --grey-violet-100: #{$grey-violet-100};
+}
+
+:where(.grey-violet) {
+  --color-0:   var(--grey-violet-0);
+  --color-5:   var(--grey-violet-5);
+  --color-10:  var(--grey-violet-10);
+  --color-15:  var(--grey-violet-15);
+  --color-20:  var(--grey-violet-20);
+  --color-25:  var(--grey-violet-25);
+  --color-30:  var(--grey-violet-30);
+  --color-35:  var(--grey-violet-35);
+  --color-40:  var(--grey-violet-40);
+  --color-45:  var(--grey-violet-45);
+  --color-50:  var(--grey-violet-50);
+  --color-55:  var(--grey-violet-55);
+  --color-60:  var(--grey-violet-60);
+  --color-65:  var(--grey-violet-65);
+  --color-70:  var(--grey-violet-70);
+  --color-75:  var(--grey-violet-75);
+  --color-80:  var(--grey-violet-80);
+  --color-85:  var(--grey-violet-85);
+  --color-90:  var(--grey-violet-90);
+  --color-95:  var(--grey-violet-95);
+  --color-100: var(--grey-violet-100);
+}

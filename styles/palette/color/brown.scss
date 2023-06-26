@@ -1,0 +1,71 @@
+/* Badger 2 - Brown */
+$brown-hue: 14 !default;
+$brown-0:   hsl($brown-hue + 4 53% 6%) !default;
+$brown-5:   hsl($brown-hue + 3 53% 8%) !default;
+$brown-10:  hsl($brown-hue + 3 53% 11%) !default;
+$brown-15:  hsl($brown-hue + 2 53% 14%) !default;
+$brown-20:  hsl($brown-hue + 1 53% 17%) !default;
+$brown-25:  hsl($brown-hue + 1 53% 21%) !default;
+$brown-30:  hsl($brown-hue + 1 54% 24%) !default;
+$brown-35:  hsl($brown-hue 54% 28%) !default;
+$brown-40:  hsl($brown-hue 54% 33%) !default;
+$brown-45:  hsl($brown-hue 54% 38%) !default;
+$brown-50:  hsl($brown-hue 54% 43%) !default;
+$brown-55:  hsl($brown-hue 54% 49%) !default;
+$brown-60:  hsl($brown-hue 54% 56%) !default;
+$brown-65:  hsl($brown-hue - 1 55% 63%) !default;
+$brown-70:  hsl($brown-hue - 1 55% 70%) !default;
+$brown-75:  hsl($brown-hue - 1 55% 77%) !default;
+$brown-80:  hsl($brown-hue 56% 84%) !default;
+$brown-85:  hsl($brown-hue 56% 89%) !default;
+$brown-90:  hsl($brown-hue 57% 93%) !default;
+$brown-95:  hsl($brown-hue 57% 96%) !default;
+$brown-100: hsl($brown-hue 58% 98%) !default;
+
+:where(html) {
+  --brown-0:   #{$brown-0};
+  --brown-5:   #{$brown-5};
+  --brown-10:  #{$brown-10};
+  --brown-15:  #{$brown-15};
+  --brown-20:  #{$brown-20};
+  --brown-25:  #{$brown-25};
+  --brown-30:  #{$brown-30};
+  --brown-35:  #{$brown-35};
+  --brown-40:  #{$brown-40};
+  --brown-45:  #{$brown-45};
+  --brown-50:  #{$brown-50};
+  --brown-55:  #{$brown-55};
+  --brown-60:  #{$brown-60};
+  --brown-65:  #{$brown-65};
+  --brown-70:  #{$brown-70};
+  --brown-75:  #{$brown-75};
+  --brown-80:  #{$brown-80};
+  --brown-85:  #{$brown-85};
+  --brown-90:  #{$brown-90};
+  --brown-95:  #{$brown-95};
+  --brown-100: #{$brown-100};
+}
+
+:where(.brown) {
+  --color-0:   var(--brown-0);
+  --color-5:   var(--brown-5);
+  --color-10:  var(--brown-10);
+  --color-15:  var(--brown-15);
+  --color-20:  var(--brown-20);
+  --color-25:  var(--brown-25);
+  --color-30:  var(--brown-30);
+  --color-35:  var(--brown-35);
+  --color-40:  var(--brown-40);
+  --color-45:  var(--brown-45);
+  --color-50:  var(--brown-50);
+  --color-55:  var(--brown-55);
+  --color-60:  var(--brown-60);
+  --color-65:  var(--brown-65);
+  --color-70:  var(--brown-70);
+  --color-75:  var(--brown-75);
+  --color-80:  var(--brown-80);
+  --color-85:  var(--brown-85);
+  --color-90:  var(--brown-90);
+  --color-95:  var(--brown-95);
+  --color-100: var(--brown-100);
+}

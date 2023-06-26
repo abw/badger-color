@@ -1,0 +1,71 @@
+/* Badger 2 - Pink */
+$pink-hue: 321 !default;
+$pink-0:   hsl($pink-hue - 1 76% 5%) !default;
+$pink-5:   hsl($pink-hue - 1 77% 7%) !default;
+$pink-10:  hsl($pink-hue 79% 9%) !default;
+$pink-15:  hsl($pink-hue 80% 12%) !default;
+$pink-20:  hsl($pink-hue 81% 15%) !default;
+$pink-25:  hsl($pink-hue 82% 19%) !default;
+$pink-30:  hsl($pink-hue 82% 23%) !default;
+$pink-35:  hsl($pink-hue 82% 28%) !default;
+$pink-40:  hsl($pink-hue 82% 33%) !default;
+$pink-45:  hsl($pink-hue 81% 39%) !default;
+$pink-50:  hsl($pink-hue 80% 46%) !default;
+$pink-55:  hsl($pink-hue 76% 53%) !default;
+$pink-60:  hsl($pink-hue 72% 61%) !default;
+$pink-65:  hsl($pink-hue 72% 69%) !default;
+$pink-70:  hsl($pink-hue + 1 73% 76%) !default;
+$pink-75:  hsl($pink-hue + 1 75% 82%) !default;
+$pink-80:  hsl($pink-hue + 1 78% 87%) !default;
+$pink-85:  hsl($pink-hue + 1 80% 91%) !default;
+$pink-90:  hsl($pink-hue + 2 83% 94%) !default;
+$pink-95:  hsl($pink-hue + 2 86% 96%) !default;
+$pink-100: hsl($pink-hue + 3 89% 98%) !default;
+
+:where(html) {
+  --pink-0:   #{$pink-0};
+  --pink-5:   #{$pink-5};
+  --pink-10:  #{$pink-10};
+  --pink-15:  #{$pink-15};
+  --pink-20:  #{$pink-20};
+  --pink-25:  #{$pink-25};
+  --pink-30:  #{$pink-30};
+  --pink-35:  #{$pink-35};
+  --pink-40:  #{$pink-40};
+  --pink-45:  #{$pink-45};
+  --pink-50:  #{$pink-50};
+  --pink-55:  #{$pink-55};
+  --pink-60:  #{$pink-60};
+  --pink-65:  #{$pink-65};
+  --pink-70:  #{$pink-70};
+  --pink-75:  #{$pink-75};
+  --pink-80:  #{$pink-80};
+  --pink-85:  #{$pink-85};
+  --pink-90:  #{$pink-90};
+  --pink-95:  #{$pink-95};
+  --pink-100: #{$pink-100};
+}
+
+:where(.pink) {
+  --color-0:   var(--pink-0);
+  --color-5:   var(--pink-5);
+  --color-10:  var(--pink-10);
+  --color-15:  var(--pink-15);
+  --color-20:  var(--pink-20);
+  --color-25:  var(--pink-25);
+  --color-30:  var(--pink-30);
+  --color-35:  var(--pink-35);
+  --color-40:  var(--pink-40);
+  --color-45:  var(--pink-45);
+  --color-50:  var(--pink-50);
+  --color-55:  var(--pink-55);
+  --color-60:  var(--pink-60);
+  --color-65:  var(--pink-65);
+  --color-70:  var(--pink-70);
+  --color-75:  var(--pink-75);
+  --color-80:  var(--pink-80);
+  --color-85:  var(--pink-85);
+  --color-90:  var(--pink-90);
+  --color-95:  var(--pink-95);
+  --color-100: var(--pink-100);
+}

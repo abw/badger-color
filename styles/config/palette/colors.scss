@@ -1,0 +1,36 @@
+$color-names:
+  'red', 'brown', 'orange', 'yellow', 'olive',
+  'green', 'teal', 'blue', 'indigo', 'violet',
+  'purple', 'pink', 'maroon', 'grey-red', 'grey-yellow',
+  'grey-green', 'grey-teal', 'grey-blue', 'grey', 'grey-violet',
+  'grey-pink', 'grey-maroon' !default;
+
+$color-stops:
+  '0', '5', '10', '15', '20',
+  '25', '30', '35', '40', '45',
+  '50', '55', '60', '65', '70',
+  '75', '80', '85', '90', '95',
+  '100' !default;
+
+@import "color/red.scss";
+@import "color/brown.scss";
+@import "color/orange.scss";
+@import "color/yellow.scss";
+@import "color/olive.scss";
+@import "color/green.scss";
+@import "color/teal.scss";
+@import "color/blue.scss";
+@import "color/indigo.scss";
+@import "color/violet.scss";
+@import "color/purple.scss";
+@import "color/pink.scss";
+@import "color/maroon.scss";
+@import "color/grey-red.scss";
+@import "color/grey-yellow.scss";
+@import "color/grey-green.scss";
+@import "color/grey-teal.scss";
+@import "color/grey-blue.scss";
+@import "color/grey.scss";
+@import "color/grey-violet.scss";
+@import "color/grey-pink.scss";
+@import "color/grey-maroon.scss";

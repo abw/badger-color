@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Red */
+$red-hue: 0 !default;
+$red-0:   hsl($red-hue 80% 6%) !default;
+$red-5:   hsl($red-hue 79% 8%) !default;
+$red-10:  hsl($red-hue 78% 10%) !default;
+$red-15:  hsl($red-hue 77% 12%) !default;
+$red-20:  hsl($red-hue 76% 16%) !default;
+$red-25:  hsl($red-hue 76% 19%) !default;
+$red-30:  hsl($red-hue 76% 23%) !default;
+$red-35:  hsl($red-hue 76% 28%) !default;
+$red-40:  hsl($red-hue 76% 34%) !default;
+$red-45:  hsl($red-hue 77% 41%) !default;
+$red-50:  hsl($red-hue 77% 49%) !default;
+$red-55:  hsl($red-hue 78% 57%) !default;
+$red-60:  hsl($red-hue 79% 64%) !default;
+$red-65:  hsl($red-hue 80% 72%) !default;
+$red-70:  hsl($red-hue 81% 78%) !default;
+$red-75:  hsl($red-hue 82% 83%) !default;
+$red-80:  hsl($red-hue 83% 88%) !default;
+$red-85:  hsl($red-hue 84% 92%) !default;
+$red-90:  hsl($red-hue 84% 95%) !default;
+$red-95:  hsl($red-hue 85% 97%) !default;
+$red-100: hsl($red-hue 85% 99%) !default;
+
+:where(html) {
+  --red-0:   #{$red-0};
+  --red-5:   #{$red-5};
+  --red-10:  #{$red-10};
+  --red-15:  #{$red-15};
+  --red-20:  #{$red-20};
+  --red-25:  #{$red-25};
+  --red-30:  #{$red-30};
+  --red-35:  #{$red-35};
+  --red-40:  #{$red-40};
+  --red-45:  #{$red-45};
+  --red-50:  #{$red-50};
+  --red-55:  #{$red-55};
+  --red-60:  #{$red-60};
+  --red-65:  #{$red-65};
+  --red-70:  #{$red-70};
+  --red-75:  #{$red-75};
+  --red-80:  #{$red-80};
+  --red-85:  #{$red-85};
+  --red-90:  #{$red-90};
+  --red-95:  #{$red-95};
+  --red-100: #{$red-100};
+}
+
+:where(.red) {
+  --color-0:   var(--red-0);
+  --color-5:   var(--red-5);
+  --color-10:  var(--red-10);
+  --color-15:  var(--red-15);
+  --color-20:  var(--red-20);
+  --color-25:  var(--red-25);
+  --color-30:  var(--red-30);
+  --color-35:  var(--red-35);
+  --color-40:  var(--red-40);
+  --color-45:  var(--red-45);
+  --color-50:  var(--red-50);
+  --color-55:  var(--red-55);
+  --color-60:  var(--red-60);
+  --color-65:  var(--red-65);
+  --color-70:  var(--red-70);
+  --color-75:  var(--red-75);
+  --color-80:  var(--red-80);
+  --color-85:  var(--red-85);
+  --color-90:  var(--red-90);
+  --color-95:  var(--red-95);
+  --color-100: var(--red-100);
+}

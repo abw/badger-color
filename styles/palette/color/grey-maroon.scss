@@ -1,0 +1,71 @@
+/* Badger 2 - Grey Maroon */
+$grey-maroon-hue: 350 !default;
+$grey-maroon-0:   hsl($grey-maroon-hue 6% 5%) !default;
+$grey-maroon-5:   hsl($grey-maroon-hue 6% 8%) !default;
+$grey-maroon-10:  hsl($grey-maroon-hue 6% 12%) !default;
+$grey-maroon-15:  hsl($grey-maroon-hue 6% 16%) !default;
+$grey-maroon-20:  hsl($grey-maroon-hue 6% 20%) !default;
+$grey-maroon-25:  hsl($grey-maroon-hue 6% 24%) !default;
+$grey-maroon-30:  hsl($grey-maroon-hue 6% 29%) !default;
+$grey-maroon-35:  hsl($grey-maroon-hue 6% 34%) !default;
+$grey-maroon-40:  hsl($grey-maroon-hue 6% 39%) !default;
+$grey-maroon-45:  hsl($grey-maroon-hue 6% 45%) !default;
+$grey-maroon-50:  hsl($grey-maroon-hue 6% 51%) !default;
+$grey-maroon-55:  hsl($grey-maroon-hue 6% 57%) !default;
+$grey-maroon-60:  hsl($grey-maroon-hue 6% 63%) !default;
+$grey-maroon-65:  hsl($grey-maroon-hue 6% 69%) !default;
+$grey-maroon-70:  hsl($grey-maroon-hue 6% 75%) !default;
+$grey-maroon-75:  hsl($grey-maroon-hue 6% 81%) !default;
+$grey-maroon-80:  hsl($grey-maroon-hue 6% 86%) !default;
+$grey-maroon-85:  hsl($grey-maroon-hue 6% 90%) !default;
+$grey-maroon-90:  hsl($grey-maroon-hue 6% 94%) !default;
+$grey-maroon-95:  hsl($grey-maroon-hue 6% 96%) !default;
+$grey-maroon-100: hsl($grey-maroon-hue 6% 98%) !default;
+
+:where(html) {
+  --grey-maroon-0:   #{$grey-maroon-0};
+  --grey-maroon-5:   #{$grey-maroon-5};
+  --grey-maroon-10:  #{$grey-maroon-10};
+  --grey-maroon-15:  #{$grey-maroon-15};
+  --grey-maroon-20:  #{$grey-maroon-20};
+  --grey-maroon-25:  #{$grey-maroon-25};
+  --grey-maroon-30:  #{$grey-maroon-30};
+  --grey-maroon-35:  #{$grey-maroon-35};
+  --grey-maroon-40:  #{$grey-maroon-40};
+  --grey-maroon-45:  #{$grey-maroon-45};
+  --grey-maroon-50:  #{$grey-maroon-50};
+  --grey-maroon-55:  #{$grey-maroon-55};
+  --grey-maroon-60:  #{$grey-maroon-60};
+  --grey-maroon-65:  #{$grey-maroon-65};
+  --grey-maroon-70:  #{$grey-maroon-70};
+  --grey-maroon-75:  #{$grey-maroon-75};
+  --grey-maroon-80:  #{$grey-maroon-80};
+  --grey-maroon-85:  #{$grey-maroon-85};
+  --grey-maroon-90:  #{$grey-maroon-90};
+  --grey-maroon-95:  #{$grey-maroon-95};
+  --grey-maroon-100: #{$grey-maroon-100};
+}
+
+:where(.grey-maroon) {
+  --color-0:   var(--grey-maroon-0);
+  --color-5:   var(--grey-maroon-5);
+  --color-10:  var(--grey-maroon-10);
+  --color-15:  var(--grey-maroon-15);
+  --color-20:  var(--grey-maroon-20);
+  --color-25:  var(--grey-maroon-25);
+  --color-30:  var(--grey-maroon-30);
+  --color-35:  var(--grey-maroon-35);
+  --color-40:  var(--grey-maroon-40);
+  --color-45:  var(--grey-maroon-45);
+  --color-50:  var(--grey-maroon-50);
+  --color-55:  var(--grey-maroon-55);
+  --color-60:  var(--grey-maroon-60);
+  --color-65:  var(--grey-maroon-65);
+  --color-70:  var(--grey-maroon-70);
+  --color-75:  var(--grey-maroon-75);
+  --color-80:  var(--grey-maroon-80);
+  --color-85:  var(--grey-maroon-85);
+  --color-90:  var(--grey-maroon-90);
+  --color-95:  var(--grey-maroon-95);
+  --color-100: var(--grey-maroon-100);
+}

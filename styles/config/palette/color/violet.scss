@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Violet */
+$violet-hue: 259 !default;
+$violet-0:   hsl($violet-hue - 12 75% 8%) !default;
+$violet-5:   hsl($violet-hue - 10 73% 11%) !default;
+$violet-10:  hsl($violet-hue - 9 72% 15%) !default;
+$violet-15:  hsl($violet-hue - 7 71% 19%) !default;
+$violet-20:  hsl($violet-hue - 6 70% 24%) !default;
+$violet-25:  hsl($violet-hue - 5 69% 28%) !default;
+$violet-30:  hsl($violet-hue - 4 68% 34%) !default;
+$violet-35:  hsl($violet-hue - 3 69% 40%) !default;
+$violet-40:  hsl($violet-hue - 2 71% 47%) !default;
+$violet-45:  hsl($violet-hue - 1 77% 54%) !default;
+$violet-50:  hsl($violet-hue 84% 62%) !default;
+$violet-55:  hsl($violet-hue + 1 88% 69%) !default;
+$violet-60:  hsl($violet-hue + 1 90% 75%) !default;
+$violet-65:  hsl($violet-hue + 2 92% 81%) !default;
+$violet-70:  hsl($violet-hue + 2 93% 86%) !default;
+$violet-75:  hsl($violet-hue + 3 93% 90%) !default;
+$violet-80:  hsl($violet-hue + 3 94% 93%) !default;
+$violet-85:  hsl($violet-hue + 4 94% 95%) !default;
+$violet-90:  hsl($violet-hue + 4 94% 96%) !default;
+$violet-95:  hsl($violet-hue + 4 93% 97%) !default;
+$violet-100: hsl($violet-hue + 4 93% 98%) !default;
+
+:where(html) {
+  --violet-0:   #{$violet-0};
+  --violet-5:   #{$violet-5};
+  --violet-10:  #{$violet-10};
+  --violet-15:  #{$violet-15};
+  --violet-20:  #{$violet-20};
+  --violet-25:  #{$violet-25};
+  --violet-30:  #{$violet-30};
+  --violet-35:  #{$violet-35};
+  --violet-40:  #{$violet-40};
+  --violet-45:  #{$violet-45};
+  --violet-50:  #{$violet-50};
+  --violet-55:  #{$violet-55};
+  --violet-60:  #{$violet-60};
+  --violet-65:  #{$violet-65};
+  --violet-70:  #{$violet-70};
+  --violet-75:  #{$violet-75};
+  --violet-80:  #{$violet-80};
+  --violet-85:  #{$violet-85};
+  --violet-90:  #{$violet-90};
+  --violet-95:  #{$violet-95};
+  --violet-100: #{$violet-100};
+}
+
+:where(.violet) {
+  --color-0:   var(--violet-0);
+  --color-5:   var(--violet-5);
+  --color-10:  var(--violet-10);
+  --color-15:  var(--violet-15);
+  --color-20:  var(--violet-20);
+  --color-25:  var(--violet-25);
+  --color-30:  var(--violet-30);
+  --color-35:  var(--violet-35);
+  --color-40:  var(--violet-40);
+  --color-45:  var(--violet-45);
+  --color-50:  var(--violet-50);
+  --color-55:  var(--violet-55);
+  --color-60:  var(--violet-60);
+  --color-65:  var(--violet-65);
+  --color-70:  var(--violet-70);
+  --color-75:  var(--violet-75);
+  --color-80:  var(--violet-80);
+  --color-85:  var(--violet-85);
+  --color-90:  var(--violet-90);
+  --color-95:  var(--violet-95);
+  --color-100: var(--violet-100);
+}

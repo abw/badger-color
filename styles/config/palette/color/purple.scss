@@ -1,0 +1,71 @@
+/* Badger 2 #1 - Purple */
+$purple-hue: 280 !default;
+$purple-0:   hsl($purple-hue 81% 6%) !default;
+$purple-5:   hsl($purple-hue 78% 8%) !default;
+$purple-10:  hsl($purple-hue 75% 11%) !default;
+$purple-15:  hsl($purple-hue 72% 14%) !default;
+$purple-20:  hsl($purple-hue 69% 18%) !default;
+$purple-25:  hsl($purple-hue 67% 22%) !default;
+$purple-30:  hsl($purple-hue 66% 27%) !default;
+$purple-35:  hsl($purple-hue 66% 33%) !default;
+$purple-40:  hsl($purple-hue 68% 39%) !default;
+$purple-45:  hsl($purple-hue 73% 46%) !default;
+$purple-50:  hsl($purple-hue 76% 53%) !default;
+$purple-55:  hsl($purple-hue 79% 60%) !default;
+$purple-60:  hsl($purple-hue 80% 67%) !default;
+$purple-65:  hsl($purple-hue 81% 73%) !default;
+$purple-70:  hsl($purple-hue 82% 79%) !default;
+$purple-75:  hsl($purple-hue 82% 84%) !default;
+$purple-80:  hsl($purple-hue 82% 89%) !default;
+$purple-85:  hsl($purple-hue 82% 92%) !default;
+$purple-90:  hsl($purple-hue 81% 95%) !default;
+$purple-95:  hsl($purple-hue 81% 97%) !default;
+$purple-100: hsl($purple-hue 80% 98%) !default;
+
+:where(html) {
+  --purple-0:   #{$purple-0};
+  --purple-5:   #{$purple-5};
+  --purple-10:  #{$purple-10};
+  --purple-15:  #{$purple-15};
+  --purple-20:  #{$purple-20};
+  --purple-25:  #{$purple-25};
+  --purple-30:  #{$purple-30};
+  --purple-35:  #{$purple-35};
+  --purple-40:  #{$purple-40};
+  --purple-45:  #{$purple-45};
+  --purple-50:  #{$purple-50};
+  --purple-55:  #{$purple-55};
+  --purple-60:  #{$purple-60};
+  --purple-65:  #{$purple-65};
+  --purple-70:  #{$purple-70};
+  --purple-75:  #{$purple-75};
+  --purple-80:  #{$purple-80};
+  --purple-85:  #{$purple-85};
+  --purple-90:  #{$purple-90};
+  --purple-95:  #{$purple-95};
+  --purple-100: #{$purple-100};
+}
+
+:where(.purple) {
+  --color-0:   var(--purple-0);
+  --color-5:   var(--purple-5);
+  --color-10:  var(--purple-10);
+  --color-15:  var(--purple-15);
+  --color-20:  var(--purple-20);
+  --color-25:  var(--purple-25);
+  --color-30:  var(--purple-30);
+  --color-35:  var(--purple-35);
+  --color-40:  var(--purple-40);
+  --color-45:  var(--purple-45);
+  --color-50:  var(--purple-50);
+  --color-55:  var(--purple-55);
+  --color-60:  var(--purple-60);
+  --color-65:  var(--purple-65);
+  --color-70:  var(--purple-70);
+  --color-75:  var(--purple-75);
+  --color-80:  var(--purple-80);
+  --color-85:  var(--purple-85);
+  --color-90:  var(--purple-90);
+  --color-95:  var(--purple-95);
+  --color-100: var(--purple-100);
+}

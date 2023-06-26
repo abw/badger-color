@@ -1,0 +1,71 @@
+/* Badger 2 - Grey Teal */
+$grey-teal-hue: 150 !default;
+$grey-teal-0:   hsl($grey-teal-hue 5% 5%) !default;
+$grey-teal-5:   hsl($grey-teal-hue 5% 10%) !default;
+$grey-teal-10:  hsl($grey-teal-hue 5% 14%) !default;
+$grey-teal-15:  hsl($grey-teal-hue 5% 19%) !default;
+$grey-teal-20:  hsl($grey-teal-hue 5% 24%) !default;
+$grey-teal-25:  hsl($grey-teal-hue 5% 29%) !default;
+$grey-teal-30:  hsl($grey-teal-hue 5% 34%) !default;
+$grey-teal-35:  hsl($grey-teal-hue 5% 39%) !default;
+$grey-teal-40:  hsl($grey-teal-hue 5% 44%) !default;
+$grey-teal-45:  hsl($grey-teal-hue 5% 49%) !default;
+$grey-teal-50:  hsl($grey-teal-hue 5% 54%) !default;
+$grey-teal-55:  hsl($grey-teal-hue 5% 59%) !default;
+$grey-teal-60:  hsl($grey-teal-hue 5% 64%) !default;
+$grey-teal-65:  hsl($grey-teal-hue 5% 69%) !default;
+$grey-teal-70:  hsl($grey-teal-hue 5% 73%) !default;
+$grey-teal-75:  hsl($grey-teal-hue 5% 78%) !default;
+$grey-teal-80:  hsl($grey-teal-hue 5% 82%) !default;
+$grey-teal-85:  hsl($grey-teal-hue 5% 87%) !default;
+$grey-teal-90:  hsl($grey-teal-hue 5% 91%) !default;
+$grey-teal-95:  hsl($grey-teal-hue 5% 94%) !default;
+$grey-teal-100: hsl($grey-teal-hue 5% 98%) !default;
+
+:where(html) {
+  --grey-teal-0:   #{$grey-teal-0};
+  --grey-teal-5:   #{$grey-teal-5};
+  --grey-teal-10:  #{$grey-teal-10};
+  --grey-teal-15:  #{$grey-teal-15};
+  --grey-teal-20:  #{$grey-teal-20};
+  --grey-teal-25:  #{$grey-teal-25};
+  --grey-teal-30:  #{$grey-teal-30};
+  --grey-teal-35:  #{$grey-teal-35};
+  --grey-teal-40:  #{$grey-teal-40};
+  --grey-teal-45:  #{$grey-teal-45};
+  --grey-teal-50:  #{$grey-teal-50};
+  --grey-teal-55:  #{$grey-teal-55};
+  --grey-teal-60:  #{$grey-teal-60};
+  --grey-teal-65:  #{$grey-teal-65};
+  --grey-teal-70:  #{$grey-teal-70};
+  --grey-teal-75:  #{$grey-teal-75};
+  --grey-teal-80:  #{$grey-teal-80};
+  --grey-teal-85:  #{$grey-teal-85};
+  --grey-teal-90:  #{$grey-teal-90};
+  --grey-teal-95:  #{$grey-teal-95};
+  --grey-teal-100: #{$grey-teal-100};
+}
+
+:where(.grey-teal) {
+  --color-0:   var(--grey-teal-0);
+  --color-5:   var(--grey-teal-5);
+  --color-10:  var(--grey-teal-10);
+  --color-15:  var(--grey-teal-15);
+  --color-20:  var(--grey-teal-20);
+  --color-25:  var(--grey-teal-25);
+  --color-30:  var(--grey-teal-30);
+  --color-35:  var(--grey-teal-35);
+  --color-40:  var(--grey-teal-40);
+  --color-45:  var(--grey-teal-45);
+  --color-50:  var(--grey-teal-50);
+  --color-55:  var(--grey-teal-55);
+  --color-60:  var(--grey-teal-60);
+  --color-65:  var(--grey-teal-65);
+  --color-70:  var(--grey-teal-70);
+  --color-75:  var(--grey-teal-75);
+  --color-80:  var(--grey-teal-80);
+  --color-85:  var(--grey-teal-85);
+  --color-90:  var(--grey-teal-90);
+  --color-95:  var(--grey-teal-95);
+  --color-100: var(--grey-teal-100);
+}
