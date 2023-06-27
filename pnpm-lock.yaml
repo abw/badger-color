@@ -34,7 +34,6 @@ dependencies:
   '@abw/badger': 1.1.15
   '@abw/badger-filesystem': 1.0.3
   '@abw/badger-utils': 1.0.21
-  chroma-js: 2.4.2
 
 devDependencies:
   '@abw/badger-timestamp': 1.0.4
@@ -48,6 +47,7 @@ devDependencies:
   '@vitejs/plugin-react': 3.1.0_vite@4.3.9
   '@vitest/coverage-c8': 0.31.4_vitest@0.31.4
   '@vitest/ui': 0.31.4_vitest@0.31.4
+  chroma-js: 2.4.2
   eslint: 8.42.0
   eslint-plugin-react: 7.32.2_eslint@8.42.0
   jsdom: 21.1.2
@@ -1418,7 +1418,7 @@ packages:
 
   /chroma-js/2.4.2:
     resolution: {integrity: sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==}
-    dev: false
+    dev: true
 
   /ci-info/3.8.0:
     resolution: {integrity: sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==}
