@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 import { commandLine, exportSCSSPalette } from '../lib/index.js'
 
+const name        = 'badger-color-scss.js'
+const version     = 'PACKAGE_VERSION'
+const description = 'Generates SCSS configuration files from a palette.'
+
 async function main() {
   await commandLine({
-    name:        'badger-color-scss.js',
-    version:     'PACKAGE_VERSION',
-    description: 'Generates SCSS configuration files from a palette.',
-    generator:   exportSCSSPalette
+    name,
+    version,
+    description,
+    generator: exportSCSSPalette
   })
 }
-
 main()
+

@@ -8,3 +8,7 @@
 * sort palettes by name
 * sort palette ranges by name, hue or manually
 * install new palette colours to replace badger-ui SCSS
+
+## Export
+
+* change colors.scss to palette.scss and color/X to range/X
