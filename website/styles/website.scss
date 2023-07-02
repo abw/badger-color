@@ -4,7 +4,8 @@
 // @import '@abw/react-formula/styles/formula.scss';
 $brand-color: 'violet';
 $dark-theme: '#site.dark';
-@import "../../styles/badger-css.scss";
+// @import "../../styles/badger-css.scss";
+@import '@abw/badger-css/styles/badger.scss';
 @import "config/all.scss";
 @import "props/all.scss";
 @import "modules/all.scss";

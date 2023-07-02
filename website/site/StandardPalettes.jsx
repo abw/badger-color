@@ -1,14 +1,16 @@
-import badger   from '../../config/palette/badger.json'
-import badger2  from '../../config/palette/badger2.json'
+// import badger   from '../../config/palette/badger.json'
+// import badger2  from '../../config/palette/badger2.json'
 import badgercss  from '../../config/palette/badger-css.json'
 import colar    from '../../config/palette/colar.json'
 import tailwind from '../../config/palette/tailwind.json'
-import semantic from '../../config/palette/semantic.json'
+// import semantic from '../../config/palette/semantic.json'
 import { unpackRanges } from '../../lib/utils/storage.js'
 import { fail } from '@abw/badger-utils'
 
 export const StandardPalettes = {
-  badger, badger2, badgercss, semantic, colar, tailwind,
+  'badger-css': badgercss,
+  colar,
+  tailwind,
 }
 
 export const standardPalette = uri => {

@@ -3,6 +3,7 @@ svg.icon {
   box-sizing: content-box;
   display: inline-block;
   height: 1em;
+  font-size: 1em;
   line-height: 1;
   overflow: visible;
   vertical-align: -.125em;
@@ -12,4 +13,7 @@ svg.icon {
   &.icon-right {
     margin-left: 0.75em;
   }
+}
+button svg.icon {
+  // padding: 0.25em 0.75em;
 }

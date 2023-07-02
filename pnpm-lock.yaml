@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@abw/badger': ^1.1.15
+  '@abw/badger-css': ^0.0.1
   '@abw/badger-filesystem': ^1.0.3
   '@abw/badger-timestamp': ^1.0.4
   '@abw/badger-utils': ^1.0.21
@@ -32,6 +33,7 @@ specifiers:
 
 dependencies:
   '@abw/badger': 1.1.15
+  '@abw/badger-css': 0.0.1
   '@abw/badger-filesystem': 1.0.3
   '@abw/badger-utils': 1.0.21
 
@@ -69,6 +71,10 @@ packages:
     dependencies:
       '@abw/badger-utils': 1.0.21
       js-yaml: 4.1.0
+    dev: false
+
+  /@abw/badger-css/0.0.1:
+    resolution: {integrity: sha512-N/hPYVMxu3KEe3cm8fAr7f+Nc5KBqH30hGagbgXmlesnnFK7uU5DJxQG/9+E3gy/P1Clq7lKCloj+9eyBzARdQ==}
     dev: false
 
   /@abw/badger-filesystem/1.0.3:
@@ -1472,6 +1478,7 @@ packages:
   /commander/10.0.1:
     resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
     engines: {node: '>=14'}
+    dev: false
 
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -1653,6 +1660,7 @@ packages:
   /dotenv/16.3.1:
     resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
     engines: {node: '>=12'}
+    dev: false
 
   /electron-to-chromium/1.4.432:
     resolution: {integrity: sha512-yz3U/khQgAFT2HURJA3/F4fKIyO2r5eK09BQzBZFd6BvBSSaRuzKc2ZNBHtJcO75/EKiRYbVYJZ2RB0P4BuD2g==}
@@ -2721,6 +2729,7 @@ packages:
   /kleur/3.0.3:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
     engines: {node: '>=6'}
+    dev: false
 
   /levn/0.3.0:
     resolution: {integrity: sha512-0OO4y2iOHix2W6ujICbKIaEQXvFQHue65vUG3pb5EUomzPI90z9hsA1VsO/dbIIpC53J8gxM9Q4Oho0jrCM/yA==}
@@ -3158,6 +3167,7 @@ packages:
     dependencies:
       kleur: 3.0.3
       sisteransi: 1.0.5
+    dev: false
 
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
@@ -3451,6 +3461,7 @@ packages:
 
   /sisteransi/1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
+    dev: false
 
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}

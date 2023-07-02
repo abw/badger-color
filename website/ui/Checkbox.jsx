@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Checkbox = ({label, checked, toggle}) =>
-  <label className="checkbox option">
+const Checkbox = ({label, checked, toggle, className=''}) =>
+  <label className={`checkbox ${className}`}>
     <input
       type="checkbox"
       checked={checked}
