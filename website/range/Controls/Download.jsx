@@ -18,12 +18,12 @@ const Download = ({ palette, range }) => {
     ? <Button
         icon="check"
         color={Theme.colors.download}
-        solid
+        className="icon"
       />
     : <Button
         icon="download"
         color={Theme.colors.download}
-        solid
+        className="icon"
         onClick={copy}
       />
 }

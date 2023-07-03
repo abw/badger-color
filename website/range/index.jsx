@@ -39,15 +39,13 @@ const Range = ({
             iconLeft="undo"
             text="Stops"
             color={Theme.colors.undo}
-            solid
             onClick={resetStops}
             className="wd-7"
           />
           <Button
             icon="arrow-up"
             color={Theme.colors.commit}
-            solid
-            className="mar-l-2"
+            className="mar-l-2 icon"
             onClick={copyRangeToPalette}
           />
         </div>
@@ -60,15 +58,13 @@ const Range = ({
             iconLeft="undo"
             text="Curves"
             color={Theme.colors.undo}
-            solid
             onClick={resetCurves}
             className="wd-7"
           />
           <Button
             icon="arrow-up"
             color={Theme.colors.commit}
-            solid
-            className="mar-l-2"
+            className="mar-l-2 icon"
             onClick={curvesToStops}
           />
         </div>

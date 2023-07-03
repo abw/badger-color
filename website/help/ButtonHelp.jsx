@@ -12,8 +12,8 @@ const ButtonHelp = ({
     <Button
       color={color}
       icon={icon}
+      className="icon no-focus"
       // size="small"
-      solid
     />
     <div>
       {text||children}

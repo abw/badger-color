@@ -72,7 +72,7 @@ const Edit = ({ palette, palettes, editPalette }) => {
         color={Theme.colors.edit}
         icon="pen"
         onClick={() => setOpen(true)}
-        solid
+        className="icon"
       />
       <Modal open={open} close={close} className="text-left">
         <Form

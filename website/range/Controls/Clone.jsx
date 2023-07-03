@@ -17,7 +17,7 @@ const Clone = ({ palette, range, cloneRange }) => {
       icon="clone"
       color={Theme.colors.clone}
       onClick={onCloneRange}
-      solid
+      className="icon"
     />
   )
 }

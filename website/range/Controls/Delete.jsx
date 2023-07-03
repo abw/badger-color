@@ -19,7 +19,7 @@ const Delete = ({ palette, deleteRange }) => {
     <>
       <Button
         color={Theme.colors.delete}
-        solid
+        className="icon"
         icon="trash"
         onClick={() => setOpen(true)}
       />
@@ -31,6 +31,7 @@ const Delete = ({ palette, deleteRange }) => {
           <Button
             color={Theme.colors.cancel}
             text="Cancel"
+            className="icon"
             iconRight="cross"
             onClick={close}
           />
@@ -38,7 +39,7 @@ const Delete = ({ palette, deleteRange }) => {
             color={Theme.colors.delete}
             text="Delete"
             iconRight="trash"
-            solid
+            className="icon"
             onClick={confirm}
           />
         </div>

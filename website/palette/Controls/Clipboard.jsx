@@ -18,12 +18,12 @@ const Clipboard = ({ palette }) => {
     ? <Button
         icon="check"
         color={Theme.colors.clipboard}
-        solid
+        className="icon"
       />
     : <Button
         icon="clipboard"
         color={Theme.colors.clipboard}
-        solid
+        className="icon"
         onClick={copy}
       />
 }

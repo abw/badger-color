@@ -18,9 +18,8 @@ const PaletteMenu = ({
         <Button
           color={Theme.colors.add}
           icon="plus"
-          className="smaller"
+          className="smaller icon"
           onClick={newRange}
-          solid
         />
       </div>
       { colors.map(

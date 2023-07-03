@@ -20,7 +20,7 @@ const ShowExamples = ({ range }) => {
     <>
       <Button
         color={Theme.colors.examples}
-        solid
+        className="icon"
         icon="eye"
         onClick={() => setOpen(true)}
       />

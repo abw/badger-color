@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@abw/badger': ^1.1.15
-  '@abw/badger-css': ^0.0.1
+  '@abw/badger-css': ^0.0.3
   '@abw/badger-filesystem': ^1.0.3
   '@abw/badger-timestamp': ^1.0.4
   '@abw/badger-utils': ^1.0.21
@@ -33,7 +33,7 @@ specifiers:
 
 dependencies:
   '@abw/badger': 1.1.15
-  '@abw/badger-css': 0.0.1
+  '@abw/badger-css': 0.0.3
   '@abw/badger-filesystem': 1.0.3
   '@abw/badger-utils': 1.0.21
 
@@ -73,8 +73,8 @@ packages:
       js-yaml: 4.1.0
     dev: false
 
-  /@abw/badger-css/0.0.1:
-    resolution: {integrity: sha512-N/hPYVMxu3KEe3cm8fAr7f+Nc5KBqH30hGagbgXmlesnnFK7uU5DJxQG/9+E3gy/P1Clq7lKCloj+9eyBzARdQ==}
+  /@abw/badger-css/0.0.3:
+    resolution: {integrity: sha512-V0XZ3jH6xnOYtiuVki4tJ7i+QNk4z4OSlgnKQXzWGWkYh0zu3fnbnGUICXHbnKxVGoGKGfAPiAJB4xGx3GyaQQ==}
     dev: false
 
   /@abw/badger-filesystem/1.0.3:

@@ -12,7 +12,7 @@ const Help = () => {
     <>
       <Button
         color={Theme.colors.help}
-        solid
+        className="icon"
         icon="info"
         onClick={() => setOpen(true)}
       />

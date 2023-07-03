@@ -19,7 +19,7 @@ const Clone = ({ palette }) => {
       icon="clone"
       color={Theme.colors.clone}
       onClick={onClonePalette}
-      solid
+      className="icon"
     />
   )
 }

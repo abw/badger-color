@@ -18,7 +18,7 @@ const Delete = ({ deletePalette }) => {
     <>
       <Button
         color={Theme.colors.delete}
-        solid
+        className="icon"
         icon="trash"
         onClick={() => setOpen(true)}
       />
