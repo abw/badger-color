@@ -13,7 +13,7 @@ const fields = {
   name: {
     label: 'Name',
     required: true,
-    help: 'A name for the palette'
+    help: 'A name for the palette',
   },
   uri: {
     label: 'URI',
@@ -79,13 +79,15 @@ const Edit = ({ palette, palettes, editPalette }) => {
           values={palette} fields={fields}
           onLoad={setForm}
           onSubmit={submit}
+          wide
         >
           <NameField/>
           <Field
             name="uri"
             validate={checkURIAvailable}
+            wide
           />
-          <Fields names="comment source"/>
+          <Fields names="comment source" wide/>
         </Form>
         <div className="flex space mar-t-8">
           <Button
@@ -112,6 +114,7 @@ const NameField = () => {
   return <Field
     name="name"
     onChange={field => setValues({ uri: nameToURI(field.value) })}
+    wide
   />
 }
 

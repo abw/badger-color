@@ -1,10 +1,9 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 @import '@abw/react-night-and-day/styles/night-and-day.css';
-// @import '@abw/react-formula/styles/formula.scss';
+
 $brand-color: 'violet';
 $dark-theme: '#site.dark';
-// @import "../../styles/badger-css.scss";
 @import '@abw/badger-css/styles/badger.scss';
 @import "config/all.scss";
 @import "props/all.scss";

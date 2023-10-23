@@ -31,7 +31,6 @@ const fields = {
   },
   greyscale: {
     type:  'checkbox',
-    // label: 'Greyscale',
     text:  'Greyscale',
     help:  'Set this for grey ranges (used for sorting)'
   },
@@ -71,9 +70,10 @@ const Edit = ({ palette, range, editRange, close }) => {
         <Field
           name="uri"
           validate={checkURIAvailable}
+          wide
         />
-        <Field name="aliases"/>
-        <Field name="greyscale"/>
+        <Field name="aliases" wide/>
+        <Field name="greyscale" wide/>
       </Form>
       <div className="flex space mar-t-8">
         <Button
@@ -99,6 +99,7 @@ const NameField = () => {
   return <Field
     name="name"
     onChange={field => setValues({ uri: nameToURI(field.value) })}
+    wide
   />
 }
 

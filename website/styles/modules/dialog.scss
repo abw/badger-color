@@ -41,5 +41,9 @@ dialog::backdrop {
     --dialog-border: var(--grey-30);
     --close-text:    var(--grey-50);
     --close-back:    var(--grey-30);
+    .field {
+      --label-color:            var(--color-60);
+      --help-color:             var(--color-60);
+    }
   }
 }

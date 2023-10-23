@@ -4,16 +4,16 @@ section.palette {
   }
   & > header {
     h1 {
-      font-size: $size-larger;
+      font-size: $size-largest;
     }
     div.info {
       div.source {
-        font-size: $size-smallish;
+        font-size: $size-small;
       }
     }
   }
   h2 {
-    font-size: $size-large;
+    font-size: $size-larger;
     margin-top: 0.5rem;
     margin-bottom: 0;
   }
@@ -57,7 +57,7 @@ section.palette {
 section.palette > header .controls,
 section.range > header .controls {
   flex-basis: 400px;
-  font-size: $size-smallish;
+  font-size: $size-small;
   justify-content: flex-end;
   flex-wrap: wrap;
 }

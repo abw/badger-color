@@ -4,7 +4,7 @@
   // box-shadow: 2px 3px 6px var(--swatch-shadow);
   .swatch {
     position: relative;
-    font-size: $size-small;
+    font-size: $size-smaller;
     padding: 0.5em;
     min-height: 3rem;
     &:first-child {
@@ -15,16 +15,16 @@
     }
     .info {
       .stop {
-        font-size: $size-small;
+        font-size: $size-smaller;
         margin-bottom: 1em;
         line-height: 1;
       }
       .specs {
-        font-size: $size-smaller;
+        font-size: $size-smallest;
         opacity: 0.8;
       }
       .locked {
-        font-size: $size-smallish;
+        font-size: $size-small;
       }
     }
     &.light {
@@ -36,7 +36,7 @@
     &.grey {
       min-height: 2rem;
       padding: 0.125rem 0.5rem;
-      font-size: $size-smaller;
+      font-size: $size-smallest;
     }
     &.none {
       background-color: var(--grey-90);

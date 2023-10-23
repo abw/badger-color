@@ -185,9 +185,17 @@ const Index = () =>
         10 (or 5 if you&apos;ve got the <b>5 Stops</b> palette option enabled).
       </p>
 
-      <h2>Terminology <span className="small">(as used here)</span></h2>
+      <h2>Generating Stylesheets</h2>
       <p>
+        Badger-Color provides some utilities for generating SCSS files to
+        define the colors in a palette as both SCSS variables and CSS
+        variables.
       </p>
+      <p>
+        Unfortunately I haven&apos;t written the documentation for that yet.
+      </p>
+
+      <h2>Terminology <span className="small">(as used here)</span></h2>
       <p>
         A <i>palette</i> is a collection of color <i>ranges</i>.
       </p>
