@@ -1,6 +1,6 @@
 {
   "name": "@abw/badger-color",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Color Palette Designer",
   "type": "module",
   "main": "./dist/badger-color.umd.cjs",
@@ -43,14 +43,14 @@
   },
   "dependencies": {
     "@abw/badger": "^1.1.15",
-    "@abw/badger-css": "^0.0.3",
+    "@abw/badger-css": "^0.1.0",
     "@abw/badger-filesystem": "^1.0.3",
     "@abw/badger-utils": "^1.0.21"
   },
   "devDependencies": {
     "@abw/badger-timestamp": "^1.0.4",
     "@abw/react-context": "^2.0.3",
-    "@abw/react-formula": "0.0.2-alpha.2",
+    "@abw/react-formula": "0.0.5",
     "@abw/react-night-and-day": "^0.0.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",

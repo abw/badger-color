@@ -2,12 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   '@abw/badger': ^1.1.15
-  '@abw/badger-css': ^0.0.3
+  '@abw/badger-css': ^0.1.0
   '@abw/badger-filesystem': ^1.0.3
   '@abw/badger-timestamp': ^1.0.4
   '@abw/badger-utils': ^1.0.21
   '@abw/react-context': ^2.0.3
-  '@abw/react-formula': 0.0.2-alpha.2
+  '@abw/react-formula': 0.0.5
   '@abw/react-night-and-day': ^0.0.5
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^14.0.0
@@ -33,14 +33,14 @@ specifiers:
 
 dependencies:
   '@abw/badger': 1.1.15
-  '@abw/badger-css': 0.0.3
+  '@abw/badger-css': 0.1.0
   '@abw/badger-filesystem': 1.0.3
   '@abw/badger-utils': 1.0.21
 
 devDependencies:
   '@abw/badger-timestamp': 1.0.4
   '@abw/react-context': 2.0.3
-  '@abw/react-formula': 0.0.2-alpha.2_biqbaboplfbrettd7655fr4n2y
+  '@abw/react-formula': 0.0.5_biqbaboplfbrettd7655fr4n2y
   '@abw/react-night-and-day': 0.0.5_biqbaboplfbrettd7655fr4n2y
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
@@ -73,9 +73,8 @@ packages:
       js-yaml: 4.1.0
     dev: false
 
-  /@abw/badger-css/0.0.3:
-    resolution: {integrity: sha512-V0XZ3jH6xnOYtiuVki4tJ7i+QNk4z4OSlgnKQXzWGWkYh0zu3fnbnGUICXHbnKxVGoGKGfAPiAJB4xGx3GyaQQ==}
-    dev: false
+  /@abw/badger-css/0.1.0:
+    resolution: {integrity: sha512-2xyAJgFJYph0jnfJrvTd+gT+4U+NCKoj/G+XJLt2XaALdgLBVoExKSkg2nv4Y/9T9EAGXJ2Q3NpHA9O4NOrFqw==}
 
   /@abw/badger-filesystem/1.0.3:
     resolution: {integrity: sha512-7y3rqD4Ybx71zaUYiVYEI2YnbDyvJ8947MaIvSpyq4/NyhMWCENIIQlOg+8wqK+Lyu/mgTFHpfrgZYL+Q1lsCg==}
@@ -112,12 +111,13 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /@abw/react-formula/0.0.2-alpha.2_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-OO8eZZjtxOPBSGqgyzffaoCS6kO9N4tfk4+B6m7MHWdai6Q6pZgiGU58fr+J1xQdpZw78Lm4acLxKRA2j6Oe1Q==}
+  /@abw/react-formula/0.0.5_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-LydnFXhQ/G4fzGaJLsp7+xEmjOC7oD0BcU8CW69Z77GCIi23/NSNe3VRTp6KxXHbWmwJV3vrwd2HMMajQmswkw==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
+      '@abw/badger-css': 0.1.0
       '@abw/badger-utils': 1.0.21
       '@abw/react-context': 2.0.3
       '@abw/react-one-louder': 0.0.5
@@ -1419,7 +1419,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /chroma-js/2.4.2:
@@ -2079,8 +2079,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents/2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -3361,7 +3361,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /rrweb-cssom/0.6.0:
@@ -3838,7 +3838,7 @@ packages:
       rollup: 3.25.1
       sass: 1.63.4
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vite/4.3.9_sass@1.63.4:
@@ -3871,7 +3871,7 @@ packages:
       rollup: 3.25.1
       sass: 1.63.4
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vitest/0.31.4_6xlwwvfaef2r23y4wnakgdyyfe:
