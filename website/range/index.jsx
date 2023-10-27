@@ -40,6 +40,8 @@ const Range = ({
             text="Stops"
             color={Theme.colors.undo}
             onClick={resetStops}
+            data-tooltip="top right"
+            aria-label="Reset all stops"
             className="wd-7"
           />
           <Button
@@ -47,6 +49,8 @@ const Range = ({
             color={Theme.colors.commit}
             className="mar-l-2 icon"
             onClick={copyRangeToPalette}
+            data-tooltip="top right"
+            aria-label="Copy all stops into current range"
           />
         </div>
       </div>
@@ -59,6 +63,8 @@ const Range = ({
             text="Curves"
             color={Theme.colors.undo}
             onClick={resetCurves}
+            data-tooltip="top right"
+            aria-label="Reset all curves"
             className="wd-7"
           />
           <Button
@@ -66,6 +72,8 @@ const Range = ({
             color={Theme.colors.commit}
             className="mar-l-2 icon"
             onClick={curvesToStops}
+            data-tooltip="top right"
+            aria-label="Use all curves to set stops"
           />
         </div>
       </div>

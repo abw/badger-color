@@ -25,6 +25,8 @@ const Download = ({ palette, range }) => {
         color={Theme.colors.download}
         className="icon"
         onClick={copy}
+        data-tooltip="top right"
+        aria-label="Download data for this range"
       />
 }
 

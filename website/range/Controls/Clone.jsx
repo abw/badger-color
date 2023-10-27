@@ -18,6 +18,9 @@ const Clone = ({ palette, range, cloneRange }) => {
       color={Theme.colors.clone}
       onClick={onCloneRange}
       className="icon"
+      data-tooltip="top right"
+      aria-label="Clone this range"
+
     />
   )
 }

@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom'
 import Header from './Header.jsx'
 // import Footer from './Footer.jsx'
 
-const Palette = ({ palette, selectPalette }) => {
+const Palette = ({ palette, selectPalette, options }) => {
   const { puri } = useParams()
 
   useEffect(
@@ -20,7 +20,7 @@ const Palette = ({ palette, selectPalette }) => {
   // console.log(`selected palette: `, palette)
 
   return (
-    <section className="palette">
+    <section className={`palette ${options.tooltips ? '' : 'no-tooltips'}`}>
       <Header/>
       <Outlet/>
       {/* <Footer/> */}

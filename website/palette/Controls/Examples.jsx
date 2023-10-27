@@ -22,6 +22,8 @@ const ShowExamples = ({ palette }) => {
         className="icon"
         icon="eye"
         onClick={() => setOpen(true)}
+        data-tooltip="bottom right"
+        aria-label="View examples using this palette"
       />
       <Modal open={open} close={close} className="text-left">
         <div className="flex space end mar-b-6">

@@ -1,8 +1,16 @@
 import React from 'react'
 import Icon from '../ui/Icon.jsx'
 import { usePalettes } from '../palettes/Context.jsx'
+import Specs from './Specs.jsx'
+import SpecsTable from './SpecsTable.jsx'
 
-export const Info = ({color, stop, showLock, showStop}) => {
+export const Info = ({
+  color,
+  stop,
+  showLock,
+  showStop,
+  tooltipClick
+}) => {
   const { options } = usePalettes()
   return (
     <div className="info">
@@ -15,13 +23,19 @@ export const Info = ({color, stop, showLock, showStop}) => {
           { showLock && color.locked && <Icon name="lock"/> }
         </div>
       </div>
-      { options.info &&
-        <div className="specs">
-          {color.hex}<br/>
-          h:{color.h}&deg;<br/>
-          s:{color.s}%<br/>
-          l:{color.l}%
-        </div>
+      { options.info
+        ? <Specs color={color}/>
+        : <div
+            onClick={tooltipClick}
+            className={`tooltip pad-1 ${tooltipClick ? 'clickable' : ''}`}
+          >
+            <SpecsTable color={color}/>
+            { Boolean(tooltipClick) &&
+              <div className="mar-t">
+                Click to edit
+              </div>
+            }
+          </div>
       }
     </div>
   )

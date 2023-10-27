@@ -21,6 +21,8 @@ const Delete = ({ deletePalette }) => {
         className="icon"
         icon="trash"
         onClick={() => setOpen(true)}
+        data-tooltip="bottom right"
+        aria-label="Delete this palette"
       />
       <Modal open={open} close={close} className="text-left">
         <p>

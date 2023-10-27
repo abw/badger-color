@@ -15,6 +15,9 @@ const Edit = () => {
         icon="pen"
         onClick={() => setOpen(true)}
         className="icon"
+        data-tooltip="top right"
+        aria-label="Edit range metadata"
+
       />
       <Modal open={open} close={close} className="text-left">
         <Form close={close}/>

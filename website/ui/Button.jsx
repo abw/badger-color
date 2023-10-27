@@ -9,7 +9,8 @@ const Button = ({
   size,
   className,
   onClick,
-  solid
+  solid,
+  ...props
 }) => {
   const classes = testClasses(
     {
@@ -23,6 +24,7 @@ const Button = ({
     <button
       className={classes}
       onClick={onClick}
+      {...props}
     >
       { iconLeft &&
         <Icon name={iconLeft} className="icon-left"/>

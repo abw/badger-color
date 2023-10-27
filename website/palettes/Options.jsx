@@ -10,6 +10,7 @@ const Options = ({
   toggleShow5s,
   toggleGrey,
   toggleBlackWhite,
+  toggleTooltips,
 }) =>
   <div className="options">
     <Checkbox
@@ -40,6 +41,12 @@ const Options = ({
       label="Greyscale"
       checked={options.grey}
       toggle={toggleGrey}
+      className="wide"
+    />
+    <Checkbox
+      label="Tooltips"
+      checked={options.tooltips}
+      toggle={toggleTooltips}
       className="wide"
     />
   </div>

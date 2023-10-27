@@ -25,6 +25,8 @@ const Clipboard = ({ palette }) => {
         color={Theme.colors.clipboard}
         className="icon"
         onClick={copy}
+        data-tooltip="bottom right"
+        aria-label="Copy palette data to clipboard"
       />
 }
 

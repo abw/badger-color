@@ -14,6 +14,7 @@ export const Swatch = ({
   lockIcon='lock',
   unlockIcon='unlock',
   copyIcon='arrow-up',
+  tooltipClick
 }) => {
   const { options } = usePalettes()
   const bgcol = options.grey
@@ -29,16 +30,23 @@ export const Swatch = ({
     classes.push('lockable')
     classes.push(color.locked ? 'locked' : 'unlocked')
   }
+  classes.push('always-tooltip')
 
   return (
     <div
       className={classes.join(' ')}
       onClick={onClick}
+      data-tooltip={options.info ? null : 'bottom'}
       style={{
         backgroundColor: bgcol
       }}
     >
-      <Info color={color} stop={stop} showLock={showLock}/>
+      <Info
+        color={color}
+        stop={stop}
+        showLock={showLock}
+        tooltipClick={tooltipClick}
+      />
       { lockable &&
         <div className="hover-overlay">
           <Icon name={color.locked ? unlockIcon : lockIcon}/>

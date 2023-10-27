@@ -25,6 +25,8 @@ const Clipboard = ({ range }) => {
         color={Theme.colors.clipboard}
         className="icon"
         onClick={copy}
+        data-tooltip="top right"
+        aria-label="Copy range data to clipboard"
       />
 }
 

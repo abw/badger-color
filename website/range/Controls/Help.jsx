@@ -16,6 +16,9 @@ const Help = () => {
         className="icon"
         icon="info"
         onClick={() => setOpen(true)}
+        data-tooltip="top right"
+        aria-label="Help for range controls"
+
       />
       <Modal open={open} close={close} className="text-left">
         <h2 className="mar-t-none mar-b-6">Help</h2>

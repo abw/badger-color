@@ -3,10 +3,32 @@
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   // box-shadow: 2px 3px 6px var(--swatch-shadow);
   .swatch {
+    --tooltip-color: var(--grey-10);
+    --tooltip-background: var(--grey-100);
+    --tooltip-hover: var(--brand-60);
+    --tooltip-margin: -8px;
     position: relative;
     font-size: $size-smaller;
     padding: 0.5em;
     min-height: 3rem;
+    &[data-tooltip] {
+      --transition-delay: 0.1s;
+      &:before, &:after, .tooltip {
+        transition-delay: var(--transition-delay);
+      }
+      &:hover {
+        --transition-delay: 0.4s;
+      }
+      &:has(:hover) {
+        .tooltip.clickable {
+          pointer-events: all;
+          opacity: 1;
+          &:hover {
+            --tooltip-background: var(--tooltip-hover);
+          }
+        }
+      }
+    }
     &:first-child {
       border-radius: var(--swatch-radius) 0 0 var(--swatch-radius);
     }
@@ -22,6 +44,14 @@
       .specs {
         font-size: $size-smallest;
         opacity: 0.8;
+      }
+      .tooltip {
+        min-width: 6rem;
+      }
+      table.specs {
+        font-size: $size-small;
+        opacity: 1;
+        color: white;
       }
       .locked {
         font-size: $size-small;
@@ -80,3 +110,8 @@
   }
 }
 
+#{$dark-theme} .swatches .swatch {
+  --tooltip-color: var(--grey-90);
+  --tooltip-background: var(--grey-0);
+  --tooltip-hover: var(--brand-40);
+}

@@ -23,6 +23,9 @@ const ShowExamples = ({ range }) => {
         className="icon"
         icon="eye"
         onClick={() => setOpen(true)}
+        data-tooltip="top right"
+        aria-label="View examples using this range"
+
       />
       <Modal open={open} close={close} className="text-left">
         <div className="flex space end mar-b-6">

@@ -24,6 +24,15 @@ section.palette {
   h2 + h3 {
     margin-top: 0;
   }
+  &.no-tooltips {
+    [data-tooltip]:not(.always-tooltip) {
+      &:before,
+      &:after,
+      .tooltip {
+        display: none;
+      }
+    }
+  }
   .ranges {
     margin: 1rem 0;
     &.nameless {
@@ -52,6 +61,22 @@ section.palette {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+}
+.field input[type="color"] {
+  height: var(--input-max-height, 64px);
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0 !important;
+  margin: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 0.5em !important;
 }
 
 section.palette > header .controls,

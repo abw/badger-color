@@ -5,6 +5,7 @@ import { Consumer } from './Context.jsx'
 import Theme from '../site/Theme.jsx'
 
 const Controls = ({
+  title,
   resetCurve,
   resetStops,
   curveToStops,
@@ -17,6 +18,8 @@ const Controls = ({
         iconLeft="undo"
         className="mar-r-2 mar-b-2"
         onClick={resetCurve}
+        data-tooltip="top left"
+        aria-label={`Reset the ${title.toLowerCase()} curve`}
         solid
       />
       <Button
@@ -25,6 +28,8 @@ const Controls = ({
         iconLeft="undo"
         className="mar-b-2"
         onClick={resetStops}
+        data-tooltip="top left"
+        aria-label={`Reset the ${title.toLowerCase()} stops`}
         solid
       />
     </div>
@@ -34,6 +39,8 @@ const Controls = ({
       // iconRight="arrow-up"
       className="mar-b-2"
       onClick={curveToStops}
+      data-tooltip="top right"
+      aria-label={`Use the ${title.toLowerCase()} curve to set the stops`}
       solid
     />
   </div>

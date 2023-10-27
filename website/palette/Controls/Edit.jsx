@@ -73,6 +73,8 @@ const Edit = ({ palette, palettes, editPalette }) => {
         icon="pen"
         onClick={() => setOpen(true)}
         className="icon"
+        data-tooltip="bottom right"
+        aria-label="Edit palette metadata"
       />
       <Modal open={open} close={close} className="text-left">
         <Form

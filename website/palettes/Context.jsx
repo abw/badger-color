@@ -25,6 +25,7 @@ const Context = ({render}) => {
     blackWhite: false,
     show5s:     false,
     grey:       false,
+    tooltips:   true,
   })
   const setOption        = (name, value) => setOptions({ ...options, [name]: value })
   const toggleOption     = name => setOption(name, ! options[name])
@@ -34,6 +35,7 @@ const Context = ({render}) => {
   const toggleGrey       = toggler('grey')
   const toggleShow5s     = toggler('show5s')
   const toggleBlackWhite = toggler('blackWhite')
+  const toggleTooltips   = toggler('tooltips')
 
   //--------------------------------------------------------------------------
   // Palettes
@@ -290,6 +292,7 @@ const Context = ({render}) => {
     toggleGrey,
     toggleShow5s,
     toggleBlackWhite,
+    toggleTooltips,
     // palettes
     palettes,
     palette,
@@ -321,6 +324,7 @@ const Context = ({render}) => {
     sAtStop,
     lAtStop,
     hslAtStop,
+    setStop
   })
 }
 

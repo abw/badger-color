@@ -22,6 +22,8 @@ const Delete = ({ palette, deleteRange }) => {
         className="icon"
         icon="trash"
         onClick={() => setOpen(true)}
+        data-tooltip="top right"
+        aria-label="Delete this range"
       />
       <Modal open={open} close={close} className="text-left">
         <p>
