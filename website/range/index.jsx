@@ -21,8 +21,18 @@ const Range = ({
   const { ruri } = useParams()
   const { value, Toggle } = Switch({
     options: [
-      { value: 'edit', text: 'Click to Edit', iconLeft: 'pen' },
-      { value: 'lock', text: 'Click to Lock', iconRight: 'lock' },
+      {
+        value: 'edit',
+        icon: 'pen',
+        'data-tooltip': 'top right',
+        'aria-label': 'Click on swatch to edit'
+      },
+      {
+        value: 'lock',
+        icon: 'lock',
+        'data-tooltip': 'top right',
+        'aria-label': 'Click on swatch to lock'
+      },
     ]
   })
 
