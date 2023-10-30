@@ -9,6 +9,13 @@ $dark-theme: '#site.dark';
 @import "props/all.scss";
 @import "modules/all.scss";
 
+#{$switch-input-types} {
+  input {
+    line-height: var(--line-height) !important;
+    vertical-align: middle;
+  }
+}
+
 div.field {
   margin-bottom: 1rem;
   label {
