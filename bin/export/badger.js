@@ -2,6 +2,9 @@
 import { bin } from '@abw/badger-filesystem'
 import { exportPaletteCSSDir, exportPaletteSCSSDir } from '../../lib/export/palette.js'
 
+// This is an older file for testing.  See ./badger-scss.js for the more
+// modern implementation.
+
 const infile  = 'config/palette/badger2.json'
 const outdir  = 'export/badger2'
 const root    = bin().up(2)
