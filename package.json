@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@abw/badger": "^1.1.15",
-    "@abw/badger-css": "^0.1.8",
+    "@abw/badger-css": "^0.1.10",
     "@abw/badger-filesystem": "^1.0.3",
     "@abw/badger-utils": "^1.0.21"
   },
