@@ -8,6 +8,7 @@ export const Theme = {
     delete:    'red',
     download:  'blue',
     edit:      'orange',
+    option:    'violet',
     // examples:  'purple',
     examples:  'olive',
     help:      'indigo',

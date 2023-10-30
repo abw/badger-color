@@ -30,6 +30,16 @@ const Help = () => {
           subtext="(you will be asked for confirmation)"
         />
         <ButtonHelp
+          color={Theme.colors.edit}
+          icon="pen"
+          text="Edit range details"
+        />
+        <ButtonHelp
+          color={Theme.colors.clone}
+          icon="clone"
+          text="Clone the current range"
+        />
+        <ButtonHelp
           color={Theme.colors.examples}
           icon="eye"
           text="View UI examples"
@@ -45,21 +55,21 @@ const Help = () => {
           text="Download range data as JSON"
         />
         <ButtonHelp
-          color={Theme.colors.edit}
-          icon="pen"
-          text="Edit range details"
-        />
-        <ButtonHelp
-          color={Theme.colors.clone}
-          icon="clone"
-          text="Clone the current range"
-        />
-        <ButtonHelp
           color={Theme.colors.help}
           icon="info"
           text="This help"
         />
         <h3 className="mar-b-3">Stop / Curve Controls</h3>
+        <ButtonHelp
+          color={Theme.colors.option}
+          icon="pen"
+          text="Enable click to edit swatch"
+        />
+        <ButtonHelp
+          color={Theme.colors.option}
+          icon="lock"
+          text="Enable click to lock swatch"
+        />
         <ButtonHelp
           color={Theme.colors.undo}
           icon="undo"

@@ -29,6 +29,16 @@ const Help = () => {
           subtext="(you will be asked for confirmation)"
         />
         <ButtonHelp
+          color={Theme.colors.edit}
+          icon="pen"
+          text="Edit palette details"
+        />
+        <ButtonHelp
+          color={Theme.colors.clone}
+          icon="clone"
+          text="Clone the current palette"
+        />
+        <ButtonHelp
           color={Theme.colors.examples}
           icon="eye"
           text="View UI examples"
@@ -42,16 +52,6 @@ const Help = () => {
           color={Theme.colors.download}
           icon="download"
           text="Download palette data as JSON"
-        />
-        <ButtonHelp
-          color={Theme.colors.edit}
-          icon="pen"
-          text="Edit palette details"
-        />
-        <ButtonHelp
-          color={Theme.colors.clone}
-          icon="clone"
-          text="Clone the current palette"
         />
         <ButtonHelp
           color={Theme.colors.help}
