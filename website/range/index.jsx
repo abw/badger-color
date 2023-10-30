@@ -6,6 +6,7 @@ import CurveSwatches from './CurveSwatches.jsx'
 import Button from '../ui/Button.jsx'
 import Header from './Header.jsx'
 import Theme from '../site/Theme.jsx'
+import Switch from '../ui/Switch.jsx'
 import { useParams } from 'react-router-dom'
 import { Consumer } from '../palettes/Context.jsx'
 
@@ -18,6 +19,12 @@ const Range = ({
   resetStops,
 }) => {
   const { ruri } = useParams()
+  const { value, Toggle } = Switch({
+    options: [
+      { value: 'edit', text: 'Click to Edit', iconLeft: 'pen' },
+      { value: 'lock', text: 'Click to Lock', iconRight: 'lock' },
+    ]
+  })
 
   useEffect(
     () => { selectRange(ruri) },
@@ -32,9 +39,10 @@ const Range = ({
       <Header/>
       <h3>Current</h3>
       <CurrentSwatches/>
-      <div className="flex space end mar-v">
+      <div className="flex space end mar-b-2 mar-t-4">
         <h3>Stops</h3>
-        <div className="small">
+        <div className="small flex">
+          <Toggle/>
           <Button
             iconLeft="undo"
             text="Stops"
@@ -42,7 +50,7 @@ const Range = ({
             onClick={resetStops}
             data-tooltip="top right"
             aria-label="Reset all stops"
-            className="wd-7"
+            className="mar-l-2 wd-7"
           />
           <Button
             icon="arrow-up"
@@ -54,8 +62,8 @@ const Range = ({
           />
         </div>
       </div>
-      <StopSwatches/>
-      <div className="flex space end mar-v">
+      <StopSwatches clickToEdit={value === 'edit'} />
+      <div className="flex space end mar-b-2 mar-t-4">
         <h3>Curves</h3>
         <div className="small">
           <Button

@@ -9,12 +9,10 @@ export const Info = ({
   stop,
   showLock,
   showStop,
-  tooltipClick
 }) => {
   const { options } = usePalettes()
   return (
     <div className="info">
-      {/* <div className={ options.info ? 'flex space' : 'text-right' }> */}
       <div className="flex space">
         <div className="stop">
           { (options.info || showStop) && stop }
@@ -25,16 +23,8 @@ export const Info = ({
       </div>
       { options.info
         ? <Specs color={color}/>
-        : <div
-            onClick={tooltipClick}
-            className={`tooltip pad-1 ${tooltipClick ? 'clickable' : ''}`}
-          >
+        : <div className="tooltip pad-1">
             <SpecsTable color={color}/>
-            { Boolean(tooltipClick) &&
-              <div className="mar-t">
-                Click to edit
-              </div>
-            }
           </div>
       }
     </div>

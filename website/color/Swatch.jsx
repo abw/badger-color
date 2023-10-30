@@ -10,11 +10,12 @@ export const Swatch = ({
   clickable,
   lockable,
   copyable,
+  editable,
   showLock=lockable,
   lockIcon='lock',
   unlockIcon='unlock',
   copyIcon='arrow-up',
-  tooltipClick
+  editIcon='pen',
 }) => {
   const { options } = usePalettes()
   const bgcol = options.grey
@@ -45,7 +46,6 @@ export const Swatch = ({
         color={color}
         stop={stop}
         showLock={showLock}
-        tooltipClick={tooltipClick}
       />
       { lockable &&
         <div className="hover-overlay">
@@ -55,6 +55,11 @@ export const Swatch = ({
       { copyable &&
         <div className="hover-overlay">
           <Icon name={copyIcon}/>
+        </div>
+      }
+      { editable &&
+        <div className="hover-overlay">
+          <Icon name={editIcon}/>
         </div>
       }
     </div>

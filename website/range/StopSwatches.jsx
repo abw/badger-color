@@ -9,6 +9,7 @@ const StopSwatches = ({
   options,
   range,
   toggleLock,
+  clickToEdit
 }) => {
   const [edit, setEdit] = useState(false)
   const clickTooltip = (e, n) => {
@@ -28,9 +29,10 @@ const StopSwatches = ({
               stop={n}
               color={range.stops[n]}
               clickable={true}
-              onClick={() => toggleLock(n)}
-              lockable={true}
-              tooltipClick={e => clickTooltip(e, n)}
+              onClick={e => clickToEdit ? clickTooltip(e, n) : toggleLock(n)}
+              lockable={! clickToEdit}
+              editable={clickToEdit}
+              showLock={true}
             />
         )}
         { options.blackWhite && <White/>}
