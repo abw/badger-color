@@ -7,6 +7,7 @@ export const Black = () =>
   <div
     className="dark swatch black"
     style={{ backgroundColor: '#000' }}
+    data-tooltip="bottom"
   >
     <Info
       stop="B"

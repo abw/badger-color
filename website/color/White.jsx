@@ -5,6 +5,7 @@ export const White = () =>
   <div
     className="light swatch white"
     style={{ backgroundColor: '#fff' }}
+    data-tooltip="bottom"
   >
     <Info
       stop="W"
