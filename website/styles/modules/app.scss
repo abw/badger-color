@@ -27,6 +27,7 @@ $item-margin-left: 0.5rem;
     flex-basis: var(--sidebar-width);
     margin-left: var(--sidebar-margin-left);
     transition: margin-left 300ms ease-in-out, background-color $theme-transition ease-in-out;
+    overflow: visible;
   }
   & > main {
     background-color: var(--app-main-back);

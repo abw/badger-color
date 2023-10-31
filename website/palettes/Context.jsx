@@ -4,7 +4,7 @@ import { fail } from '@abw/badger-utils'
 import {
   setHex,
   loadPaletteApp, savePaletteApp,
-  copyPalette, newPalette,
+  copyPalette, newPalette, addPalette,
   newRange,
   hStopValueFromRange,
   sStopValueFromRange,
@@ -71,6 +71,9 @@ const Context = ({render}) => {
 
   const clonePalette = p =>
     savePalette( copyPalette(p, palettes) )
+
+  const importPalette = p =>
+    savePalette( addPalette(p, palettes) )
 
   const editPalette = details => {
     if (! palette) {
@@ -299,6 +302,7 @@ const Context = ({render}) => {
     selectPalette,
     createPalette,
     clonePalette,
+    importPalette,
     // renamePalette,
     editPalette,
     deletePalette,
