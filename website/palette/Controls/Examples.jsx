@@ -26,16 +26,18 @@ const ShowExamples = ({ palette }) => {
         aria-label="View examples using this palette"
       />
       <Modal open={open} close={close} className="text-left">
-        <div className="flex space end mar-b-6">
-          <h2 className="mar-v-none">Examples</h2>
-          <div className="options pad-r-none">
-            <Checkbox
-              label="Dark"
-              checked={dark}
-              toggle={toggleDark}
-            />
+        <header>
+          <div className="flex space end">
+            <h2 className="mar-v-none">Palette Examples</h2>
+            <div className="options pad-r-none">
+              <Checkbox
+                label="Dark"
+                checked={dark}
+                toggle={toggleDark}
+              />
+            </div>
           </div>
-        </div>
+        </header>
         <div className="grid-3 gap-4 stack-laptop">
           { Object.values(palette.ranges).map(
             range =>
@@ -49,7 +51,7 @@ const ShowExamples = ({ palette }) => {
               </div>
           )}
         </div>
-        <div className="text-right mar-t-8">
+        <footer className="text-right mar-t-8">
           <Button
             color={Theme.colors.ok}
             text="OK"
@@ -57,7 +59,7 @@ const ShowExamples = ({ palette }) => {
             solid
             onClick={close}
           />
-        </div>
+        </footer>
       </Modal>
     </>
   )

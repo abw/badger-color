@@ -32,7 +32,9 @@ const Modal = ({
           <Icon name="cross"/>
         </div>
       }
-      {children}
+      <article>
+        {children}
+      </article>
     </dialog>
   )
 }

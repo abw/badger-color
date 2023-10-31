@@ -25,10 +25,15 @@ const Delete = ({ deletePalette }) => {
         aria-label="Delete this palette"
       />
       <Modal open={open} close={close} className="text-left">
-        <p>
+        <header>
+          <h2 className="mar-v-none">
+            Delete Palette?
+          </h2>
+        </header>
+        <p className="large">
           Are you sure you want to delete this palette?
         </p>
-        <div className="flex space mar-t-8">
+        <footer className="flex space mar-t-8">
           <Button
             color={Theme.colors.cancel}
             text="Cancel"
@@ -42,7 +47,7 @@ const Delete = ({ deletePalette }) => {
             solid
             onClick={confirm}
           />
-        </div>
+        </footer>
       </Modal>
     </>
   )

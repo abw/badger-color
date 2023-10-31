@@ -77,6 +77,9 @@ const Edit = ({ palette, palettes, editPalette }) => {
         aria-label="Edit palette metadata"
       />
       <Modal open={open} close={close} className="text-left">
+        <header>
+          <h2 className="mar-v-none">Edit Palette Metadata</h2>
+        </header>
         <Form
           values={palette} fields={fields}
           onLoad={setForm}
@@ -91,7 +94,7 @@ const Edit = ({ palette, palettes, editPalette }) => {
           />
           <Fields names="comment source" wide/>
         </Form>
-        <div className="flex space mar-t-8">
+        <footer className="flex space mar-t-8">
           <Button
             color={Theme.colors.cancel}
             text="Cancel"
@@ -105,7 +108,7 @@ const Edit = ({ palette, palettes, editPalette }) => {
             solid
             onClick={e => form.submit(e)}
           />
-        </div>
+        </footer>
       </Modal>
     </>
   )

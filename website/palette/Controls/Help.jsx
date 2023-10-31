@@ -20,7 +20,9 @@ const Help = () => {
         aria-label="Help for palette controls"
       />
       <Modal open={open} close={close} className="text-left">
-        <h2 className="mar-t-none mar-b-6">Help</h2>
+        <header>
+          <h2 className="mar-v-none">Palette Help</h2>
+        </header>
         <h3 className="mar-b-3">Palette Controls</h3>
         <ButtonHelp
           color={Theme.colors.delete}
@@ -59,7 +61,7 @@ const Help = () => {
           text="This help"
         />
 
-        <div className="text-right mar-t-8">
+        <footer className="text-right mar-t-8">
           <Button
             color={Theme.colors.ok}
             text="OK"
@@ -67,7 +69,7 @@ const Help = () => {
             solid
             onClick={close}
           />
-        </div>
+        </footer>
       </Modal>
     </>
   )

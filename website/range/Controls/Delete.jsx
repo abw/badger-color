@@ -26,10 +26,13 @@ const Delete = ({ palette, deleteRange }) => {
         aria-label="Delete this range"
       />
       <Modal open={open} close={close} className="text-left">
-        <p>
+        <header>
+          <h2 className="mar-v-none">Delete Range?</h2>
+        </header>
+        <p className="large pad-h-2">
           Are you sure you want to delete this range?
         </p>
-        <div className="flex space mar-t-8">
+        <footer className="flex space mar-t-8">
           <Button
             color={Theme.colors.cancel}
             text="Cancel"
@@ -44,7 +47,7 @@ const Delete = ({ palette, deleteRange }) => {
             className="icon"
             onClick={confirm}
           />
-        </div>
+        </footer>
       </Modal>
     </>
   )

@@ -15,10 +15,10 @@ div.examples {
   --button-solid-hover-text: white;
   --button-solid-hover-back: var(--color-45);
   --table-head-text: var(--color-0);
-  --table-head-back: var(--color-70);
+  --table-head-back: var(--color-80);
   --table-cell-text: var(--color-10);
-  --table-cell-back: var(--color-90);
-  --table-alt-back:  var(--color-80);
+  --table-cell-back: var(--color-95);
+  --table-alt-back:  var(--color-90);
 
   color: var(--text);
   background-color: var(--back);
@@ -90,7 +90,7 @@ div.examples {
     --alert-back: var(--color-20);
     --alert-edge: var(--color-40);
     --button-text: var(--color-90);
-    --button-back: var(--color-20);
+    --button-back: var(--color-10);
     --button-edge: var(--color-40);
     --button-hover-text: var(--color-100);
     --button-hover-back: var(--color-25);
@@ -99,9 +99,9 @@ div.examples {
     --button-solid-hover-text: white;
     --button-solid-hover-back: var(--color-45);
     --table-head-text: var(--color-100);
-    --table-head-back: var(--color-30);
+    --table-head-back: var(--color-20);
     --table-cell-text: var(--color-95);
     --table-cell-back: var(--color-10);
-    --table-alt-back:  var(--color-20);
+    --table-alt-back:  var(--color-5);
   }
 }

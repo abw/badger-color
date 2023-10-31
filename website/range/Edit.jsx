@@ -61,6 +61,9 @@ const Edit = ({ palette, range, editRange, close }) => {
 
   return (
     <>
+      <header>
+        <h2>Edit Range Metadata</h2>
+      </header>
       <Form
         values={range} fields={fields}
         onLoad={setForm}
@@ -75,7 +78,7 @@ const Edit = ({ palette, range, editRange, close }) => {
         <Field name="aliases" wide/>
         <Field name="greyscale" wide/>
       </Form>
-      <div className="flex space mar-t-8">
+      <footer className="flex space mar-t-8">
         <Button
           color={Theme.colors.cancel}
           text="Cancel"
@@ -89,7 +92,7 @@ const Edit = ({ palette, range, editRange, close }) => {
           solid
           onClick={e => form.submit(e)}
         />
-      </div>
+      </footer>
     </>
   )
 }

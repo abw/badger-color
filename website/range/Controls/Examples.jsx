@@ -28,21 +28,23 @@ const ShowExamples = ({ range }) => {
 
       />
       <Modal open={open} close={close} className="text-left">
-        <div className="flex space end mar-b-6">
-          <h2 className="mar-v-none">Examples</h2>
-          <div className="options pad-r-none">
-            <Checkbox
-              label="Dark"
-              checked={dark}
-              toggle={toggleDark}
-            />
+        <header>
+          <div className="flex space end">
+            <h2 className="mar-v-none">Range Examples</h2>
+            <div className="options pad-r-none">
+              <Checkbox
+                label="Dark"
+                checked={dark}
+                toggle={toggleDark}
+              />
+            </div>
           </div>
-        </div>
+        </header>
 
         <div className={`examples ${dark ? 'dark' : 'light'}`} style={styles}>
           <Examples/>
         </div>
-        <div className="text-right mar-t-8">
+        <footer className="text-right mar-t-8">
           <Button
             color={Theme.colors.ok}
             text="OK"
@@ -50,7 +52,7 @@ const ShowExamples = ({ range }) => {
             solid
             onClick={close}
           />
-        </div>
+        </footer>
       </Modal>
     </>
   )

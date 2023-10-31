@@ -42,3 +42,18 @@ div.field {
   font-size: 2rem;
 }
 
+dialog article {
+  --shadow-color: rgba(0, 0, 0, 0.03);
+  header {
+    box-shadow: inset 0 -2px 8px var(--shadow-color);
+  }
+  footer {
+    box-shadow: inset 0 2px 8px var(--shadow-color);
+  }
+}
+
+#{$dark-theme} {
+  dialog article {
+    --shadow-color: rgba(0, 0, 0, 0.04);
+  }
+}
