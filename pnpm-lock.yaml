@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@abw/badger': ^1.1.15
-  '@abw/badger-css': ^0.1.10
+  '@abw/badger-css': ^0.1.14
   '@abw/badger-filesystem': ^1.0.3
   '@abw/badger-timestamp': ^1.0.4
   '@abw/badger-utils': ^1.0.21
@@ -33,7 +33,7 @@ specifiers:
 
 dependencies:
   '@abw/badger': 1.1.15
-  '@abw/badger-css': 0.1.10
+  '@abw/badger-css': 0.1.14
   '@abw/badger-filesystem': 1.0.3
   '@abw/badger-utils': 1.0.21
 
@@ -73,8 +73,9 @@ packages:
       js-yaml: 4.1.0
     dev: false
 
-  /@abw/badger-css/0.1.10:
-    resolution: {integrity: sha512-w8GiCImpDUEpp/sHhZ5cmD8Nax4fGdmXhbpH4PJrb8+ZaUD+LXVUTzlCwPDhWBMAamNB+Pr55zPpFNt8AtcYAg==}
+  /@abw/badger-css/0.1.14:
+    resolution: {integrity: sha512-pJ6Hm6JUunm1s4O9xs+lyzhV52Snf2TVQyzqYgBtFV3dEv1lqFp0LqgYepwm0Ay5ZLfx+WGmPcKtxt31LxKGIA==}
+    hasBin: true
 
   /@abw/badger-filesystem/1.0.3:
     resolution: {integrity: sha512-7y3rqD4Ybx71zaUYiVYEI2YnbDyvJ8947MaIvSpyq4/NyhMWCENIIQlOg+8wqK+Lyu/mgTFHpfrgZYL+Q1lsCg==}
@@ -117,7 +118,7 @@ packages:
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@abw/badger-css': 0.1.10
+      '@abw/badger-css': 0.1.14
       '@abw/badger-utils': 1.0.21
       '@abw/react-context': 2.0.3
       '@abw/react-one-louder': 0.0.5
