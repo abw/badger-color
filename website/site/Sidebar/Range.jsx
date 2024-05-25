@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from '../Link.jsx'
 import { URLS } from '../URLS.jsx'
-import { hslToCSS } from '../../../lib/utils/color.js'
+import { hslToCSS } from '@/lib/utils/color.js'
 
 const Range = ({
   range,

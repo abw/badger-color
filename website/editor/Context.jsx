@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
-import { bezier, bezierInverse, clamper } from '../../lib/utils/index.js'
-import { usePalettes } from '../palettes/Context.jsx'
+import { bezier, bezierInverse, clamper } from '@/lib/utils/index.js'
+import { usePalettes } from '@/palettes/Context.jsx'
 import { Generator } from '@abw/react-context'
 
 const clamp100 = clamper(0, 100)

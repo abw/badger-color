@@ -1,9 +1,9 @@
 import React from 'react'
-import Button from '../../ui/Button.jsx'
-import Theme from '../../site/Theme.jsx'
-import { Consumer } from '../../palettes/Context.jsx'
+import Theme from '@/site/Theme.jsx'
+import { Button } from '@abw/badger-react-ui'
+import { Consumer } from '@/palettes/Context.jsx'
 import { useNavigate } from 'react-router-dom'
-import { URLS } from '../../site/URLS.jsx'
+import { URLS } from '@/site/URLS.jsx'
 
 const Clone = ({ palette, clonePalette }) => {
   const navigate = useNavigate()

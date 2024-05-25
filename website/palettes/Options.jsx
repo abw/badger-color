@@ -1,11 +1,10 @@
 import React from 'react'
-import Checkbox from '../ui/Checkbox.jsx'
+import { Checkbox } from '@abw/badger-react-ui'
 import { Consumer } from './Context.jsx'
 
 const Options = ({
   options,
   toggleNames,
-  // toggleStops,
   toggleInfo,
   toggleShow5s,
   toggleGrey,
@@ -14,40 +13,34 @@ const Options = ({
 }) =>
   <div className="options">
     <Checkbox
-      label="Range Names"
+      text="Range Names"
       checked={options.names}
-      toggle={toggleNames}
-      className="wide"
+      onChange={toggleNames}
     />
     <Checkbox
-      label="Swatch Info"
+      text="Swatch Info"
       checked={options.info}
-      toggle={toggleInfo}
-      className="wide"
+      onChange={toggleInfo}
     />
     <Checkbox
-      label="5 Stops"
+      text="5 Stops"
       checked={options.show5s}
-      toggle={toggleShow5s}
-      className="wide"
+      onChange={toggleShow5s}
     />
     <Checkbox
-      label="Black &amp; White"
+      text="Black &amp; White"
       checked={options.blackWhite}
-      toggle={toggleBlackWhite}
-      className="wide"
+      onChange={toggleBlackWhite}
     />
     <Checkbox
-      label="Greyscale"
+      text="Greyscale"
       checked={options.grey}
-      toggle={toggleGrey}
-      className="wide"
+      onChange={toggleGrey}
     />
     <Checkbox
-      label="Tooltips"
+      text="Tooltips"
       checked={options.tooltips}
-      toggle={toggleTooltips}
-      className="wide"
+      onChange={toggleTooltips}
     />
   </div>
 

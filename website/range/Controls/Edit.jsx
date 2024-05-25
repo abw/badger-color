@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import Button from '../../ui/Button.jsx'
-import Modal from '../../ui/Modal.jsx'
-import { Consumer } from '../../palettes/Context.jsx'
-import Theme from '../../site/Theme.jsx'
 import Form from '../Edit.jsx'
+import Theme from '@/site/Theme.jsx'
+import { Button, Modal } from '@abw/badger-react-ui'
+import { Consumer } from '@/palettes/Context.jsx'
 
 const Edit = () => {
   const [open, setOpen] = useState(false)

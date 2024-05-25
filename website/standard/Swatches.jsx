@@ -1,6 +1,6 @@
 import React from 'react'
-import { range as numberRange } from '@abw/badger-utils'
 import { Consumer } from './Context.jsx'
+import { range as numberRange } from '@abw/badger-utils'
 import { Swatch, Black, White } from '../color/index.jsx'
 
 const Swatches = ({

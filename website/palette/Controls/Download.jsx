@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import Button from '../../ui/Button.jsx'
-import Theme from '../../site/Theme.jsx'
-import { sleep } from '@abw/badger-utils'
-import { Consumer } from '../../palettes/Context.jsx'
-import { download } from '../../../lib/utils/download.js'
+import Theme from '@/site/Theme.jsx'
 import { now } from '@abw/badger-timestamp'
+import { sleep } from '@abw/badger-utils'
+import { Button } from '@abw/badger-react-ui'
+import { Consumer } from '@/palettes/Context.jsx'
+import { download } from '@/lib/utils/download.js'
 
 const Download = ({ palette }) => {
   const [downloaded, setDownloaded] = useState(false)

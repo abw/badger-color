@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import Button from '../../ui/Button.jsx'
-import Modal from '../../ui/Modal.jsx'
-import { Consumer } from '../../palettes/Context.jsx'
-import ButtonHelp from '../../help/ButtonHelp.jsx'
-import Theme from '../../site/Theme.jsx'
+import Theme from '@/site/Theme.jsx'
+import ButtonHelp from '@/help/ButtonHelp.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
+import { Button, Modal } from '@abw/badger-react-ui'
 
 const Help = () => {
   const [open, setOpen] = useState(false)

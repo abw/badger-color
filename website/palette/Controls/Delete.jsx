@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import Button from '../../ui/Button.jsx'
-import Modal from '../../ui/Modal.jsx'
-import Theme from '../../site/Theme.jsx'
+import Theme from '@/site/Theme.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
 import { useNavigate } from 'react-router-dom'
-import { Consumer } from '../../palettes/Context.jsx'
+import { Button, Modal } from '@abw/badger-react-ui'
 
 const Delete = ({ deletePalette }) => {
   const navigate = useNavigate()
@@ -39,12 +38,12 @@ const Delete = ({ deletePalette }) => {
             text="Cancel"
             iconRight="cross"
             onClick={close}
+            outline
           />
           <Button
             color={Theme.colors.delete}
             text="Delete"
             iconRight="trash"
-            solid
             onClick={confirm}
           />
         </footer>

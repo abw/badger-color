@@ -1,6 +1,6 @@
 import React      from 'react'
-import CodeBlock  from '../site/CodeBlock.jsx'
-import add        from '../snippets/install/add?raw'
+import CodeBlock  from '@/site/CodeBlock.jsx'
+import add        from '@/snippets/install/add?raw'
 
 const GettingStarted = () =>
   <div>

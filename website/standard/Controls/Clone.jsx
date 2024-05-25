@@ -1,10 +1,10 @@
 import React from 'react'
-import Button from '../../ui/Button.jsx'
-import Theme from '../../site/Theme.jsx'
-import { usePalettes } from '../../palettes/Context.jsx'
-import { useNavigate } from 'react-router-dom'
-import { URLS } from '../../site/URLS.jsx'
+import Theme from '@/site/Theme.jsx'
+import { URLS } from '@/site/URLS.jsx'
+import { Button } from '@abw/badger-react-ui'
 import { Consumer } from '../Context.jsx'
+import { usePalettes } from '@/palettes/Context.jsx'
+import { useNavigate } from 'react-router-dom'
 
 const Clone = ({ palette }) => {
   const { clonePalette } = usePalettes()

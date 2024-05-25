@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Button from '../../ui/Button.jsx'
-import Theme from '../../site/Theme.jsx'
+import Theme from '@/site/Theme.jsx'
 import { sleep } from '@abw/badger-utils'
+import { Button } from '@abw/badger-react-ui'
 import { Consumer } from '../Context.jsx'
 
 const Clipboard = ({ palette }) => {

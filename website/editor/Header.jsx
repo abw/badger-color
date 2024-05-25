@@ -1,5 +1,5 @@
 import React from 'react'
-import Checkbox from '../ui/Checkbox.jsx'
+import { Checkbox } from '@abw/badger-react-ui'
 import { Consumer } from './Context.jsx'
 
 const Header = ({
@@ -12,19 +12,19 @@ const Header = ({
     <h3 className="mar-v-none">{title}</h3>
     <div className="options small">
       <Checkbox
-        label="Curve"
+        text="Curve"
         checked={showCurve}
-        toggle={toggleShowCurve}
+        onChange={toggleShowCurve}
       />
       <Checkbox
-        label="Stops"
+        text="Stops"
         checked={showStops}
-        toggle={toggleShowStops}
+        onChange={toggleShowStops}
       />
       <Checkbox
-        label="Snap"
+        text="Snap"
         checked={snap}
-        toggle={toggleSnap}
+        onChange={toggleSnap}
       />
     </div>
   </header>

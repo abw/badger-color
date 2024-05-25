@@ -1,11 +1,10 @@
 import React from 'react'
-import { Consumer } from '../../palettes/Context.jsx'
-import { useState } from 'react'
-import Icon from '../../ui/Icon.jsx'
-import Button from '../../ui/Button.jsx'
-import { haveValue, isObject } from '@abw/badger-utils'
-import { useNavigate } from 'react-router-dom'
 import { URLS } from '../URLS.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Button, Icon } from '@abw/badger-react-ui'
+import { haveValue, isObject } from '@abw/badger-utils'
 
 const Upload = ({
   close,

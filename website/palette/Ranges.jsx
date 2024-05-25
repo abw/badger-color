@@ -1,6 +1,6 @@
 import React from 'react'
 import Range from './Range.jsx'
-import { Consumer } from '../palettes/Context.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
 
 const Ranges = ({
   palette,

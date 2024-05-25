@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { Consumer } from '../palettes/Context.jsx'
-import { Outlet } from 'react-router-dom'
 import Header from './Header.jsx'
-// import Footer from './Footer.jsx'
+import { Outlet } from 'react-router-dom'
+import { Consumer } from '@/palettes/Context.jsx'
+import { useParams } from 'react-router-dom'
 
 const Palette = ({ palette, selectPalette, options }) => {
   const { puri } = useParams()

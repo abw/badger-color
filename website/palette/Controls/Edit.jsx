@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
-import Button from '../../ui/Button.jsx'
-import Modal from '../../ui/Modal.jsx'
-import { URLS } from '../../site/URLS.jsx'
-import { Consumer } from '../../palettes/Context.jsx'
+import Theme from '@/site/Theme.jsx'
+import { URLS } from '@/site/URLS.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
+import { nameToURI } from '@/lib/utils/index.js'
 import { useNavigate } from 'react-router-dom'
-import { Form, Field, Fields, useForm } from '@abw/react-formula'
+import { Button, Modal, Form, Field, Fields, useForm } from '@abw/badger-react-ui'
 import * as yup  from 'yup'
-import { nameToURI } from '../../../lib/utils/index.js'
-import Theme from '../../site/Theme.jsx'
 
 const fields = {
   name: {
@@ -49,6 +47,7 @@ const Edit = ({ palette, palettes, editPalette }) => {
   const close = () => setOpen(false)
   const submit = values => {
     editPalette(values)
+    form.reset()
     setOpen(false)
     navigate(URLS.palette.home(values.uri))
   }
@@ -81,7 +80,8 @@ const Edit = ({ palette, palettes, editPalette }) => {
           <h2 className="mar-v-none">Edit Palette Metadata</h2>
         </header>
         <Form
-          values={palette} fields={fields}
+          fields={fields}
+          values={palette}
           onLoad={setForm}
           onSubmit={submit}
           wide
@@ -99,13 +99,13 @@ const Edit = ({ palette, palettes, editPalette }) => {
             color={Theme.colors.cancel}
             text="Cancel"
             iconRight="cross"
+            outline
             onClick={close}
           />
           <Button
             color={Theme.colors.save}
             text="Save"
             iconRight="check"
-            solid
             onClick={e => form.submit(e)}
           />
         </footer>
@@ -116,11 +116,13 @@ const Edit = ({ palette, palettes, editPalette }) => {
 
 const NameField = () => {
   const { setValues } = useForm()
-  return <Field
-    name="name"
-    onChange={field => setValues({ uri: nameToURI(field.value) })}
-    wide
-  />
+  return (
+    <Field
+      name="name"
+      onChange={field => setValues({ uri: nameToURI(field.value) })}
+      wide
+    />
+  )
 }
 
 export default Consumer(Edit)

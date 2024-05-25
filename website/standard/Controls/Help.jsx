@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import Button from '../../ui/Button.jsx'
-import Modal from '../../ui/Modal.jsx'
-import ButtonHelp from '../../help/ButtonHelp.jsx'
-import Theme from '../../site/Theme.jsx'
+import Theme from '@/site/Theme.jsx'
+import ButtonHelp from '@/help/ButtonHelp.jsx'
+import { Button, Modal } from '@abw/badger-react-ui'
 
 const Help = () => {
   const [open, setOpen] = useState(false)
@@ -50,7 +49,6 @@ const Help = () => {
             color={Theme.colors.ok}
             text="OK"
             iconRight="check"
-            solid
             onClick={close}
           />
         </div>

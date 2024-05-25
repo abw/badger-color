@@ -1,8 +1,8 @@
 import React              from 'react'
-import CodeBlock          from '../../site/CodeBlock.jsx'
-import hues               from '../../snippets/sass/color-hues.scss?raw'
+import CodeBlock          from '@/site/CodeBlock.jsx'
+import hues               from '@/snippets/sass/color-hues.scss?raw'
 import classes            from './colors.module.scss'
-import { colors, stops }  from '../../config/colors.js'
+import { colors, stops }  from '@/site/config/colors.js'
 
 const Colors = () =>
   <>

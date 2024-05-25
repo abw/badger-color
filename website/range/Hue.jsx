@@ -1,6 +1,6 @@
 import React from 'react'
-import { Consumer } from '../palettes/Context.jsx'
-import Editor from '../editor/index.jsx'
+import Editor from '@/editor/index.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
 
 const Hue = ({
   title='Hue',

@@ -13,7 +13,7 @@ import {
   stopValueFromCurve,
   copyRange,
   sortRanges
-} from '../../lib/utils/index.js'
+} from '@/lib/utils/index.js'
 
 const Context = ({render}) => {
   //--------------------------------------------------------------------------

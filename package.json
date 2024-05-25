@@ -42,14 +42,15 @@
     "url": "https://github.com/abw/badger-color/issues"
   },
   "dependencies": {
-    "@abw/badger": "^1.1.15",
-    "@abw/badger-css": "^0.1.14",
-    "@abw/badger-filesystem": "^1.0.3",
-    "@abw/badger-utils": "^1.0.21"
+    "@abw/badger": "^1.2.4",
+    "@abw/badger-css": "^1.1.9",
+    "@abw/badger-filesystem": "^1.0.6",
+    "@abw/badger-react-ui": "^1.1.14",
+    "@abw/badger-utils": "^1.1.0"
   },
   "devDependencies": {
-    "@abw/badger-timestamp": "^1.0.4",
-    "@abw/react-context": "^2.0.3",
+    "@abw/badger-timestamp": "^1.0.6",
+    "@abw/react-context": "^2.0.4",
     "@abw/react-formula": "0.0.5",
     "@abw/react-night-and-day": "^0.0.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -70,6 +71,7 @@
     "rollup-plugin-copy": "^3.4.0",
     "sass": "^1.60.0",
     "vite": "^4.2.0",
+    "vite-jsconfig-paths": "^2.0.1",
     "vite-plugin-svgr": "^3.2.0",
     "vitest": "^0.31.0",
     "yup": "^1.2.0"

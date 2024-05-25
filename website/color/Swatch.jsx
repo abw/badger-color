@@ -1,8 +1,8 @@
 import React from 'react'
 import Info from './Info.jsx'
-import { hslToCSS, hslToGrey, hslToLuminance } from '../../lib/utils/color.js'
-import Icon from '../ui/Icon.jsx'
-import { usePalettes } from '../palettes/Context.jsx'
+import { Icon } from '@abw/badger-react-ui'
+import { usePalettes } from '@/palettes/Context.jsx'
+import { hslToCSS, hslToGrey, hslToLuminance } from '@/lib/utils/color.js'
 
 export const Swatch = ({
   color, stop,
@@ -12,8 +12,8 @@ export const Swatch = ({
   copyable,
   editable,
   showLock=lockable,
-  lockIcon='lock',
-  unlockIcon='unlock',
+  lockIcon='locked',
+  unlockIcon='unlocked',
   copyIcon='arrow-up',
   editIcon='pen',
 }) => {

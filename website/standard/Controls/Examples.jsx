@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import Button from '../../ui/Button.jsx'
-import Modal from '../../ui/Modal.jsx'
-import Theme from '../../site/Theme.jsx'
-import Checkbox from '../../ui/Checkbox.jsx'
-import Examples from '../../examples/index.jsx'
+import Theme from '@/site/Theme.jsx'
+import Examples from '@/examples/index.jsx'
 import { Consumer } from '../Context.jsx'
-import { exportRangeCSSItems } from '../../../lib/export/palette.js'
 import { useTheme } from '@abw/react-night-and-day'
+import { exportRangeCSSItems } from '@/lib/export/palette.js'
+import { Button, Modal, Checkbox } from '@abw/badger-react-ui'
 
 const ShowExamples = ({ palette }) => {
   const { isDark } = useTheme()
@@ -28,9 +26,9 @@ const ShowExamples = ({ palette }) => {
           <h2 className="mar-v-none">Examples</h2>
           <div className="options pad-r-none">
             <Checkbox
-              label="Dark"
+              text="Dark"
               checked={dark}
-              toggle={toggleDark}
+              onChange={toggleDark}
             />
           </div>
         </div>
@@ -52,7 +50,6 @@ const ShowExamples = ({ palette }) => {
             color={Theme.colors.ok}
             text="OK"
             iconRight="check"
-            solid
             onClick={close}
           />
         </div>

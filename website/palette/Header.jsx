@@ -1,6 +1,6 @@
 import React from 'react'
 import Controls from './Controls/index.jsx'
-import { Consumer } from '../palettes/Context.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
 
 const Header = ({ palette }) =>
   <header>

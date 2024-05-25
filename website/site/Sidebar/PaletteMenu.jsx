@@ -1,7 +1,7 @@
 import React from 'react'
-import Button from '../../ui/Button.jsx'
 import Theme from '../Theme.jsx'
 import Range from './Range.jsx'
+import { Button } from '@abw/badger-react-ui'
 
 const PaletteMenu = ({
   palette,

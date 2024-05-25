@@ -1,8 +1,8 @@
-import badgercss  from '../../config/palette/badger-css.json'
-import colar    from '../../config/palette/colar.json'
-import tailwind from '../../config/palette/tailwind.json'
-import { unpackRanges } from '../../lib/utils/storage.js'
-import { fail } from '@abw/badger-utils'
+import badgercss  from '@/config/palette/badger-css.json'
+import colar      from '@/config/palette/colar.json'
+import tailwind   from '@/config/palette/tailwind.json'
+import { fail }   from '@abw/badger-utils'
+import { unpackRanges } from '@/lib/utils/storage.js'
 
 export const StandardPalettes = {
   'badger-css': badgercss,

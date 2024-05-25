@@ -1,8 +1,8 @@
 import React from 'react'
-import { Consumer } from './Context.jsx'
-import { range as numberRange } from '@abw/badger-utils'
 import DraggablePoint from './DraggablePoint.jsx'
-import { bezier } from '../../lib/utils/bezier.js'
+import { range as numberRange } from '@abw/badger-utils'
+import { bezier } from '@/lib/utils/bezier.js'
+import { Consumer } from './Context.jsx'
 
 const polyPoints = numberRange(0, 100)
 

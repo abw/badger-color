@@ -1,12 +1,11 @@
 import React from 'react'
-import Icons from '../ui/Icons.jsx'
-import Button from '../ui/Button.jsx'
+import { Button, IconLibrary } from '@abw/badger-react-ui'
 
 const IconsPage = () =>
   <div>
     <h1>Icons</h1>
     <div className="grid-fit" style={{ '--min-width': '30px' }}>
-      { Object.keys(Icons).map(
+      { Object.keys(IconLibrary.icons).map(
         name =>
           <div key={name}>
             <Button key={name} icon={name} solid/>

@@ -1,12 +1,10 @@
 import React from 'react'
-import Modal from '../ui/Modal.jsx'
-import { Consumer } from '../palettes/Context.jsx'
-import { Form, Field } from '@abw/react-formula'
-import Button from '../ui/Button.jsx'
-import Theme from '../site/Theme.jsx'
+import Theme from '@/site/Theme.jsx'
 import { useState } from 'react'
-import { colorToHSL } from '../../lib/utils/color.js'
-
+import { Consumer } from '@/palettes/Context.jsx'
+import { colorToHSL } from '@/lib/utils/color.js'
+import { Form, Field } from '@abw/react-formula'
+import { Button, Modal } from '@abw/badger-react-ui'
 
 const fields = {
   hex: {

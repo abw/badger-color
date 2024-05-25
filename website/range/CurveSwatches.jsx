@@ -1,7 +1,7 @@
 import React from 'react'
-import { Swatch, Black, White } from '../color/index.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
+import { Swatch, Black, White } from '@/color/index.jsx'
 import { range as numberRange } from '@abw/badger-utils'
-import { Consumer } from '../palettes/Context.jsx'
 
 const CurveSwatches = ({
   options,
@@ -19,7 +19,7 @@ const CurveSwatches = ({
           color={hslAtStop(n)}
           copyable={true}
           clickable={true}
-          copyIcon={range.stops[n].locked ? 'lock' : 'arrow-up'}
+          copyIcon={range.stops[n].locked ? 'locked' : 'arrow-up'}
           onClick={range.stops[n].locked ? null : () => curvesToStop(n)}
         />
     )}

@@ -1,8 +1,8 @@
 import React from 'react'
-import Icon from '../ui/Icon.jsx'
-import { usePalettes } from '../palettes/Context.jsx'
 import Specs from './Specs.jsx'
 import SpecsTable from './SpecsTable.jsx'
+import { Icon } from '@abw/badger-react-ui'
+import { usePalettes } from '@/palettes/Context.jsx'
 
 export const Info = ({
   color,
@@ -18,7 +18,7 @@ export const Info = ({
           { (options.info || showStop) && stop }
         </div>
         <div className="locked small">
-          { showLock && color.locked && <Icon name="lock"/> }
+          { showLock && color.locked && <Icon name="locked"/> }
         </div>
       </div>
       { options.info

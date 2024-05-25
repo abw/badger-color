@@ -1,12 +1,11 @@
 import React from 'react'
-import Button from '../../ui/Button.jsx'
 import Palette from './Palette.jsx'
+import Upload from './Upload.jsx'
 import { Consumer } from '../../palettes/Context.jsx'
 import { URLS } from '../URLS.jsx'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import Modal from '../../ui/Modal.jsx'
-import Upload from './Upload.jsx'
+import { Button, Modal } from '@abw/badger-react-ui'
 
 const Sidebar = ({
   palette,

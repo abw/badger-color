@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Field, Submit } from '@abw/react-formula'
+import { Form, Field, Submit } from '@abw/badger-react-ui'
 
 const MyFirstForm = () =>
   <Form>

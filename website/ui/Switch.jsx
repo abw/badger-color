@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Buttons from './Buttons.jsx'
+import { Buttons } from '@abw/badger-react-ui'
 
 const stateProps = (a, b) =>
   a === b

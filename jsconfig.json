@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/lib/*":        ["./lib/*"],
+      "@/config/*":     ["./config/*"],
+      "@/color/*":      ["./website/color/*"],
+      "@/editor/*":     ["./website/editor/*"],
+      "@/examples/*":   ["./website/examples/*"],
+      "@/help/*":       ["./website/help/*"],
+      "@/pages/*":      ["./website/pages*"],
+      "@/palette/*":    ["./website/palette/*"],
+      "@/palettes/*":   ["./website/palettes/*"],
+      "@/page/*":       ["./website/page/*"],
+      "@/range/*":      ["./website/range/*"],
+      "@/routes/*":     ["./website/routes/*"],
+      "@/site/*":       ["./website/site/*"],
+      "@/snippets/*":   ["./website/snippets/*"],
+      "@/standard/*":   ["./website/standard/*"],
+      "@/styles/*":     ["./website/styles/*"],
+      "@/svg/*":        ["./website/svg/*"],
+      "@/theme/*":      ["./website/theme/*"],
+      "@/ui/*":         ["./website/ui/*"],
+      "@/utils/*":      ["./website/utils/*"],
+    }
+  }
+}

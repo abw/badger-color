@@ -3,6 +3,7 @@ import { Generator } from '@abw/react-context'
 import { usePalettes } from '../palettes/Context.jsx'
 
 // DEPRECATED
+throw 'palette/context is deprecated'
 
 const Context = ({render}) => {
   const { palette: source } = usePalettes()

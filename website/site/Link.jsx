@@ -1,6 +1,6 @@
 import React from 'react'
+import { Button } from '@abw/badger-react-ui'
 import { NavLink } from 'react-router-dom'
-import Button from '../ui/Button.jsx'
 
 const Link = ({
   to,

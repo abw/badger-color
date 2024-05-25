@@ -1,9 +1,9 @@
 import React from 'react'
-import { Swatch, Black, White } from '../color/index.jsx'
-import { range as numberRange } from '@abw/badger-utils'
+import Link from '@/site/Link.jsx'
+import { URLS } from '@/site/URLS.jsx'
 import { Consumer } from '../palettes/Context.jsx'
-import { URLS } from '../site/URLS.jsx'
-import Link from '../site/Link.jsx'
+import { Swatch, Black, White } from '@/color/index.jsx'
+import { range as numberRange } from '@abw/badger-utils'
 
 const Swatches = ({
   palette,

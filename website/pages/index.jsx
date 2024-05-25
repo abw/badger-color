@@ -1,10 +1,10 @@
 import React from 'react'
-import { ReactComponent as Badger } from '../svg/badger-color.svg'
-import { ReactComponent as UK } from '../svg/uk.svg'
-import { ReactComponent as Canada } from '../svg/canada.svg'
-import { ReactComponent as Australia } from '../svg/australia.svg'
 import Theme from '../site/Theme.jsx'
-import ButtonHelp from '../help/ButtonHelp.jsx'
+import ButtonHelp from '@/help/ButtonHelp.jsx'
+import { ReactComponent as Badger    } from '@/svg/badger-color.svg'
+import { ReactComponent as UK        } from '@/svg/uk.svg'
+import { ReactComponent as Canada    } from '@/svg/canada.svg'
+import { ReactComponent as Australia } from '@/svg/australia.svg'
 
 const Index = () =>
   <div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from './Menu.jsx'
-import Options from '../palettes/Options.jsx'
+import Options from '@/palettes/Options.jsx'
 import MyPalettes from './Sidebar/MyPalettes.jsx'
 import { Standards } from './Menus.jsx'
 

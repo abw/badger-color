@@ -1,6 +1,6 @@
 import React from 'react'
 import Swatches from './Swatches.jsx'
-import { usePalettes } from '../palettes/Context.jsx'
+import { usePalettes } from '@/palettes/Context.jsx'
 
 const Range = ({uri, range}) => {
   const { options } = usePalettes()

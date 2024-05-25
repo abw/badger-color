@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import Button from '../ui/Button.jsx'
-import { URLS } from '../site/URLS.jsx'
-import { Consumer } from '../palettes/Context.jsx'
+import Theme from '@/site/Theme.jsx'
+import { URLS } from '@/site/URLS.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
 import { useNavigate } from 'react-router-dom'
-import { Form, Field, useForm } from '@abw/react-formula'
-import { nameToURI, namesToAliases } from '../../lib/utils/index.js'
-import Theme from '../site/Theme.jsx'
+import { nameToURI, namesToAliases } from '@/lib/utils/index.js'
+import { Button, Form, Field, useForm } from '@abw/badger-react-ui'
 
 const fields = {
   name: {
@@ -65,7 +64,8 @@ const Edit = ({ palette, range, editRange, close }) => {
         <h2>Edit Range Metadata</h2>
       </header>
       <Form
-        values={range} fields={fields}
+        fields={fields}
+        values={range}
         onLoad={setForm}
         onSubmit={submit}
       >
@@ -84,12 +84,12 @@ const Edit = ({ palette, range, editRange, close }) => {
           text="Cancel"
           iconRight="cross"
           onClick={close}
+          outline
         />
         <Button
           color={Theme.colors.save}
           text="Save"
           iconRight="check"
-          solid
           onClick={e => form.submit(e)}
         />
       </footer>

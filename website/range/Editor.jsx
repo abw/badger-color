@@ -2,7 +2,7 @@ import React from 'react'
 import Hue from './Hue.jsx'
 import Saturation from './Saturation.jsx'
 import Lightness from './Lightness.jsx'
-import { Consumer } from '../palettes/Context.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
 
 const Editor = () =>
   <div className="range-editor">

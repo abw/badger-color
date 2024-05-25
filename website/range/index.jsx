@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react'
+import Header from './Header.jsx'
 import Editor from './Editor.jsx'
-import CurrentSwatches from './CurrentSwatches.jsx'
+import Theme from '@/site/Theme.jsx'
 import StopSwatches from './StopSwatches.jsx'
 import CurveSwatches from './CurveSwatches.jsx'
-import Button from '../ui/Button.jsx'
-import Header from './Header.jsx'
-import Theme from '../site/Theme.jsx'
-import Switch from '../ui/Switch.jsx'
+import CurrentSwatches from './CurrentSwatches.jsx'
+import { Button, useToggle } from '@abw/badger-react-ui'
+import { Consumer } from '@/palettes/Context.jsx'
 import { useParams } from 'react-router-dom'
-import { Consumer } from '../palettes/Context.jsx'
 
 const Range = ({
   range,
@@ -19,7 +18,7 @@ const Range = ({
   resetStops,
 }) => {
   const { ruri } = useParams()
-  const { value, Toggle } = Switch({
+  const [ option, Toggle ] = useToggle({
     options: [
       {
         value: 'edit',
@@ -29,7 +28,7 @@ const Range = ({
       },
       {
         value: 'lock',
-        icon: 'lock',
+        icon: 'locked',
         'data-tooltip': 'top right',
         'aria-label': 'Click on swatch to lock'
       },
@@ -72,7 +71,7 @@ const Range = ({
           />
         </div>
       </div>
-      <StopSwatches clickToEdit={value === 'edit'} />
+      <StopSwatches clickToEdit={option.value === 'edit'} />
       <div className="flex space end mar-b-2 mar-t-4">
         <h3>Curves</h3>
         <div className="small">

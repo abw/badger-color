@@ -1,7 +1,7 @@
 import React from 'react'
 import { Consumer } from './Context.jsx'
 
-const Footer = ({  }) =>
+const Footer = () =>
   <footer>
   </footer>
 

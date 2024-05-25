@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Button from '../../ui/Button.jsx'
-import Theme from '../../site/Theme.jsx'
+import Theme from '@/site/Theme.jsx'
 import { sleep } from '@abw/badger-utils'
-import { Consumer } from '../../palettes/Context.jsx'
+import { Button } from '@abw/badger-react-ui'
+import { Consumer } from '@/palettes/Context.jsx'
 
 const Clipboard = ({ range }) => {
   const [copied, setCopied] = useState(false)

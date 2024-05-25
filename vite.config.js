@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import define from  './vite.defs.js'
-import svgr from 'vite-plugin-svgr'
-import copy from 'rollup-plugin-copy'
+import react    from '@vitejs/plugin-react'
+import define   from  './vite.defs.js'
+import svgr     from 'vite-plugin-svgr'
+import copy     from 'rollup-plugin-copy'
+import jsconfig from 'vite-jsconfig-paths'
 
 const PACKAGE_NAME = 'badger-color'
 const PACKAGE_DIST = `@abw/badger-color`
@@ -11,6 +12,7 @@ export default defineConfig({
   plugins: [
     react(),
     svgr(),
+    jsconfig({ root: '../' })
   ],
   define,
   test: {

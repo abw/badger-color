@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import Button from '../../ui/Button.jsx'
-import Modal from '../../ui/Modal.jsx'
+import Theme from '@/site/Theme.jsx'
+import { URLS } from '@/site/URLS.jsx'
+import { Consumer } from '@/palettes/Context.jsx'
 import { useNavigate } from 'react-router-dom'
-import { Consumer } from '../../palettes/Context.jsx'
-import { URLS } from '../../site/URLS.jsx'
-import Theme from '../../site/Theme.jsx'
+import { Button, Modal } from '@abw/badger-react-ui'
 
 const Delete = ({ palette, deleteRange }) => {
   const navigate = useNavigate()

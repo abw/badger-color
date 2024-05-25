@@ -1,8 +1,7 @@
 import React from 'react'
-import Button from '../ui/Button.jsx'
-import Icon from '../ui/Icon.jsx'
+import Theme from '@/site/Theme.jsx'
 import { Consumer } from './Context.jsx'
-import Theme from '../site/Theme.jsx'
+import { Icon, Button } from '@abw/badger-react-ui'
 
 const Controls = ({
   title,
