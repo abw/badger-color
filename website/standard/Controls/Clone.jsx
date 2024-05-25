@@ -20,6 +20,8 @@ const Clone = ({ palette }) => {
       color={Theme.colors.clone}
       onClick={onClonePalette}
       className="icon"
+      data-tooltip="bottom right"
+      aria-label="Clone this palette"
     />
   )
 }
