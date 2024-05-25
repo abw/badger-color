@@ -8,7 +8,7 @@ const Header = ({
   showStops, toggleShowStops,
   snap, toggleSnap
 }) =>
-  <header className="flex space center">
+  <header className="flex space middle">
     <h3 className="mar-v-none">{title}</h3>
     <div className="options small">
       <Checkbox

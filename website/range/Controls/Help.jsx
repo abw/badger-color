@@ -17,7 +17,6 @@ const Help = () => {
         onClick={() => setOpen(true)}
         data-tooltip="top right"
         aria-label="Help for range controls"
-
       />
       <Modal open={open} close={close} className="text-left">
         <header>
@@ -86,7 +85,6 @@ const Help = () => {
             color={Theme.colors.ok}
             text="OK"
             iconRight="check"
-            solid
             onClick={close}
           />
         </footer>

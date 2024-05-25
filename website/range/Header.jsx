@@ -1,6 +1,6 @@
 import React from 'react'
-import Controls from './Controls/index.jsx'
 import { Consumer } from '@/palettes/Context.jsx'
+import Controls from './Controls/index.jsx'
 
 const Header = ({
   range,

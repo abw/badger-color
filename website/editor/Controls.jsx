@@ -9,7 +9,7 @@ const Controls = ({
   resetStops,
   curveToStops,
 }) =>
-  <div className="controls flex space small start">
+  <div className="controls flex space smaller middle">
     <div>
       <Button
         text="Curve"
@@ -19,7 +19,6 @@ const Controls = ({
         onClick={resetCurve}
         data-tooltip="top left"
         aria-label={`Reset the ${title.toLowerCase()} curve`}
-        solid
       />
       <Button
         text="Stops"
@@ -29,7 +28,6 @@ const Controls = ({
         onClick={resetStops}
         data-tooltip="top left"
         aria-label={`Reset the ${title.toLowerCase()} stops`}
-        solid
       />
     </div>
     <Button
@@ -40,7 +38,6 @@ const Controls = ({
       onClick={curveToStops}
       data-tooltip="top right"
       aria-label={`Use the ${title.toLowerCase()} curve to set the stops`}
-      solid
     />
   </div>
 

@@ -3,8 +3,7 @@ import Theme from '@/site/Theme.jsx'
 import { useState } from 'react'
 import { Consumer } from '@/palettes/Context.jsx'
 import { colorToHSL } from '@/lib/utils/color.js'
-import { Form, Field } from '@abw/react-formula'
-import { Button, Modal } from '@abw/badger-react-ui'
+import { Button, Modal, Form, Field } from '@abw/badger-react-ui'
 
 const fields = {
   hex: {
@@ -40,12 +39,12 @@ const EditSwatch = ({
             iconRight="cross"
             type="button"
             onClick={close}
+            outline
           />
           <Button
             color={Theme.colors.save}
             text="Save"
             iconRight="check"
-            solid
             onClick={e => form.submit(e)}
           />
         </div>

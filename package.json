@@ -43,9 +43,9 @@
   },
   "dependencies": {
     "@abw/badger": "^1.2.4",
-    "@abw/badger-css": "^1.1.9",
+    "@abw/badger-css": "^1.1.11",
     "@abw/badger-filesystem": "^1.0.6",
-    "@abw/badger-react-ui": "^1.1.14",
+    "@abw/badger-react-ui": "^1.1.16",
     "@abw/badger-utils": "^1.1.0"
   },
   "devDependencies": {

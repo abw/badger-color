@@ -9,14 +9,14 @@ dependencies:
     specifier: ^1.2.4
     version: 1.2.4
   '@abw/badger-css':
-    specifier: ^1.1.9
-    version: 1.1.9
+    specifier: ^1.1.11
+    version: 1.1.11
   '@abw/badger-filesystem':
     specifier: ^1.0.6
     version: 1.0.6
   '@abw/badger-react-ui':
-    specifier: ^1.1.14
-    version: 1.1.14(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.1.16
+    version: 1.1.16(react-dom@18.2.0)(react@18.2.0)
   '@abw/badger-utils':
     specifier: ^1.1.0
     version: 1.1.0
@@ -116,8 +116,8 @@ packages:
       '@abw/badger': 1.2.4
     dev: true
 
-  /@abw/badger-css@1.1.9:
-    resolution: {integrity: sha512-ltTAEnrxFa3mRsaLCrg79naPyOyTzPWVmKQ0MdZhr7AMx4dXaxFKV/KCNTJgS9STERCc163waFfvDjxeAyID9A==}
+  /@abw/badger-css@1.1.11:
+    resolution: {integrity: sha512-bfJdB2eMS/QDArfIxZtNPhusXi+LC64RafOdd4JNEh988GrPEU8K0PYtEG+4DWabwBfIn05vg8b9yjUFXNb7bw==}
     hasBin: true
     dependencies:
       '@abw/badger': 1.2.4
@@ -140,8 +140,8 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@abw/badger-icon@0.1.0:
-    resolution: {integrity: sha512-jYkGTtskkE1rqnY8RuHr3z+mzdbyQzP33YUp4MJxzEUJimzk9khod087KJrxWQyrimqTmPyyaqmFrOt68RZGHw==}
+  /@abw/badger-icon@0.1.1:
+    resolution: {integrity: sha512-PQ98UFT7ag09cHO4K6QF0UBR7bsXhWyi8Zo0yvVL86FMD9edeSPER9+8mkZ9aDHHHXYSs5MM3X5e8S/9PjSbqQ==}
     dependencies:
       '@abw/badger-utils': 1.1.0
       '@abw/react-one-louder': 0.0.6
@@ -149,15 +149,15 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@abw/badger-react-ui@1.1.14(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-RjK6w7ngnQQ+0QaXLv9DgzM9dXR1D+zg5rbxYHL50O6VFd3BkrkpsbBItyqAiw60EsYb+FIBghnGWKDayrbSqA==}
+  /@abw/badger-react-ui@1.1.16(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-QoRdquZ9qLk8shg2q3gThseoCr4LQQdXvJ4MYjTM5wlJ5VP3O9HoJFg45iOHK0cPi8ooaxxg+4pXIkNJ5DiuEw==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@abw/badger-css': 1.1.9
+      '@abw/badger-css': 1.1.11
       '@abw/badger-form': 1.0.2(react-dom@18.2.0)(react@18.2.0)
-      '@abw/badger-icon': 0.1.0
+      '@abw/badger-icon': 0.1.1
       '@abw/badger-utils': 1.1.0
       '@abw/react-context': 2.0.4
       '@abw/react-one-louder': 0.0.6

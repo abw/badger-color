@@ -65,7 +65,6 @@ const Help = () => {
             color={Theme.colors.ok}
             text="OK"
             iconRight="check"
-            solid
             onClick={close}
           />
         </footer>

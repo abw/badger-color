@@ -29,9 +29,9 @@ const ShowExamples = ({ palette }) => {
             <h2 className="mar-v-none">Palette Examples</h2>
             <div className="options pad-r-none">
               <Checkbox
-                label="Dark"
+                text="Dark"
                 checked={dark}
-                toggle={toggleDark}
+                onChange={toggleDark}
               />
             </div>
           </div>
@@ -54,7 +54,6 @@ const ShowExamples = ({ palette }) => {
             color={Theme.colors.ok}
             text="OK"
             iconRight="check"
-            solid
             onClick={close}
           />
         </footer>

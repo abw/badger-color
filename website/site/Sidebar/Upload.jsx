@@ -3,7 +3,7 @@ import { URLS } from '../URLS.jsx'
 import { Consumer } from '@/palettes/Context.jsx'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button, Icon } from '@abw/badger-react-ui'
+import { Button, Error, Icon, Info, Success } from '@abw/badger-react-ui'
 import { haveValue, isObject } from '@abw/badger-utils'
 
 const Upload = ({
@@ -62,16 +62,13 @@ const Upload = ({
         ? <section className="mar-b-4">
             { status && <Status file={file} status={status}/> }
           </section>
-        : <div className="info alert flex center gap-4 border">
-            <Icon name="info" className="blue x2"/>
-            <div>
-              <p>
-                Click the button to select a palette data file to upload.
-                This should be a{' '} <code>.json</code> file that
-                you&apos;ve previously downloaded from this app.
-              </p>
-            </div>
-          </div>
+        : <Info icon="info" border>
+            <p>
+              Click the button to select a palette data file to upload.
+              This should be a{' '} <code>.json</code> file that
+              you&apos;ve previously downloaded from this app.
+            </p>
+          </Info>
       }
       <div className="flex space">
         <label
@@ -102,6 +99,7 @@ const Upload = ({
           iconRight="cross"
           onClick={close}
           text="Cancel"
+          outline
         />
       </footer>
     </>
@@ -110,21 +108,15 @@ const Upload = ({
 
 const Status = ({file, status}) =>
   status.ok
-    ? <div className="success alert flex center gap-4 border">
-        <Icon name="check" className="green x2"/>
-        <div>
-          <h4 className="font-mono mar-b-2">{file.name}</h4>
-          Loaded <b>{status.palette.name}</b> palette
-          with {Object.keys(status.palette.ranges).length} ranges.
-        </div>
-      </div>
-    : <div className="error alert flex center gap-4 border">
-        <Icon name="danger" className="red x2"/>
-        <div>
-          <h4 className="font-mono mar-b-2">{file.name}</h4>
-          {status.error}
-        </div>
-      </div>
+    ? <Success icon="check" border>
+        <h4 className="font-mono mar-b-2">{file.name}</h4>
+        Loaded <b>{status.palette.name}</b> palette
+        with {Object.keys(status.palette.ranges).length} ranges.
+      </Success>
+    : <Error icon="exclamation" border>
+        <h4 className="font-mono mar-b-2">{file.name}</h4>
+        {status.error}
+      </Error>
 
 
 export default Consumer(Upload)
