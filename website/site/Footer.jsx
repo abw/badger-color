@@ -5,7 +5,7 @@ const Footer = () =>
   <footer>
     <div className="flex space">
       <div>
-        &copy; Copyright 2023 Andy Wardley
+        &copy; Copyright 2023 - 2024 Andy Wardley
       </div>
       <div>
         Version {version} {date}

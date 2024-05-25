@@ -4,11 +4,12 @@ import { Consumer } from '@/palettes/Context.jsx'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button, Error, Icon, Info, Success } from '@abw/badger-react-ui'
-import { haveValue, isObject } from '@abw/badger-utils'
+import { haveValue } from '@abw/badger-utils'
 
 const Upload = ({
+  palette,
   close,
-  importPalette
+  importRange
 }) => {
   const navigate = useNavigate()
   const [file, setFile] = useState(null)
@@ -21,17 +22,17 @@ const Upload = ({
       reader.onload = e => {
         try {
           const json = JSON.parse(e.target.result)
-          const { name, comment, source, ranges } = json
-          if (haveValue(name, ranges) && isObject(ranges)) {
+          const { name, hue, stops, curves } = json
+          if (haveValue(name, hue, stops, curves)) {
             setStatus({
               ok: true,
-              palette: { name, comment, source, ranges }
+              range: { name, hue, stops, curves }
             })
           }
           else {
             setStatus({
               ok: false,
-              error: 'Not a valid palette file.'
+              error: 'Not a valid range file.'
             })
           }
         }
@@ -45,9 +46,9 @@ const Upload = ({
       reader.readAsText(f)
     }
   }
-  const onImportPalette = () => {
-    const p = importPalette(status.palette)
-    navigate(URLS.palette.home(p.uri))
+  const onImportRange = () => {
+    const r = importRange(status.range)
+    navigate(URLS.palette.range(palette.uri, r.uri))
     close()
   }
 
@@ -55,7 +56,7 @@ const Upload = ({
     <>
       <header>
         <h2 className="mar-v-none">
-          Upload a Palette
+          Upload a Range
         </h2>
       </header>
       { file
@@ -64,7 +65,7 @@ const Upload = ({
           </section>
         : <Info icon="info" border>
             <p>
-              Click the button to select a palette data file to upload.
+              Click the button to select a range data file to upload.
               This should be a{' '} <code>.json</code> file that
               you&apos;ve previously downloaded from this app.
             </p>
@@ -88,8 +89,8 @@ const Upload = ({
           <Button
             color="green"
             iconRight="check"
-            text="Import Palette"
-            onClick={onImportPalette}
+            text="Import Range"
+            onClick={onImportRange}
           />
         }
       </div>
@@ -110,8 +111,7 @@ const Status = ({file, status}) =>
   status.ok
     ? <Success icon="check" border>
         <h4 className="font-mono mar-b-2">{file.name}</h4>
-        Loaded <b>{status.palette.name}</b> palette
-        with {Object.keys(status.palette.ranges).length} ranges.
+        Loaded <b>{status.range.name}</b> range
       </Success>
     : <Error icon="exclamation" border>
         <h4 className="font-mono mar-b-2">{file.name}</h4>

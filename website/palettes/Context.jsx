@@ -131,6 +131,9 @@ const Context = ({render}) => {
   const cloneRange = r =>
     saveRange( copyRange(r, palette.ranges) )
 
+  const importRange = r =>
+    saveRange( copyRange(r, palette.ranges) )
+
   const editRange = details => {
     if (! range) {
       return
@@ -313,6 +316,7 @@ const Context = ({render}) => {
     copyRangeToPalette,
     createRange,
     cloneRange,
+    importRange,
     editRange,
     deleteRange,
     // curves and stops

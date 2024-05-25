@@ -32,10 +32,9 @@ const Sidebar = ({
       <div className="menu">
         <div className="flex space start mar-b-2">
           <h3 className="mar-v-none">My Palettes</h3>
-          <div className="smaller">
+          <div className="smaller flex gap-2">
             <Button
               color="violet"
-              className="icon"
               icon="upload"
               onClick={openUpload}
               data-tooltip="bottom left"
@@ -43,7 +42,6 @@ const Sidebar = ({
             />
             <Button
               color="green"
-              className="icon mar-l-2"
               icon="plus"
               onClick={newPalette}
               data-tooltip="bottom left"
